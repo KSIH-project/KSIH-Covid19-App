@@ -10,4 +10,24 @@
         android:name="com.android.ksih_covid_19_app.ui.dayOneTotal.DayOneTotalFragment"
         android:label="home_fragment"
         tools:layout="@layout/home_fragment" />
+    <fragment
+        android:id="@+id/countryFragment"
+        android:name="com.android.ksih_covid_19_app.ui.country.CountryFragment"
+        android:label="country_fragment"
+        tools:layout="@layout/country_fragment" />
+    <fragment
+        android:id="@+id/liveByCountryAndStatusFragment"
+        android:name="com.android.ksih_covid_19_app.ui.liveByCountryAndStatus.LiveByCountryAndStatusFragment"
+        android:label="live_by_country_and_status_fragment"
+        tools:layout="@layout/live_by_country_and_status_fragment" />
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.android.ksih_covid_19_app.ui.search.SearchFragment"
+        android:label="search_fragment"
+        tools:layout="@layout/search_fragment" />
+    <fragment
+        android:id="@+id/summaryFragment"
+        android:name="com.android.ksih_covid_19_app.ui.summary.SummaryFragment"
+        android:label="summary_fragment"
+        tools:layout="@layout/summary_fragment" />
 </navigation>
