@@ -50,4 +50,8 @@ dependencies {
 
     //materialDesign
     implementation 'com.google.android.material:material:1.2.0-alpha05'
+
+    //roomDatabase
+    implementation "androidx.room:room-runtime:2.2.5"
+    annotationProcessor "androidx.room:room-compiler:2.2.5"
 }
