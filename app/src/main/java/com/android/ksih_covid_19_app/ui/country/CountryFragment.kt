@@ -12,6 +12,7 @@ class CountryFragment : Fragment() {
 
     companion object {
         fun newInstance() = CountryFragment()
+
     }
 
     private lateinit var viewModel: CountryViewModel
