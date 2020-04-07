@@ -5,16 +5,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProviders
+import androidx.fragment.app.viewModels
 import com.android.ksih_covid_19_app.R
 
 class SummaryFragment : Fragment() {
 
-    companion object {
-        fun newInstance() = SummaryFragment()
-    }
-
-    private lateinit var viewModel: SummaryViewModel
+    private val viewModel: SummaryViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -25,8 +21,6 @@ class SummaryFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProviders.of(this).get(SummaryViewModel::class.java)
         // TODO: Use the ViewModel
     }
-
 }
