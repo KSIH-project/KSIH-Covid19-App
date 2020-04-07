@@ -5,17 +5,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProviders
+import androidx.fragment.app.viewModels
 import com.android.ksih_covid_19_app.R
 
 class CountryFragment : Fragment() {
 
-    companion object {
-        fun newInstance() = CountryFragment()
-
-    }
-
-    private lateinit var viewModel: CountryViewModel
+    private val viewModel: CountryViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -26,8 +21,6 @@ class CountryFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProviders.of(this).get(CountryViewModel::class.java)
         // TODO: Use the ViewModel
     }
-
 }
