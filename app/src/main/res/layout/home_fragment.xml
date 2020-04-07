@@ -8,6 +8,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:fontFamily="@font/source_serif_pro_bold"
         android:text="This is the home fragment" />
 
 </FrameLayout>
