@@ -1,6 +1,11 @@
 package com.android.ksih_covid_19_app.model
 
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
+@Entity
 data class Country(
+    @PrimaryKey
     val Country: String,
     val CountryCode: String,
     val Date: String,

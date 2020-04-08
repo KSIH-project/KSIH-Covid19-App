@@ -1,2 +1,7 @@
 # Default ignored files
 /workspace.xml
+/navEditor.xml
+/modules.xml
+/caches/*
+/dictionaries/*
+/libraries/*

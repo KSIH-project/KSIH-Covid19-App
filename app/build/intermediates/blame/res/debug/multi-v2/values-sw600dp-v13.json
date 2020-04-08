@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-sw600dp-v13/values-sw600dp-v13.xml",
+            "outputFile": "C:\\Users\\SegunFrancis\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw600dp-v13\\values-sw600dp-v13.xml",
             "map": [
                 {
-                    "source": "/home/sundaydavid/.gradle/caches/transforms-2/files-2.1/5988781b109aa2e81ee2deed8375ae92/appcompat-1.1.0/res/values-sw600dp-v13/values-sw600dp-v13.xml",
+                    "source": "C:\\Users\\SegunFrancis\\.gradle\\caches\\transforms-2\\files-2.1\\5988781b109aa2e81ee2deed8375ae92\\appcompat-1.1.0\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "/home/sundaydavid/.gradle/caches/transforms-2/files-2.1/a977b27854041d0eb768ec246c30c78d/material-1.2.0-alpha05/res/values-sw600dp-v13/values-sw600dp-v13.xml",
+                    "source": "C:\\Users\\SegunFrancis\\.gradle\\caches\\transforms-2\\files-2.1\\a977b27854041d0eb768ec246c30c78d\\material-1.2.0-alpha05\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,10,11,12,13,14",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4",

@@ -4,13 +4,24 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import com.android.ksih_covid_19_app.model.Country
+import com.android.ksih_covid_19_app.model.DayOneTotalResponseItem
 import com.android.ksih_covid_19_app.model.LiveByCountryAndStatusItem
+import com.android.ksih_covid_19_app.model.Summary
 
 /**
  * Created by SegunFrancis
  */
 
-@Database(exportSchema = false, version = 1, entities = [LiveByCountryAndStatusItem::class])
+@Database(
+    exportSchema = false,
+    version = 1,
+    entities = [
+        LiveByCountryAndStatusItem::class,
+        DayOneTotalResponseItem::class,
+        Country::class, Summary::class
+    ]
+)
 abstract class Covid19RoomDatabase : RoomDatabase() {
     abstract fun covid19Dao(): Covid19Dao
 
