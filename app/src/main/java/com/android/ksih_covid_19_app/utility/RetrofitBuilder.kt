@@ -10,6 +10,8 @@ class RetrofitBuilder {
         .build()
 
         val covid19Api = retrofit.create(Covid19Api::class.java)
+
+
 }
 
 
