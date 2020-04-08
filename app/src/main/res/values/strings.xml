@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">KSIH-Covid-19-app</string>
+    <string name="countryname">CountryName</string>
+    <string name="total_cofirmed_cases">Total Cofirmed Cases</string>
 </resources>

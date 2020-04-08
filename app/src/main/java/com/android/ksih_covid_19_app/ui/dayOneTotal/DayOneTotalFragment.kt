@@ -5,16 +5,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProviders
+import androidx.fragment.app.viewModels
 import com.android.ksih_covid_19_app.R
 
 class DayOneTotalFragment : Fragment() {
 
-    companion object {
-        fun newInstance() = DayOneTotalFragment()
-    }
-
-    private lateinit var viewModel: DayOneTotalViewModel
+    private val viewModel: DayOneTotalViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -25,7 +21,6 @@ class DayOneTotalFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProviders.of(this).get(DayOneTotalViewModel::class.java)
         // TODO: Use the ViewModel
     }
 
