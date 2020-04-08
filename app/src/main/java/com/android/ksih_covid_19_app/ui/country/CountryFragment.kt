@@ -13,6 +13,7 @@ class CountryFragment : Fragment() {
     private val viewModel: CountryViewModel by viewModels()
 
     override fun onCreateView(
+
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
