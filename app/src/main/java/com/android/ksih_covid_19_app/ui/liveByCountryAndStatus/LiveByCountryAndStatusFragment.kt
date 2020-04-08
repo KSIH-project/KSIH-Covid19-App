@@ -8,19 +8,12 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.android.ksih_covid_19_app.R
 
-class LiveByCountryAndStatusFragment : Fragment() {
+class LiveByCountryAndStatusFragment : Fragment(R.layout.live_by_country_and_status_fragment) {
 
     private val viewModel: LiveByCountryAndStatusViewModel by viewModels()
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.live_by_country_and_status_fragment, container, false)
-    }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        // TODO: Use the ViewModel
     }
 }
