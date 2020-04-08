@@ -17,6 +17,7 @@ class CountryFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
         return inflater.inflate(R.layout.country_fragment, container, false)
     }
 
