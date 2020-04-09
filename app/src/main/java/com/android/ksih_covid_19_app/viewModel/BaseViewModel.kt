@@ -21,15 +21,15 @@ open class BaseViewModel(myApplication: Application): AndroidViewModel(myApplica
         repository = BaseRepository(covid19Api, dao)
     }
 
-    fun getLiveByCountryAndStatusRemote(country: String): Call<LiveByCountryAndStatus> {
+    fun getLiveByCountryAndStatusRemote(country: String): Call<List<LiveByCountryAndStatusItem?>> {
         return repository.getLiveByCountryAndStatusRemote(country)
     }
 
-    fun getLiveByCountryAndStatusLocal(country: String): LiveData<List<LiveByCountryAndStatusItem>> {
+    fun getLiveByCountryAndStatusLocal(country: String): LiveData<List<LiveByCountryAndStatusItem?>> {
         return repository.getLiveByCountryAndStatusLocal(country)
     }
 
-    fun setLiveByCountryAndStatus(responseList: List<LiveByCountryAndStatusItem>) {
+    suspend fun setLiveByCountryAndStatus(responseList: List<LiveByCountryAndStatusItem?>) {
         repository.setLiveByCountryAndStatusLocal(responseList)
     }
 }

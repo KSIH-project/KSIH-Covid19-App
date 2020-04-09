@@ -9,7 +9,7 @@ import com.android.ksih_covid_19_app.model.LiveByCountryAndStatusItem
 
 interface LocalRepo {
 
-    fun getLiveByCountryAndStatusLocal(country: String): LiveData<List<LiveByCountryAndStatusItem>>
+    fun getLiveByCountryAndStatusLocal(country: String): LiveData<List<LiveByCountryAndStatusItem?>>
 
-    fun setLiveByCountryAndStatusLocal(responseList: List<LiveByCountryAndStatusItem>)
+    suspend fun setLiveByCountryAndStatusLocal(responseList: List<LiveByCountryAndStatusItem?>)
 }

@@ -15,8 +15,8 @@ import com.android.ksih_covid_19_app.model.LiveByCountryAndStatusItem
 interface Covid19Dao {
 
     @Query("SELECT * FROM LiveByCountryAndStatusItem")
-    fun getLiveByCountryAndStatus(): LiveData<List<LiveByCountryAndStatusItem>>
+    fun getLiveByCountryAndStatus(): LiveData<List<LiveByCountryAndStatusItem?>>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun setLiveByCountryAndStatus(responseList: List<LiveByCountryAndStatusItem>)
+    suspend fun setLiveByCountryAndStatus(responseList: List<LiveByCountryAndStatusItem?>)
 }

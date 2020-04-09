@@ -1,6 +1,7 @@
 package com.android.ksih_covid_19_app.dataSource.remote
 
 import com.android.ksih_covid_19_app.model.LiveByCountryAndStatus
+import com.android.ksih_covid_19_app.model.LiveByCountryAndStatusItem
 import retrofit2.Call
 
 /**
@@ -8,6 +9,6 @@ import retrofit2.Call
  */
 interface RemoteRepo {
 
-    fun getLiveByCountryAndStatusRemote(country: String): Call<LiveByCountryAndStatus>
+    fun getLiveByCountryAndStatusRemote(country: String): Call<List<LiveByCountryAndStatusItem?>>
 
 }
