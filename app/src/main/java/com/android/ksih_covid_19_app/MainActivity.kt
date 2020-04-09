@@ -13,5 +13,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         mNavController = Navigation.findNavController(this, R.id.fragment)
+
+
     }
 }
