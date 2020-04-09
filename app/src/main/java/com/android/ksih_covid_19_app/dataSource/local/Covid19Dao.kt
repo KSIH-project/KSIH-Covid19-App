@@ -5,6 +5,7 @@ import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
+import com.android.ksih_covid_19_app.model.Country
 import com.android.ksih_covid_19_app.model.LiveByCountryAndStatus
 import com.android.ksih_covid_19_app.model.LiveByCountryAndStatusItem
 
@@ -19,4 +20,10 @@ interface Covid19Dao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun setLiveByCountryAndStatus(responseList: List<LiveByCountryAndStatusItem?>)
+
+    @Query("SELECT * FROM Country")
+    fun getCountryAndNewCasesListLocal(): LiveData<List<Country>>
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun setCountryAndNewCasesList(countryList: List<Country>)
 }

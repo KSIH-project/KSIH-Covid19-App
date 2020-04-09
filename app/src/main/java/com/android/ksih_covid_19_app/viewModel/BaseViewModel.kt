@@ -6,8 +6,9 @@ import androidx.lifecycle.LiveData
 import com.android.ksih_covid_19_app.dataSource.BaseRepository
 import com.android.ksih_covid_19_app.dataSource.local.Covid19RoomDatabase
 import com.android.ksih_covid_19_app.dataSource.remote.RetrofitBuilder.covid19Api
-import com.android.ksih_covid_19_app.model.LiveByCountryAndStatus
+import com.android.ksih_covid_19_app.model.Country
 import com.android.ksih_covid_19_app.model.LiveByCountryAndStatusItem
+import com.android.ksih_covid_19_app.model.Summary
 import retrofit2.Call
 
 /**
@@ -31,5 +32,17 @@ open class BaseViewModel(myApplication: Application): AndroidViewModel(myApplica
 
     suspend fun setLiveByCountryAndStatus(responseList: List<LiveByCountryAndStatusItem?>) {
         repository.setLiveByCountryAndStatusLocal(responseList)
+    }
+
+    fun getCountryAndNewCasesListLocal() : LiveData<List<Country>> {
+        return repository.getCountryAndNewCasesListLocal()
+    }
+
+    suspend fun setCountryAndNewCasesList(countryList: List<Country>) {
+        repository.setCountryAndNewCasesListLocal(countryList)
+    }
+
+    fun getSummary(): Call<Summary> {
+        return repository.getSummary()
     }
 }
