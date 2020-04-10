@@ -1631,6 +1631,7 @@ id go_back
 id gone
 id group_divider
 id groups
+id guideline
 id hideable
 id home
 id homeAsUp
