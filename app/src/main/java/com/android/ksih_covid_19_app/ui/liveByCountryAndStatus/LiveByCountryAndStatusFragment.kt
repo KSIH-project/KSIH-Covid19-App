@@ -4,8 +4,6 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.activityViewModels
-import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.android.ksih_covid_19_app.R
@@ -21,10 +19,12 @@ class LiveByCountryAndStatusFragment : Fragment(R.layout.live_by_country_and_sta
         super.onViewCreated(view, savedInstanceState)
         viewModel = ViewModelProvider(requireActivity()).get(LiveByCountryAndStatusViewModel::class.java)
         viewModel.responseMessage.observe(viewLifecycleOwner, Observer {
-            when (it.status) {
-                State.LOADING -> showSnackBar(it.message!!)
-                State.SUCCESS -> showSnackBar(it.message!!)
-                State.ERROR -> showSnackBar(it.message!!)
+            it.getContentIfNotHandled()?.let { result ->
+                when (result.status) {
+                    State.LOADING -> showSnackBar(result.message!!)
+                    State.SUCCESS -> showSnackBar(result.message!!)
+                    State.ERROR -> showSnackBar(result.message!!)
+                }
             }
         })
         viewModel.getCountryAndNewCasesList().observe(viewLifecycleOwner, Observer { countryList ->
