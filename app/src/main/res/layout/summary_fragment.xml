@@ -19,11 +19,13 @@
     </LinearLayout>
 
     <ImageView
+        android:id="@+id/go_back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_arrow_back"
         android:layout_marginTop="16dp"
-        android:layout_marginStart="16dp"/>
+        android:layout_marginStart="16dp"
+        android:contentDescription="back Button"/>
     <TextView
         android:id="@+id/be_safe"
         android:layout_width="wrap_content"
