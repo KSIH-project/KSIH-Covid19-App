@@ -5,9 +5,11 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.android.ksih_covid_19_app.model.Summary
 
-class SummaryViewModel : ViewModel() {
+open class SummaryViewModel : ViewModel() {
 
-    lateinit var summaryList: MutableLiveData<Summary>
+    val empty = MutableLiveData<Boolean>().apply { value = false }
+    val  dataLoading = MutableLiveData<Boolean>().apply { value = false }
+    val toastMessage = MutableLiveData<String>()
 
 
 }

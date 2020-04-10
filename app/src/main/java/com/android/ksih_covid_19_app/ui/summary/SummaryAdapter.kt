@@ -7,12 +7,15 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.android.ksih_covid_19_app.R
+import com.android.ksih_covid_19_app.model.Country
 import com.android.ksih_covid_19_app.model.Summary
 import kotlinx.android.synthetic.main.summary_list_item.view.*
 import org.w3c.dom.Text
 
-class SummaryAdapter(private val summary: ArrayList<Summary>) :
+class SummaryAdapter(private val mainSummaryViewModel: MainSummaryViewModel) :
     RecyclerView.Adapter<SummaryAdapter.ViewHolder>(){
+
+    var summary: List<Country> = emptyList()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val v = LayoutInflater.from(parent.context).inflate(R.layout.summary_list_item, parent, false)
@@ -23,12 +26,12 @@ class SummaryAdapter(private val summary: ArrayList<Summary>) :
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
        val virus = summary[position]
-        holder.countryName.text = virus.Countries[position].Country
-        holder.newConfirmed.text = virus.Countries[position].NewConfirmed.toString()
-        holder.totalConfirmed.text = virus.Countries[position].TotalConfirmed.toString()
-        holder.newDeath.text = virus.Countries[position].NewDeaths.toString()
-        holder.totalDeath.text = virus.Countries[position].TotalDeaths.toString()
-        holder.newRecovered.text = virus.Countries[position].NewRecovered.toString()
+        holder.countryName.text = virus.Country
+        holder.newConfirmed.text = virus.NewConfirmed.toString()
+        holder.totalConfirmed.text = virus.TotalConfirmed.toString()
+        holder.newDeath.text = virus.NewDeaths.toString()
+        holder.totalDeath.text = virus.TotalDeaths.toString()
+        holder.newRecovered.text = virus.NewRecovered.toString()
 
     }
 

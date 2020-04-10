@@ -13,12 +13,23 @@ class BaseRepository {
 
         ApiClient.instance.getSummary().enqueue(object : Callback<Summary> {
             override fun onResponse(call: Call<Summary>, response: Response<Summary>) {
-                TODO("Not yet implemented")
+                if (response != null && response.isSuccessful)
+                    onResult(true, response.body())
+                else
+                    onResult(false, null)
             }
 
             override fun onFailure(call: Call<Summary>, t: Throwable) {
-                TODO("Not yet implemented")
+                onResult(false, null)
             }
         })
+    }
+
+    companion object{
+        private var INSTANCE: BaseRepository? = null
+        fun getInstance() = INSTANCE
+            ?: BaseRepository().also {
+                INSTANCE = it
+            }
     }
 }
