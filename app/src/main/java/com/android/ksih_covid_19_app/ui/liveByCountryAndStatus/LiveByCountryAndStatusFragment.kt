@@ -15,24 +15,21 @@ class LiveByCountryAndStatusFragment : Fragment(R.layout.live_by_country_and_sta
 
     private val viewModel: LiveByCountryAndStatusViewModel by viewModels()
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        viewModel.getSummaryRemote()
-    }
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         viewModel.responseMessage.observe(viewLifecycleOwner, Observer {
-            when(it.status) {
+            when (it.status) {
                 State.LOADING -> showSnackBar(it.message!!)
                 State.SUCCESS -> showSnackBar(it.message!!)
                 State.ERROR -> showSnackBar(it.message!!)
             }
         })
-
-        viewModel.getCountryAndNewCasesList().observe(viewLifecycleOwner, Observer {
-            Log.d("LiveByCountryFrag", it.toString())
+        viewModel.getCountryAndNewCasesList().observe(viewLifecycleOwner, Observer { countryList ->
+            val countries = countryList.filter { country ->
+                country.NewConfirmed > 0
+            }
+            Log.d("LiveByCountryFrag", countries.toString())
         })
     }
 

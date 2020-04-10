@@ -18,6 +18,9 @@ import retrofit2.Response
 class LiveByCountryAndStatusViewModel(myApplication: Application) : BaseViewModel(myApplication) {
     private val model: BaseViewModel = BaseViewModel(myApplication)
     var responseMessage = MutableLiveData<Result<Summary>>()
+    private val _loadData = MutableLiveData<Boolean>(false)
+    val loadData: MutableLiveData<Boolean>
+        get() = _loadData
 
     fun getSummaryRemote() {
         responseMessage.postValue(Result(State.LOADING, message = "Loading..."))
@@ -27,6 +30,7 @@ class LiveByCountryAndStatusViewModel(myApplication: Application) : BaseViewMode
                     model.setCountryAndNewCasesList(response.body()!!.Countries)
                 }
                 responseMessage.postValue(Result(State.SUCCESS, message = "Success"))
+                Log.d("LiveByViewModel", "Loaded")
             }
 
             override fun onFailure(call: Call<Summary?>, t: Throwable) {
