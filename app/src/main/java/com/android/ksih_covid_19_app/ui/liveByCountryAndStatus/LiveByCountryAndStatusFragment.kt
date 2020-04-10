@@ -4,8 +4,10 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
 import com.android.ksih_covid_19_app.R
 import com.android.ksih_covid_19_app.utility.State
 import com.google.android.material.snackbar.Snackbar
@@ -13,11 +15,11 @@ import kotlinx.android.synthetic.main.live_by_country_and_status_fragment.*
 
 class LiveByCountryAndStatusFragment : Fragment(R.layout.live_by_country_and_status_fragment) {
 
-    private val viewModel: LiveByCountryAndStatusViewModel by viewModels()
+    private lateinit var viewModel: LiveByCountryAndStatusViewModel
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        viewModel = ViewModelProvider(requireActivity()).get(LiveByCountryAndStatusViewModel::class.java)
         viewModel.responseMessage.observe(viewLifecycleOwner, Observer {
             when (it.status) {
                 State.LOADING -> showSnackBar(it.message!!)

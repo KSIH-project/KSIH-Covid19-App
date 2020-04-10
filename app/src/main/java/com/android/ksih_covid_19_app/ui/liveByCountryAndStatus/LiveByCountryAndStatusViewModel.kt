@@ -2,32 +2,40 @@ package com.android.ksih_covid_19_app.ui.liveByCountryAndStatus
 
 import android.app.Application
 import android.util.Log
+import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
+import com.android.ksih_covid_19_app.dataSource.BaseRepository
+import com.android.ksih_covid_19_app.dataSource.local.Covid19Dao
+import com.android.ksih_covid_19_app.dataSource.local.Covid19RoomDatabase
+import com.android.ksih_covid_19_app.dataSource.remote.RetrofitBuilder.covid19Api
 import com.android.ksih_covid_19_app.model.Country
 import com.android.ksih_covid_19_app.model.Summary
 import com.android.ksih_covid_19_app.utility.Result
 import com.android.ksih_covid_19_app.utility.State
-import com.android.ksih_covid_19_app.viewModel.BaseViewModel
 import kotlinx.coroutines.launch
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class LiveByCountryAndStatusViewModel(myApplication: Application) : BaseViewModel(myApplication) {
-    private val model: BaseViewModel = BaseViewModel(myApplication)
+class LiveByCountryAndStatusViewModel(myApplication: Application) :
+    AndroidViewModel(myApplication) {
+    private val repository: BaseRepository
+    private val dao: Covid19Dao = Covid19RoomDatabase.getDatabase(myApplication).covid19Dao()
     var responseMessage = MutableLiveData<Result<Summary>>()
-    private val _loadData = MutableLiveData<Boolean>(false)
-    val loadData: MutableLiveData<Boolean>
-        get() = _loadData
 
-    fun getSummaryRemote() {
+    init {
+        repository = BaseRepository(covid19Api, dao)
+        getSummaryRemote()
+    }
+
+    private fun getSummaryRemote() {
         responseMessage.postValue(Result(State.LOADING, message = "Loading..."))
-        model.getSummary().enqueue(object : Callback<Summary?> {
+        repository.getSummary().enqueue(object : Callback<Summary?> {
             override fun onResponse(call: Call<Summary?>, response: Response<Summary?>) {
                 viewModelScope.launch {
-                    model.setCountryAndNewCasesList(response.body()!!.Countries)
+                    repository.setCountryAndNewCasesListLocal(response.body()!!.Countries)
                 }
                 responseMessage.postValue(Result(State.SUCCESS, message = "Success"))
                 Log.d("LiveByViewModel", "Loaded")
@@ -47,6 +55,6 @@ class LiveByCountryAndStatusViewModel(myApplication: Application) : BaseViewMode
     }
 
     fun getCountryAndNewCasesList(): LiveData<List<Country>> {
-        return model.getCountryAndNewCasesListLocal()
+        return repository.getCountryAndNewCasesListLocal()
     }
 }
