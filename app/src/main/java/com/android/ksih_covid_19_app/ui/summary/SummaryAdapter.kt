@@ -35,6 +35,11 @@ class SummaryAdapter(private val mainSummaryViewModel: MainSummaryViewModel) :
 
     }
 
+    fun updateSummaryList( summary: List<Country>){
+        this.summary = summary
+        notifyDataSetChanged()
+    }
+
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
 
         val countryName: TextView = itemView.findViewById(R.id.summary_country)

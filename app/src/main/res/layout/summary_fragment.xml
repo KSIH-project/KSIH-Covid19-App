@@ -40,13 +40,14 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:layout_below="@id/be_safe"
-        android:layout_marginTop="8dp">
+        android:layout_below="@id/be_safe">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/summary_recyclerView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="12dp"
             tools:listitem="@layout/summary_list_item" />
     </LinearLayout>
 
