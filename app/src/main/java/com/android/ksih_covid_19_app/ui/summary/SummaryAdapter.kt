@@ -1,28 +1,46 @@
 package com.android.ksih_covid_19_app.ui.summary
 
+import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.android.ksih_covid_19_app.R
 import com.android.ksih_covid_19_app.model.Summary
+import kotlinx.android.synthetic.main.summary_list_item.view.*
+import org.w3c.dom.Text
 
-class SummaryAdapter(private val summary: ArrayList<Summary>) : RecyclerView.Adapter<SummaryAdapter.ViewHolder>(){
-
-
-
+class SummaryAdapter(private val summary: ArrayList<Summary>) :
+    RecyclerView.Adapter<SummaryAdapter.ViewHolder>(){
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        TODO("Not yet implemented")
+        val v = LayoutInflater.from(parent.context).inflate(R.layout.summary_list_item, parent, false)
+        return ViewHolder(v)
     }
 
-    override fun getItemCount(): Int {
-        TODO("Not yet implemented")
-    }
+    override fun getItemCount() = summary.size
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        TODO("Not yet implemented")
+       val virus = summary[position]
+        holder.countryName.text = virus.Countries[position].Country
+        holder.newConfirmed.text = virus.Countries[position].NewConfirmed.toString()
+        holder.totalConfirmed.text = virus.Countries[position].TotalConfirmed.toString()
+        holder.newDeath.text = virus.Countries[position].NewDeaths.toString()
+        holder.totalDeath.text = virus.Countries[position].TotalDeaths.toString()
+        holder.newRecovered.text = virus.Countries[position].NewRecovered.toString()
+
     }
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
 
+        val countryName: TextView = itemView.findViewById(R.id.summary_country)
+        val newConfirmed: TextView = itemView.findViewById(R.id.summary_newConfirmed)
+        val totalConfirmed: TextView = itemView.findViewById(R.id.summary_totalConfirmed)
+        val newDeath: TextView = itemView.findViewById(R.id.summary_newDeath)
+        val totalDeath: TextView = itemView.findViewById(R.id.summary_totalDeath)
+        val newRecovered: TextView = itemView.findViewById(R.id.summary_newRecovered)
+
+        val countryFlag: ImageView = itemView.findViewById(R.id.summary_countryFlag)
     }
 }
