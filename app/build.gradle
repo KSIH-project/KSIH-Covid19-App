@@ -55,6 +55,14 @@ dependencies {
     // Retrofit
     implementation 'com.squareup.retrofit2:retrofit:2.8.1'
     implementation 'com.squareup.retrofit2:converter-gson:2.8.1'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.9.1'
+
+    // Anko
+    implementation 'org.jetbrains.anko:anko:0.10.8'
+    implementation 'org.jetbrains.anko:anko-commons:0.10.8'
+
+    // Picasso
+    implementation 'com.squareup.picasso:picasso:2.71828'
 
     // MaterialDesign
     implementation 'com.google.android.material:material:1.2.0-alpha05'
