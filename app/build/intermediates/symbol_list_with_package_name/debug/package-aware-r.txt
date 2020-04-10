@@ -1770,6 +1770,7 @@ id summary_newRecovered
 id summary_recyclerView
 id summary_totalConfirmed
 id summary_totalDeath
+id summary_totalRecovered
 id tabMode
 id tag_accessibility_actions
 id tag_accessibility_clickable_spans
@@ -1793,6 +1794,7 @@ id textView2
 id textView3
 id textView4
 id textView5
+id textView6
 id text_input_end_icon
 id text_input_start_icon
 id textinput_counter

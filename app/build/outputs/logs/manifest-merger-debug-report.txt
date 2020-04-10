@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:2:1-24:12
-INJECTED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:2:1-24:12
-INJECTED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:2:1-24:12
-INJECTED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:2:1-24:12
+ADDED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:2:1-25:12
+INJECTED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:2:1-25:12
+INJECTED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:2:1-25:12
+INJECTED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:2:1-25:12
 MERGED from [androidx.fragment:fragment-ktx:1.2.4] /home/sundaydavid/.gradle/caches/transforms-2/files-2.1/0cc7c7bf5463ed6bee90856da0700bc6/jetified-fragment-ktx-1.2.4/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.activity:activity-ktx:1.1.0] /home/sundaydavid/.gradle/caches/transforms-2/files-2.1/e097c60eb5f34023431f5b655ace11ce/jetified-activity-ktx-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0] /home/sundaydavid/.gradle/caches/transforms-2/files-2.1/832ca3f7026133f6241ad16f77007d4d/jetified-lifecycle-viewmodel-ktx-2.2.0/AndroidManifest.xml:17:1-24:12
@@ -77,29 +77,33 @@ MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/s
 MERGED from [androidx.print:print:1.0.0] /home/sundaydavid/.gradle/caches/transforms-2/files-2.1/7f965f507d38b4c2f90b65950242b04b/print-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.interpolator:interpolator:1.0.0] /home/sundaydavid/.gradle/caches/transforms-2/files-2.1/c7f0935e7d55a72aff026eb580088845/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.annotation:annotation-experimental:1.0.0] /home/sundaydavid/.gradle/caches/transforms-2/files-2.1/966d2e0c8f35c940208afdfe033085dd/jetified-annotation-experimental-1.0.0/AndroidManifest.xml:17:1-24:12
-INJECTED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:2:1-24:12
-INJECTED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:2:1-24:12
-INJECTED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:2:1-24:12
+INJECTED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:2:1-25:12
+INJECTED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:2:1-25:12
+INJECTED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:2:1-25:12
 	package
 		ADDED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:3:5-44
 		INJECTED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml
 		INJECTED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml
-		ADDED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:2:1-24:12
+		ADDED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:2:1-25:12
 		INJECTED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml
 	android:versionCode
 		INJECTED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml
-		ADDED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:2:1-24:12
+		ADDED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:2:1-25:12
 		INJECTED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:2:11-69
-uses-permission#android.permission.INTERNET
-ADDED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:5:5-66
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:5:5-79
 	android:name
-		ADDED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:5:22-64
+		ADDED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:5:22-76
+uses-permission#android.permission.INTERNET
+ADDED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:6:5-66
+	android:name
+		ADDED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:6:22-64
 application
-ADDED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:6:5-22:19
+ADDED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:7:5-23:19
 MERGED from [org.jetbrains.anko:anko:0.10.8] /home/sundaydavid/.gradle/caches/transforms-2/files-2.1/fa7f3f7514486ad96f0cbb42626dbcb0/jetified-anko-0.10.8/AndroidManifest.xml:11:5-20
 MERGED from [org.jetbrains.anko:anko:0.10.8] /home/sundaydavid/.gradle/caches/transforms-2/files-2.1/fa7f3f7514486ad96f0cbb42626dbcb0/jetified-anko-0.10.8/AndroidManifest.xml:11:5-20
 MERGED from [org.jetbrains.anko:anko-coroutines:0.10.8] /home/sundaydavid/.gradle/caches/transforms-2/files-2.1/3c4cfff55c14a27ddfcb1b3a79186207/jetified-anko-coroutines-0.10.8/AndroidManifest.xml:11:5-20
@@ -141,33 +145,33 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /home/sunda
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.2.0] /home/sundaydavid/.gradle/caches/transforms-2/files-2.1/f8a25a8e7a6c14f5ca703a491b755ba2/core-1.2.0/AndroidManifest.xml:24:18-86
 	android:supportsRtl
-		ADDED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:11:9-35
+		ADDED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:12:9-35
 	android:label
-		ADDED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:9:9-41
+		ADDED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:10:9-41
 	android:roundIcon
-		ADDED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:10:9-54
+		ADDED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:11:9-54
 	android:icon
-		ADDED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:8:9-43
+		ADDED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:9:9-43
 	android:allowBackup
-		ADDED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:7:9-35
+		ADDED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:8:9-35
 	android:theme
-		ADDED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:12:9-40
+		ADDED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:13:9-40
 activity#com.android.ksih_covid_19_app.MainActivity
-ADDED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:13:9-21:20
+ADDED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:14:9-22:20
 	android:label
-		ADDED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:14:13-45
+		ADDED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:15:13-45
 	android:name
-		ADDED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:13:19-47
+		ADDED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:14:19-47
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:15:13-19:29
+ADDED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:16:13-20:29
 action#android.intent.action.MAIN
-ADDED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:16:17-69
+ADDED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:17:17-69
 	android:name
-		ADDED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:16:25-66
+		ADDED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:17:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:18:17-77
+ADDED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:19:17-77
 	android:name
-		ADDED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:18:27-74
+		ADDED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:19:27-74
 uses-sdk
 INJECTED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml
