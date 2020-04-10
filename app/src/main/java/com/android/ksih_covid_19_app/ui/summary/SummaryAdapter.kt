@@ -32,6 +32,7 @@ class SummaryAdapter(private val mainSummaryViewModel: MainSummaryViewModel) :
         holder.newDeath.text = virus.NewDeaths.toString()
         holder.totalDeath.text = virus.TotalDeaths.toString()
         holder.newRecovered.text = virus.NewRecovered.toString()
+        holder.totalRecovered.text = virus.TotalRecovered.toString()
 
     }
 
@@ -48,6 +49,7 @@ class SummaryAdapter(private val mainSummaryViewModel: MainSummaryViewModel) :
         val newDeath: TextView = itemView.findViewById(R.id.summary_newDeath)
         val totalDeath: TextView = itemView.findViewById(R.id.summary_totalDeath)
         val newRecovered: TextView = itemView.findViewById(R.id.summary_newRecovered)
+        val totalRecovered: TextView = itemView.findViewById(R.id.summary_totalRecovered)
 
         val countryFlag: ImageView = itemView.findViewById(R.id.summary_countryFlag)
     }
