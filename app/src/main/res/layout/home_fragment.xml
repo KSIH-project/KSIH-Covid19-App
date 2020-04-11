@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    tools:context=".ui.dayOneTotal.DayOneTotalFragment">
+    tools:context=".MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -13,127 +14,163 @@
         android:background="#31C7F7"
         android:orientation="vertical">
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="200dp"
-        android:layout_height="100dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="50dp"
-        app:cardCornerRadius="15dp">
+        <androidx.cardview.widget.CardView
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            app:cardCornerRadius="15dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/big_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="435678"
+                    android:textColor="@android:color/black"
+                    android:textSize="25sp"
+                    android:layout_marginBottom="10dp"
+                    android:textAppearance="@font/source_serif_pro_bold"/>
+
+                <TextView
+                    android:id="@+id/small_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/total_cofirmed_cases"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/round_corners" />
+
+            <View
+                android:layout_width="200dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/round_right_corner" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/big_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="435678"
-                android:textColor="@android:color/black"
-                android:textSize="14sp" />
-
-            <TextView
-                android:id="@+id/small_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="@string/total_cofirmed_cases"
-                android:textColor="@android:color/black"
-                android:textSize="14sp" />
-
-        </LinearLayout>
-
-    </androidx.cardview.widget.CardView>
-
-    <androidx.appcompat.widget.LinearLayoutCompat
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <View
-            android:layout_width="100dp"
-            android:layout_height="30dp"
-            android:layout_marginLeft="50dp"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/round_corners" />
-
-        <View
-            android:layout_width="200dp"
-            android:layout_height="30dp"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/round_right_corner" />
-
-    </androidx.appcompat.widget.LinearLayoutCompat>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="15dp"
-        android:layout_gravity="center"
-        android:paddingBottom="20dp"
-        android:orientation="horizontal">
-
-        <RadioGroup
-            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="15dp"
+            android:layout_gravity="center"
+            android:paddingBottom="20dp"
             android:orientation="horizontal">
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="#000000"
-                />
-            <TextView
-                android:id="@+id/radio_text_one"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/death_value"
-                android:textColor="@android:color/black"
-                android:layout_marginStart="10dp"
-                android:textSize="14sp" />
-            <TextView
-                android:id="@+id/radio_text_number"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="3425"
-                android:textColor="@android:color/black"
-                android:layout_marginStart="10dp"
-                android:textSize="14sp" />
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginStart="30dp"
-                />
 
-            <TextView
-                android:id="@+id/radio_text_two"
+            <RadioGroup
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/recovered_value"
-                android:textColor="@android:color/black"
-                android:layout_marginStart="10dp"
-                android:textSize="14sp" />
-            <TextView
-                android:id="@+id/radio_text_number2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:text="32456"
-                android:textColor="@android:color/black"
-                android:textSize="14sp" />
-        </RadioGroup>
-    </LinearLayout>
-    </LinearLayout>
+                android:orientation="horizontal">
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#000000"
+                    />
+                <TextView
+                    android:id="@+id/radio_text_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/death_value"
+                    android:textColor="@android:color/black"
+                    android:layout_marginStart="10dp"
+                    android:textSize="14sp" />
+                <TextView
+                    android:id="@+id/radio_text_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3425"
+                    android:textColor="@android:color/black"
+                    android:layout_marginStart="10dp"
+                    android:textSize="14sp" />
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="30dp"
+                    />
 
+                <TextView
+                    android:id="@+id/radio_text_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/recovered_value"
+                    android:textColor="@android:color/black"
+                    android:layout_marginStart="10dp"
+                    android:textSize="14sp" />
+                <TextView
+                    android:id="@+id/radio_text_number2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="32456"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp" />
+            </RadioGroup>
+        </LinearLayout>
+            <androidx.cardview.widget.CardView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="100dp"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="3dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center"
+                    android:background="#0598C8">
+
+                    <TextView
+                        android:id="@+id/countryNumber1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="7656"
+                        android:textColor="#ffffff" />
+
+                    <TextView
+                        android:id="@+id/countryName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Nigeria"
+                        android:textColor="#ffffff" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="center"
         android:background="@drawable/covid_image"
-        android:paddingTop="30dp"
+        android:paddingTop="10dp"
         android:orientation="vertical">
 
         <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
@@ -144,6 +181,7 @@
             android:layout_marginTop="30dp"
             android:background="#000000"
             app:cardCornerRadius="15dp"
+            android:clickable="true"
             app:cardElevation="2dp">
 
             <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -166,7 +204,9 @@
                     android:layout_toRightOf="@+id/cardviewImage1"
                     android:gravity="center"
                     android:text="this text will not be shown"
-                    android:textColor="#000000" />
+                    android:textColor="@android:color/black"
+                    android:textSize="15sp"
+                    />
 
                 <TextView
                     android:id="@+id/countryNumber"
@@ -190,6 +230,7 @@
             android:layout_marginTop="30dp"
             android:background="#000000"
             app:cardCornerRadius="15dp"
+            android:clickable="true"
             app:cardElevation="2dp">
 
             <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -212,7 +253,8 @@
                     android:layout_toRightOf="@+id/cardviewImage2"
                     android:gravity="center"
                     android:text="this text will not be shown"
-                    android:textColor="#000000" />
+                    android:textColor="@android:color/black"
+                    android:textSize="15sp" />
 
                 <TextView
                     android:id="@+id/countryStatusNumber"
@@ -236,6 +278,7 @@
             android:layout_marginTop="30dp"
             android:background="#000000"
             app:cardCornerRadius="15dp"
+            android:clickable="true"
             app:cardElevation="2dp">
 
             <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -258,7 +301,8 @@
                     android:layout_toRightOf="@+id/cardviewImage4"
                     android:gravity="center"
                     android:text="this text will not be shown"
-                    android:textColor="#000000" />
+                    android:textColor="@android:color/black"
+                    android:textSize="15sp" />
 
                 <TextView
                     android:id="@+id/totalNumber"
@@ -281,6 +325,7 @@
             android:layout_marginTop="30dp"
             android:background="#000000"
             app:cardCornerRadius="15dp"
+            android:clickable="true"
             app:cardElevation="2dp">
 
             <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -303,7 +348,8 @@
                     android:layout_toRightOf="@+id/closeImg"
                     android:gravity="center"
                     android:text="this text will not be shown"
-                    android:textColor="#000000" />
+                    android:textColor="@android:color/black"
+                    android:textSize="15sp" />
 
                 <TextView
                     android:id="@+id/mark"
@@ -326,6 +372,7 @@
             android:layout_marginTop="30dp"
             android:background="#000000"
             app:cardCornerRadius="15dp"
+            android:clickable="true"
             app:cardElevation="2dp">
 
             <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -335,20 +382,21 @@
 
                 <ImageView
                     android:id="@+id/summary_image"
-                    android:layout_width="28dp"
+                    android:layout_width="50dp"
                     android:layout_height="400dp"
                     android:layout_alignParentLeft="true"
-                    android:src="@drawable/covid_image" />
+                    android:src="@drawable/ic_cloud_upload_black_24dp" />
 
                 <TextView
                     android:id="@+id/summaryText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="50dp"
+                    android:layout_marginStart="30dp"
                     android:layout_toRightOf="@+id/summary_image"
                     android:gravity="center"
                     android:text="this text will not be shown"
-                    android:textColor="#000000" />
+                    android:textColor="@android:color/black"
+                    android:textSize="15sp" />
 
                 <TextView
                     android:id="@+id/summaryText1"
@@ -362,5 +410,18 @@
                     android:textColor="#000000" />
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
-    </LinearLayout>
+        </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floating_action_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:fabSize="normal"
+        android:visibility="invisible"
+        android:layout_margin="16dp"
+        app:layout_anchor="@id/card_view_five"
+        app:layout_anchorGravity="bottom|right|end"
+        android:contentDescription="jgiugiugiug"
+        android:src="@drawable/ic_add_black_24dp" />
+
 </LinearLayout>
