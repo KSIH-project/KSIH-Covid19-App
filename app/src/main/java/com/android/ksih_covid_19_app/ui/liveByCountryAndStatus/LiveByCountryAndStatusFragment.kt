@@ -7,11 +7,15 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.android.ksih_covid_19_app.R
+import com.android.ksih_covid_19_app.model.Country
 import com.android.ksih_covid_19_app.utility.LiveByCountryAdapter
 import com.android.ksih_covid_19_app.utility.MarginItemDecoration
 import com.android.ksih_covid_19_app.utility.State
+import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.live_by_country_and_status_fragment.*
+import kotlinx.android.synthetic.main.live_by_country_bottom_sheet.*
+import kotlinx.android.synthetic.main.live_by_country_bottom_sheet.view.*
 
 class LiveByCountryAndStatusFragment : Fragment(R.layout.live_by_country_and_status_fragment) {
 
@@ -51,6 +55,23 @@ class LiveByCountryAndStatusFragment : Fragment(R.layout.live_by_country_and_sta
         live_swipeRefresh.setOnRefreshListener {
             viewModel.refreshList()
         }
+
+        // Bottom Sheet
+        val sheetBehaviour = BottomSheetBehavior.from(live_by_country_bottomSheet)
+        if (arguments != null) {
+            val country = requireArguments().getSerializable("country") as Country
+            bottomSheet_confirmed_textView.text = "New Confirmed: ${country.NewConfirmed}"
+            bottomSheet_death_textView.text = "New Deaths: ${country.NewDeaths}"
+            bottomSheet_date_textView.text = "Date: ${country.Date.removeRange(country.Date.indexOf("T") until country.Date.length)}"
+            bottomSheet_recovered_textView.text = "New Recovered: ${country.NewRecovered}"
+            bottomSheet_country_code_textView.text = country.CountryCode
+            if (sheetBehaviour.state != BottomSheetBehavior.STATE_EXPANDED) {
+                sheetBehaviour.state = BottomSheetBehavior.STATE_EXPANDED
+            } else {
+                sheetBehaviour.state = BottomSheetBehavior.STATE_COLLAPSED
+            }
+        }
+
     }
 
     private fun showSnackBar(message: String) {
