@@ -2,4 +2,9 @@
     <string name="app_name">KSIH-Covid-19-app</string>
     <string name="countryname">CountryName</string>
     <string name="total_cofirmed_cases">Total Cofirmed Cases</string>
+    <string name="death_value">DEATH</string>
+    <string name="recovered_value">RECOVERED</string>
+    <string name="country_text">this text will be replaced</string>
+    <string name="countr_number_text">this text will not be shown</string>
+    <string name="radio_text_two">32456</string>
 </resources>

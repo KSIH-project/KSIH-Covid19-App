@@ -3,7 +3,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     tools:context=".MainActivity">
@@ -32,11 +32,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="435678"
-                    android:textColor="@android:color/black"
-                    android:textSize="25sp"
                     android:layout_marginBottom="10dp"
-                    android:textAppearance="@font/source_serif_pro_bold"/>
+                    android:text="435678"
+                    android:textAppearance="@font/source_serif_pro_bold"
+                    android:textColor="@android:color/black"
+                    android:textSize="25sp" />
 
                 <TextView
                     android:id="@+id/small_text"
@@ -74,51 +74,57 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:layout_marginStart="30dp"
             android:layout_marginTop="15dp"
-            android:layout_gravity="center"
-            android:paddingBottom="20dp"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:paddingBottom="20dp">
 
-            <RadioGroup
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="#000000"
-                    />
+                <TextView
+                    android:id="@+id/num_txt"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="0dp"
+                    android:background="@drawable/bg_red"
+                    android:gravity="center" />
+
                 <TextView
                     android:id="@+id/radio_text_one"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
                     android:text="@string/death_value"
                     android:textColor="@android:color/black"
-                    android:layout_marginStart="10dp"
                     android:textSize="14sp" />
+
                 <TextView
                     android:id="@+id/radio_text_number"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
                     android:text="3425"
                     android:textColor="@android:color/black"
-                    android:layout_marginStart="10dp"
                     android:textSize="14sp" />
-                <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginStart="30dp"
-                    />
+
+            <TextView
+                android:id="@+id/num_txt1"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/bg_blue"
+                android:gravity="center"
+                android:textColor="#FFFFFF" />
 
                 <TextView
                     android:id="@+id/radio_text_two"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
                     android:text="@string/recovered_value"
                     android:textColor="@android:color/black"
-                    android:layout_marginStart="10dp"
                     android:textSize="14sp" />
+
                 <TextView
                     android:id="@+id/radio_text_number2"
                     android:layout_width="wrap_content"
@@ -127,66 +133,67 @@
                     android:text="32456"
                     android:textColor="@android:color/black"
                     android:textSize="14sp" />
-            </RadioGroup>
         </LinearLayout>
-            <androidx.cardview.widget.CardView
-                android:layout_width="100dp"
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="100dp"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="3dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginStart="100dp"
-                app:cardCornerRadius="15dp"
-                app:cardElevation="3dp">
+                android:background="#0598C8"
+                android:orientation="vertical">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
+                <TextView
+                    android:id="@+id/countryNumber1"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
                     android:layout_gravity="center"
-                    android:background="#0598C8">
+                    android:text="7656"
+                    android:textColor="#ffffff" />
 
-                    <TextView
-                        android:id="@+id/countryNumber1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:text="7656"
-                        android:textColor="#ffffff" />
+                <TextView
+                    android:id="@+id/countryName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Nigeria"
+                    android:textColor="#ffffff" />
 
-                    <TextView
-                        android:id="@+id/countryName"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:text="Nigeria"
-                        android:textColor="#ffffff" />
+            </LinearLayout>
 
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
+        </androidx.cardview.widget.CardView>
 
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:background="@drawable/covid_image"
-        android:paddingTop="10dp"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:paddingTop="10dp">
 
         <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
             android:id="@+id/card_view_one"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="20dp"
             android:background="#000000"
-            app:cardCornerRadius="15dp"
             android:clickable="true"
+            app:cardCornerRadius="15dp"
             app:cardElevation="2dp">
 
             <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="60dp"
                 android:padding="0dp">
 
                 <ImageView
@@ -203,10 +210,12 @@
                     android:layout_marginStart="50dp"
                     android:layout_toRightOf="@+id/cardviewImage1"
                     android:gravity="center"
-                    android:text="this text will not be shown"
+                    android:fontFamily="Sanchez"
+                    android:textStyle="bold"
+                    android:text="Country"
+                    android:textAppearance="@font/source_serif_pro_bold"
                     android:textColor="@android:color/black"
-                    android:textSize="15sp"
-                    />
+                    android:textSize="15sp" />
 
                 <TextView
                     android:id="@+id/countryNumber"
@@ -227,15 +236,15 @@
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="20dp"
             android:background="#000000"
-            app:cardCornerRadius="15dp"
             android:clickable="true"
+            app:cardCornerRadius="15dp"
             app:cardElevation="2dp">
 
             <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="60dp"
                 android:padding="0dp">
 
                 <ImageView
@@ -252,7 +261,10 @@
                     android:layout_marginStart="50dp"
                     android:layout_toRightOf="@+id/cardviewImage2"
                     android:gravity="center"
-                    android:text="this text will not be shown"
+                    android:fontFamily="Sanchez"
+                    android:textStyle="bold"
+                    android:text="Live by Country and Status"
+                    android:textAppearance="@font/source_serif_pro_bold"
                     android:textColor="@android:color/black"
                     android:textSize="15sp" />
 
@@ -275,15 +287,15 @@
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="20dp"
             android:background="#000000"
-            app:cardCornerRadius="15dp"
             android:clickable="true"
+            app:cardCornerRadius="15dp"
             app:cardElevation="2dp">
 
             <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="60dp"
                 android:padding="0dp">
 
                 <ImageView
@@ -300,7 +312,10 @@
                     android:layout_marginStart="50dp"
                     android:layout_toRightOf="@+id/cardviewImage4"
                     android:gravity="center"
-                    android:text="this text will not be shown"
+                    android:fontFamily="Sanchez"
+                    android:textStyle="bold"
+                    android:text="Day One Total"
+                    android:textAppearance="@font/source_serif_pro_bold"
                     android:textColor="@android:color/black"
                     android:textSize="15sp" />
 
@@ -322,15 +337,15 @@
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="20dp"
             android:background="#000000"
-            app:cardCornerRadius="15dp"
             android:clickable="true"
+            app:cardCornerRadius="15dp"
             app:cardElevation="2dp">
 
             <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="60dp"
                 android:padding="0dp">
 
                 <ImageView
@@ -347,7 +362,10 @@
                     android:layout_marginStart="50dp"
                     android:layout_toRightOf="@+id/closeImg"
                     android:gravity="center"
-                    android:text="this text will not be shown"
+                    android:fontFamily="Sanchez"
+                    android:textStyle="bold"
+                    android:text="Search By Date"
+                    android:textAppearance="@font/source_serif_pro_bold"
                     android:textColor="@android:color/black"
                     android:textSize="15sp" />
 
@@ -369,15 +387,15 @@
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="20dp"
             android:background="#000000"
-            app:cardCornerRadius="15dp"
             android:clickable="true"
+            app:cardCornerRadius="15dp"
             app:cardElevation="2dp">
 
             <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="60dp"
                 android:padding="0dp">
 
                 <ImageView
@@ -394,7 +412,10 @@
                     android:layout_marginStart="30dp"
                     android:layout_toRightOf="@+id/summary_image"
                     android:gravity="center"
-                    android:text="this text will not be shown"
+                    android:text="Summary"
+                    android:fontFamily="Sanchez"
+                    android:textStyle="bold"
+                    android:textAppearance="@font/source_serif_pro_bold"
                     android:textColor="@android:color/black"
                     android:textSize="15sp" />
 
@@ -410,18 +431,18 @@
                     android:textColor="#000000" />
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
-        </LinearLayout>
+    </LinearLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/floating_action_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:fabSize="normal"
-        android:visibility="invisible"
+        android:visibility="visible"
         android:layout_margin="16dp"
         app:layout_anchor="@id/card_view_five"
         app:layout_anchorGravity="bottom|right|end"
-        android:contentDescription="jgiugiugiug"
+        android:elevation="6dp"
         android:src="@drawable/ic_add_black_24dp" />
 
 </LinearLayout>

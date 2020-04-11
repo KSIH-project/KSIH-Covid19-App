@@ -1,110 +1,178 @@
 [
     {
-        "merged": "C:\\Users\\SegunFrancis\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\SegunFrancis\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
+        "merged": "C:\\Users\\Gino\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable_fab.png.flat",
+        "source": "C:\\Users\\Gino\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\src\\main\\res\\drawable\\fab.png"
     },
     {
-        "merged": "C:\\Users\\SegunFrancis\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "C:\\Users\\SegunFrancis\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+        "merged": "C:\\Users\\Gino\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\build\\intermediates\\res\\merged\\debug\\font_source_serif_pro_bold.ttf.flat",
+        "source": "C:\\Users\\Gino\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\src\\main\\res\\font\\source_serif_pro_bold.ttf"
     },
     {
-        "merged": "C:\\Users\\SegunFrancis\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\SegunFrancis\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
+        "merged": "C:\\Users\\Gino\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable_round_corners.xml.flat",
+        "source": "C:\\Users\\Gino\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\src\\main\\res\\drawable\\round_corners.xml"
     },
     {
-        "merged": "C:\\Users\\SegunFrancis\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_launcher_background.png.flat",
-        "source": "C:\\Users\\SegunFrancis\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_launcher_background.png"
+        "merged": "C:\\Users\\Gino\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\Gino\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\SegunFrancis\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "C:\\Users\\SegunFrancis\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
+        "merged": "C:\\Users\\Gino\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\Gino\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\src\\main\\res\\drawable-v24\\ic_launcher_foreground.xml"
     },
     {
-        "merged": "C:\\Users\\SegunFrancis\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\SegunFrancis\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
+        "merged": "C:\\Users\\Gino\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Gino\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\SegunFrancis\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_launcher_background.png.flat",
-        "source": "C:\\Users\\SegunFrancis\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_launcher_background.png"
+        "merged": "C:\\Users\\Gino\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Gino\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\SegunFrancis\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\build\\intermediates\\res\\merged\\debug\\layout_home_fragment.xml.flat",
-        "source": "C:\\Users\\SegunFrancis\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\src\\main\\res\\layout\\home_fragment.xml"
+        "merged": "C:\\Users\\Gino\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\Gino\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\SegunFrancis\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_launcher_background.png.flat",
-        "source": "C:\\Users\\SegunFrancis\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_launcher_background.png"
+        "merged": "C:\\Users\\Gino\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\Gino\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
     },
     {
-        "merged": "C:\\Users\\SegunFrancis\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_launcher_background.png.flat",
-        "source": "C:\\Users\\SegunFrancis\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_launcher_background.png"
+        "merged": "C:\\Users\\Gino\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_check_circle_black_24dp.xml.flat",
+        "source": "C:\\Users\\Gino\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\src\\main\\res\\drawable\\ic_check_circle_black_24dp.xml"
     },
     {
-        "merged": "C:\\Users\\SegunFrancis\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\build\\intermediates\\res\\merged\\debug\\layout_country_fragment.xml.flat",
-        "source": "C:\\Users\\SegunFrancis\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\src\\main\\res\\layout\\country_fragment.xml"
+        "merged": "C:\\Users\\Gino\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_add_black_24dp.xml.flat",
+        "source": "C:\\Users\\Gino\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\src\\main\\res\\drawable\\ic_add_black_24dp.xml"
     },
     {
-        "merged": "C:\\Users\\SegunFrancis\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\build\\intermediates\\res\\merged\\debug\\layout_summary_fragment.xml.flat",
-        "source": "C:\\Users\\SegunFrancis\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\src\\main\\res\\layout\\summary_fragment.xml"
+        "merged": "C:\\Users\\Gino\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_patient.xml.flat",
+        "source": "C:\\Users\\Gino\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\src\\main\\res\\drawable\\ic_patient.xml"
     },
     {
-        "merged": "C:\\Users\\SegunFrancis\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\build\\intermediates\\res\\merged\\debug\\layout_live_by_country_and_status_fragment.xml.flat",
-        "source": "C:\\Users\\SegunFrancis\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\src\\main\\res\\layout\\live_by_country_and_status_fragment.xml"
+        "merged": "C:\\Users\\Gino\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Gino\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\SegunFrancis\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\SegunFrancis\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+        "merged": "C:\\Users\\Gino\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\build\\intermediates\\res\\merged\\debug\\layout_home_fragment.xml.flat",
+        "source": "C:\\Users\\Gino\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\src\\main\\res\\layout\\home_fragment.xml"
     },
     {
-        "merged": "C:\\Users\\SegunFrancis\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\build\\intermediates\\res\\merged\\debug\\navigation_nav_graph.xml.flat",
-        "source": "C:\\Users\\SegunFrancis\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\src\\main\\res\\navigation\\nav_graph.xml"
+        "merged": "C:\\Users\\Gino\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\build\\intermediates\\res\\merged\\debug\\layout_live_by_country_and_status_fragment.xml.flat",
+        "source": "C:\\Users\\Gino\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\src\\main\\res\\layout\\live_by_country_and_status_fragment.xml"
     },
     {
-        "merged": "C:\\Users\\SegunFrancis\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\SegunFrancis\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
+        "merged": "C:\\Users\\Gino\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bg_blue.xml.flat",
+        "source": "C:\\Users\\Gino\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\src\\main\\res\\drawable\\bg_blue.xml"
     },
     {
-        "merged": "C:\\Users\\SegunFrancis\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_launcher_background.png.flat",
-        "source": "C:\\Users\\SegunFrancis\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_launcher_background.png"
+        "merged": "C:\\Users\\Gino\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_arrow_back.xml.flat",
+        "source": "C:\\Users\\Gino\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\src\\main\\res\\drawable\\ic_arrow_back.xml"
     },
     {
-        "merged": "C:\\Users\\SegunFrancis\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_launcher_background.png.flat",
-        "source": "C:\\Users\\SegunFrancis\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_launcher_background.png"
+        "merged": "C:\\Users\\Gino\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\build\\intermediates\\res\\merged\\debug\\font_sanchez.ttf.flat",
+        "source": "C:\\Users\\Gino\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\src\\main\\res\\font\\sanchez.ttf"
     },
     {
-        "merged": "C:\\Users\\SegunFrancis\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\SegunFrancis\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+        "merged": "C:\\Users\\Gino\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bg_red.xml.flat",
+        "source": "C:\\Users\\Gino\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\src\\main\\res\\drawable\\bg_red.xml"
     },
     {
-        "merged": "C:\\Users\\SegunFrancis\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
-        "source": "C:\\Users\\SegunFrancis\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\src\\main\\res\\layout\\activity_main.xml"
+        "merged": "C:\\Users\\Gino\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_medicine.xml.flat",
+        "source": "C:\\Users\\Gino\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\src\\main\\res\\drawable\\ic_medicine.xml"
     },
     {
-        "merged": "C:\\Users\\SegunFrancis\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\build\\intermediates\\res\\merged\\debug\\layout_search_fragment.xml.flat",
-        "source": "C:\\Users\\SegunFrancis\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\src\\main\\res\\layout\\search_fragment.xml"
+        "merged": "C:\\Users\\Gino\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\build\\intermediates\\res\\merged\\debug\\layout_search_fragment.xml.flat",
+        "source": "C:\\Users\\Gino\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\src\\main\\res\\layout\\search_fragment.xml"
     },
     {
-        "merged": "C:\\Users\\SegunFrancis\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\SegunFrancis\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
+        "merged": "C:\\Users\\Gino\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Gino\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\SegunFrancis\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\SegunFrancis\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
+        "merged": "C:\\Users\\Gino\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\build\\intermediates\\res\\merged\\debug\\layout_summary_fragment.xml.flat",
+        "source": "C:\\Users\\Gino\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\src\\main\\res\\layout\\summary_fragment.xml"
     },
     {
-        "merged": "C:\\Users\\SegunFrancis\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_launcher_background.xml.flat",
-        "source": "C:\\Users\\SegunFrancis\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_launcher_background.xml"
+        "merged": "C:\\Users\\Gino\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\build\\intermediates\\res\\merged\\debug\\layout_country_fragment.xml.flat",
+        "source": "C:\\Users\\Gino\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\src\\main\\res\\layout\\country_fragment.xml"
     },
     {
-        "merged": "C:\\Users\\SegunFrancis\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\SegunFrancis\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
+        "merged": "C:\\Users\\Gino\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Gino\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\SegunFrancis\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_launcher_foreground.xml.flat",
-        "source": "C:\\Users\\SegunFrancis\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\src\\main\\res\\drawable-v24\\ic_launcher_foreground.xml"
+        "merged": "C:\\Users\\Gino\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\Gino\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
     },
     {
-        "merged": "C:\\Users\\SegunFrancis\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\SegunFrancis\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+        "merged": "C:\\Users\\Gino\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_world.xml.flat",
+        "source": "C:\\Users\\Gino\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\src\\main\\res\\drawable\\ic_world.xml"
+    },
+    {
+        "merged": "C:\\Users\\Gino\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_sneeze.xml.flat",
+        "source": "C:\\Users\\Gino\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\src\\main\\res\\drawable\\ic_sneeze.xml"
+    },
+    {
+        "merged": "C:\\Users\\Gino\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_cloud_upload_black_24dp.xml.flat",
+        "source": "C:\\Users\\Gino\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\src\\main\\res\\drawable\\ic_cloud_upload_black_24dp.xml"
+    },
+    {
+        "merged": "C:\\Users\\Gino\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable_round_right_corner.xml.flat",
+        "source": "C:\\Users\\Gino\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\src\\main\\res\\drawable\\round_right_corner.xml"
+    },
+    {
+        "merged": "C:\\Users\\Gino\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\Gino\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\Gino\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_live.xml.flat",
+        "source": "C:\\Users\\Gino\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\src\\main\\res\\drawable\\ic_live.xml"
+    },
+    {
+        "merged": "C:\\Users\\Gino\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\build\\intermediates\\res\\merged\\debug\\navigation_nav_graph.xml.flat",
+        "source": "C:\\Users\\Gino\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\src\\main\\res\\navigation\\nav_graph.xml"
+    },
+    {
+        "merged": "C:\\Users\\Gino\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable_top_card_view.xml.flat",
+        "source": "C:\\Users\\Gino\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\src\\main\\res\\drawable\\top_card_view.xml"
+    },
+    {
+        "merged": "C:\\Users\\Gino\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_search.xml.flat",
+        "source": "C:\\Users\\Gino\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\src\\main\\res\\drawable\\ic_search.xml"
+    },
+    {
+        "merged": "C:\\Users\\Gino\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable_background.png.flat",
+        "source": "C:\\Users\\Gino\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\src\\main\\res\\drawable\\background.png"
+    },
+    {
+        "merged": "C:\\Users\\Gino\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_doctor.xml.flat",
+        "source": "C:\\Users\\Gino\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\src\\main\\res\\drawable\\ic_doctor.xml"
+    },
+    {
+        "merged": "C:\\Users\\Gino\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable_background_image_shape.xml.flat",
+        "source": "C:\\Users\\Gino\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\src\\main\\res\\drawable\\background_image_shape.xml"
+    },
+    {
+        "merged": "C:\\Users\\Gino\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable_covid_image.png.flat",
+        "source": "C:\\Users\\Gino\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\src\\main\\res\\drawable\\covid_image.png"
+    },
+    {
+        "merged": "C:\\Users\\Gino\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\Gino\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\Gino\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\Gino\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Gino\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_calendar.xml.flat",
+        "source": "C:\\Users\\Gino\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\src\\main\\res\\drawable\\ic_calendar.xml"
+    },
+    {
+        "merged": "C:\\Users\\Gino\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\Gino\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\Gino\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\Gino\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
     }
 ]
