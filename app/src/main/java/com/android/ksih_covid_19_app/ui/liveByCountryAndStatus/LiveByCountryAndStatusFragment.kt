@@ -7,6 +7,8 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.android.ksih_covid_19_app.R
+import com.android.ksih_covid_19_app.utility.LiveByCountryAdapter
+import com.android.ksih_covid_19_app.utility.MarginItemDecoration
 import com.android.ksih_covid_19_app.utility.State
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.live_by_country_and_status_fragment.*
@@ -17,25 +19,45 @@ class LiveByCountryAndStatusFragment : Fragment(R.layout.live_by_country_and_sta
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        viewModel = ViewModelProvider(requireActivity()).get(LiveByCountryAndStatusViewModel::class.java)
+        live_recyclerView.addItemDecoration(MarginItemDecoration(16))
+        viewModel =
+            ViewModelProvider(requireActivity()).get(LiveByCountryAndStatusViewModel::class.java)
         viewModel.responseMessage.observe(viewLifecycleOwner, Observer {
             it.getContentIfNotHandled()?.let { result ->
                 when (result.status) {
-                    State.LOADING -> showSnackBar(result.message!!)
-                    State.SUCCESS -> showSnackBar(result.message!!)
-                    State.ERROR -> showSnackBar(result.message!!)
+                    State.LOADING -> refresh(result.isRefreshing!!)
+                    State.SUCCESS -> {
+                        showSnackBar(result.message!!)
+                        refresh(result.isRefreshing!!)
+                    }
+                    State.ERROR -> {
+                        showSnackBar(result.message!!)
+                        refresh(result.isRefreshing!!)
+                    }
                 }
             }
         })
+
         viewModel.getCountryAndNewCasesList().observe(viewLifecycleOwner, Observer { countryList ->
             val countries = countryList.filter { country ->
                 country.NewConfirmed > 0
             }
-            Log.d("LiveByCountryFrag", countries.toString())
+            val adapter = LiveByCountryAdapter()
+            adapter.displayData(countries)
+            live_recyclerView.adapter = adapter
+            Log.d("LiveByCountrySize", adapter.itemCount.toString())
         })
+
+        live_swipeRefresh.setOnRefreshListener {
+            viewModel.refreshList()
+        }
     }
 
     private fun showSnackBar(message: String) {
-        Snackbar.make(frame_layout, message, Snackbar.LENGTH_LONG).show()
+        Snackbar.make(live_swipeRefresh, message, Snackbar.LENGTH_LONG).show()
+    }
+
+    private fun refresh(value: Boolean) {
+        live_swipeRefresh.isRefreshing = value
     }
 }

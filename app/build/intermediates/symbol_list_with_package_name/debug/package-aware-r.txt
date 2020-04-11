@@ -1587,6 +1587,7 @@ id content
 id contentPanel
 id coordinator
 id countryFragment
+id country_name_textView
 id custom
 id customPanel
 id cut
@@ -1622,7 +1623,6 @@ id floating
 id forever
 id fragment
 id fragment_container_view_tag
-id frame_layout
 id ghost_view
 id ghost_view_holder
 id gone
@@ -1649,6 +1649,8 @@ id line3
 id listMode
 id list_item
 id liveByCountryAndStatusFragment
+id live_recyclerView
+id live_swipeRefresh
 id masked
 id media_actions
 id message
@@ -1686,6 +1688,7 @@ id nav_graph
 id nav_host_fragment_container
 id navigation_header_container
 id never
+id new_cases_textView
 id noScroll
 id none
 id normal
@@ -1891,6 +1894,7 @@ layout design_text_input_start_icon
 layout fragment_individual_country_detail
 layout home_fragment
 layout live_by_country_and_status_fragment
+layout live_by_country_list_item
 layout mtrl_alert_dialog
 layout mtrl_alert_dialog_actions
 layout mtrl_alert_dialog_title

@@ -25,6 +25,7 @@ class LiveByCountryAndStatusViewModel(myApplication: Application) :
     private val repository: BaseRepository
     private val dao: Covid19Dao = Covid19RoomDatabase.getDatabase(myApplication).covid19Dao()
     var responseMessage = MutableLiveData<Event<Result<Summary>>>()
+    var isRefreshing = MutableLiveData<Boolean>(false)
 
     init {
         repository = BaseRepository(covid19Api, dao)
@@ -32,13 +33,29 @@ class LiveByCountryAndStatusViewModel(myApplication: Application) :
     }
 
     private fun getSummaryRemote() {
-        responseMessage.postValue(Event(Result(State.LOADING, message = "Loading...")))
+        responseMessage.postValue(
+            Event(
+                Result(
+                    State.LOADING,
+                    message = "Loading...",
+                    isRefreshing = true
+                )
+            )
+        )
         repository.getSummary().enqueue(object : Callback<Summary?> {
             override fun onResponse(call: Call<Summary?>, response: Response<Summary?>) {
                 viewModelScope.launch {
                     repository.setCountryAndNewCasesListLocal(response.body()!!.Countries)
                 }
-                responseMessage.postValue(Event(Result(State.SUCCESS, message = "Success")))
+                responseMessage.postValue(
+                    Event(
+                        Result(
+                            State.SUCCESS,
+                            message = "Success",
+                            isRefreshing = false
+                        )
+                    )
+                )
                 Log.d("LiveByViewModel", "Loaded")
             }
 
@@ -48,7 +65,8 @@ class LiveByCountryAndStatusViewModel(myApplication: Application) :
                         Result(
                             State.ERROR,
                             message = "Check Network Connection",
-                            error = t
+                            error = t,
+                            isRefreshing = false
                         )
                     )
                 )
@@ -59,5 +77,9 @@ class LiveByCountryAndStatusViewModel(myApplication: Application) :
 
     fun getCountryAndNewCasesList(): LiveData<List<Country>> {
         return repository.getCountryAndNewCasesListLocal()
+    }
+
+    fun refreshList() {
+        getSummaryRemote()
     }
 }
