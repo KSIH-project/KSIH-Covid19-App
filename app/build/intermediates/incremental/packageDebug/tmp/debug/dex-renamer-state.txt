@@ -1,7 +1,4 @@
-#Sat Apr 11 16:07:09 WAT 2020
-base.0=C\:\\Users\\Gino\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\out\\classes.dex
-path.1=classes.dex
-renamed.1=classes2.dex
+#Sun Apr 12 11:26:19 WAT 2020
+base.0=/home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/build/intermediates/dex/debug/out/classes.dex
 path.0=classes.dex
 renamed.0=classes.dex
-base.1=C\:\\Users\\Gino\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\out\\classes.dex

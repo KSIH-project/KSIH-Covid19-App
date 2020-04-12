@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Gino\\AndroidStudioProjects\\KSIH-Covid19-App\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-hdpi-v4\\values-hdpi-v4.xml",
+            "outputFile": "/home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-hdpi-v4/values-hdpi-v4.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Gino\\.gradle\\caches\\transforms-2\\files-2.1\\5988781b109aa2e81ee2deed8375ae92\\appcompat-1.1.0\\res\\values-hdpi-v4\\values-hdpi-v4.xml",
+                    "source": "/home/sundaydavid/.gradle/caches/transforms-2/files-2.1/5988781b109aa2e81ee2deed8375ae92/appcompat-1.1.0/res/values-hdpi-v4/values-hdpi-v4.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

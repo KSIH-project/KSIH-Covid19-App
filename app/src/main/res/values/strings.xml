@@ -7,4 +7,7 @@
     <string name="country_text">this text will be replaced</string>
     <string name="countr_number_text">this text will not be shown</string>
     <string name="radio_text_two">32456</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
