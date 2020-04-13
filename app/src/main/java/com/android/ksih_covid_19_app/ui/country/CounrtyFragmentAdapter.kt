@@ -11,7 +11,7 @@ import com.android.ksih_covid_19_app.R
 import com.android.ksih_covid_19_app.model.Country
 import java.util.jar.Attributes
 
-class CounrtyFragmentAdapter(private val context: Context, private val Country: List<Country>) :
+class CounrtyFragmentAdapter(val context: Context, private val Country: List<Country>) :
     RecyclerView.Adapter<CounrtyFragmentAdapter.ViewHolder>() {
 
     private val layoutInflater = LayoutInflater.from(context)
