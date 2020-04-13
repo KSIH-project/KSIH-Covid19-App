@@ -94,7 +94,7 @@ class SummaryFragment : Fragment() {
                         Snackbar.LENGTH_LONG
                     )
                     .setAction(
-                        "Reload"
+                        "Reload Data"
                     ) { view: View? ->
                         viewModel.fetchSummaryList()
                         setUpAdapter()
@@ -120,13 +120,6 @@ class SummaryFragment : Fragment() {
                         "No internet Connection! ",
                         Snackbar.LENGTH_LONG
                     )
-                    .setAction(
-                        "Retry"
-                    ) { view: View? ->
-                        viewModel.fetchSummaryList()
-                        setUpAdapter()
-                       setUpObservers()
-                    }
                 // customizing snackbar
                 snackbar.setActionTextColor(Color.BLACK)
                 val view = snackbar.view

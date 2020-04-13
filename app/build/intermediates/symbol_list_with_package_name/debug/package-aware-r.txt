@@ -880,6 +880,7 @@ color error_color_material_dark
 color error_color_material_light
 color foreground_material_dark
 color foreground_material_light
+color green
 color highlighted_text_material_dark
 color highlighted_text_material_light
 color material_blue_grey_800
@@ -971,6 +972,7 @@ color primary_text_default_material_dark
 color primary_text_default_material_light
 color primary_text_disabled_material_dark
 color primary_text_disabled_material_light
+color red
 color ripple_material_dark
 color ripple_material_light
 color secondary_text_default_material_dark
@@ -988,6 +990,7 @@ color test_mtrl_calendar_day_selected
 color tooltip_background_dark
 color tooltip_background_light
 color white
+color yellow
 dimen abc_action_bar_content_inset_material
 dimen abc_action_bar_content_inset_with_nav
 dimen abc_action_bar_default_height_material
@@ -1433,6 +1436,7 @@ drawable btn_radio_off_mtrl
 drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
+drawable country_code_shape
 drawable covid_image
 drawable design_bottom_navigation_item_background
 drawable design_fab_background
@@ -1488,6 +1492,7 @@ drawable notify_panel_notification_icon_bg
 drawable test_custom_background
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
+font lily_script_one
 font sanchez
 font source_serif_pro_bold
 id ALT
@@ -1764,7 +1769,7 @@ id submenuarrow
 id submit_area
 id summaryFragment
 id summary_country
-id summary_countryFlag
+id summary_countryTag
 id summary_newConfirmed
 id summary_newDeath
 id summary_newRecovered

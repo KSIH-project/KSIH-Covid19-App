@@ -13,6 +13,7 @@ import com.android.ksih_covid_19_app.model.Country
 import com.android.ksih_covid_19_app.model.Summary
 import kotlinx.android.synthetic.main.summary_list_item.view.*
 import org.w3c.dom.Text
+import java.util.*
 
 class SummaryAdapter(private val mainSummaryViewModel: MainSummaryViewModel) :
     RecyclerView.Adapter<SummaryAdapter.ViewHolder>(){
@@ -35,12 +36,28 @@ class SummaryAdapter(private val mainSummaryViewModel: MainSummaryViewModel) :
         holder.totalDeath.text = virus.TotalDeaths.toString()
         holder.newRecovered.text = virus.NewRecovered.toString()
         holder.totalRecovered.text = virus.TotalRecovered.toString()
+//        holder.countryTag.text = virus.CountryCode
+        holder.countryTag.text = countryCodeToEmojiFlag(virus.CountryCode)
 
     }
 
     fun updateSummaryList( summary: List<Country>){
         this.summary = summary
         notifyDataSetChanged()
+    }
+
+    fun countryCodeToEmojiFlag(countryCode: String): String {
+        return countryCode
+            .toUpperCase(Locale.ROOT)
+            .map { char ->
+                Character.codePointAt("$char", 0) - 0x41 + 0x1F1E6
+            }
+            .map { codePoint ->
+                Character.toChars(codePoint)
+            }
+            .joinToString(separator = "") { charArray ->
+                String(charArray)
+            }
     }
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
@@ -52,7 +69,6 @@ class SummaryAdapter(private val mainSummaryViewModel: MainSummaryViewModel) :
         val totalDeath: TextView = itemView.findViewById(R.id.summary_totalDeath)
         val newRecovered: TextView = itemView.findViewById(R.id.summary_newRecovered)
         val totalRecovered: TextView = itemView.findViewById(R.id.summary_totalRecovered)
-
-        val countryFlag: ImageView = itemView.findViewById(R.id.summary_countryFlag)
+        val countryTag: TextView = itemView.findViewById(R.id.summary_countryTag)
     }
 }
