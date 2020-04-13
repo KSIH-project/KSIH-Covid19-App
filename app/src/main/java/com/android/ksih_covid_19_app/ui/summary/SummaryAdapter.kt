@@ -11,7 +11,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.android.ksih_covid_19_app.R
 import com.android.ksih_covid_19_app.model.Country
 import com.android.ksih_covid_19_app.model.Summary
-import kotlinx.android.synthetic.main.summary_list_item.view.*
 import org.w3c.dom.Text
 import java.util.*
 
@@ -21,7 +20,7 @@ class SummaryAdapter(private val mainSummaryViewModel: MainSummaryViewModel) :
     var summary: List<Country> = emptyList()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val v = LayoutInflater.from(parent.context).inflate(R.layout.summary_list_item, parent, false)
+        val v = LayoutInflater.from(parent.context).inflate(R.layout.summary_list, parent, false)
         return ViewHolder(v)
     }
 
