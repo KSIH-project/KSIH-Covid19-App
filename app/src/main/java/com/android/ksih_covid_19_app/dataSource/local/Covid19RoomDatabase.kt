@@ -19,7 +19,7 @@ import com.android.ksih_covid_19_app.model.Summary
     entities = [
         LiveByCountryAndStatusItem::class,
         DayOneTotalResponseItem::class,
-        Country::class, Summary::class
+        Country::class
     ]
 )
 abstract class Covid19RoomDatabase : RoomDatabase() {
