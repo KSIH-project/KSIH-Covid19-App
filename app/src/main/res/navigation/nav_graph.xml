@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.android.ksih_covid_19_app.ui.dayOneTotal.DayOneTotalFragment"
+        android:name="com.android.ksih_covid_19_app.ui.home.HomeFragment"
         android:label="home_fragment"
         tools:layout="@layout/home_fragment" />
     <fragment
@@ -20,6 +20,13 @@
         android:name="com.android.ksih_covid_19_app.ui.liveByCountryAndStatus.LiveByCountryAndStatusFragment"
         android:label="live_by_country_and_status_fragment"
         tools:layout="@layout/live_by_country_and_status_fragment" />
+
+    <fragment
+        android:id="@+id/dayOneTotalFragment"
+        android:name="com.android.ksih_covid_19_app.ui.dayOneTotal.DayOneTotalFragment"
+        android:label="Day one Total"
+        tools:layout="@layout/fragment_day_one_total" />
+
     <fragment
         android:id="@+id/searchFragment"
         android:name="com.android.ksih_covid_19_app.ui.search.SearchFragment"
