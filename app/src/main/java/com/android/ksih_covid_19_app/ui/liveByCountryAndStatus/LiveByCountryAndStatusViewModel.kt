@@ -25,7 +25,6 @@ class LiveByCountryAndStatusViewModel(myApplication: Application) :
     private val repository: BaseRepository
     private val dao: Covid19Dao = Covid19RoomDatabase.getDatabase(myApplication).covid19Dao()
     var responseMessage = MutableLiveData<Event<Result<Summary>>>()
-    var isRefreshing = MutableLiveData<Boolean>(false)
 
     init {
         repository = BaseRepository(covid19Api, dao)

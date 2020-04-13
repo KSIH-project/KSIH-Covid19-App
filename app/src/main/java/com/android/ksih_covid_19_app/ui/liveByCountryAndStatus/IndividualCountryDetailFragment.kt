@@ -1,42 +1,47 @@
 package com.android.ksih_covid_19_app.ui.liveByCountryAndStatus
 
 import android.os.Bundle
-import android.util.Log
+import android.view.LayoutInflater
 import android.view.View
+import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.viewModels
-import androidx.lifecycle.Observer
 
 import com.android.ksih_covid_19_app.R
-import com.android.ksih_covid_19_app.utility.State
-import com.google.android.material.snackbar.Snackbar
+import com.android.ksih_covid_19_app.model.Country
+import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import kotlinx.android.synthetic.main.fragment_individual_country_detail.*
+import java.text.DecimalFormat
 
 /**
  * A simple [Fragment] subclass.
  */
-class IndividualCountryDetailFragment : Fragment(R.layout.fragment_individual_country_detail) {
-    private val viewModel: IndividualCountryViewModel by viewModels()
+class IndividualCountryDetailFragment : BottomSheetDialogFragment() {
+
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        return inflater.inflate(R.layout.fragment_individual_country_detail, container, false)
+    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        viewModel.getLiveByCountryRemote("nigeria")
-
-        viewModel.getLiveByCountryLocal("nigeria").observe(viewLifecycleOwner, Observer {
-            Log.d("LiveByCountryFragment", it.toString())
-        })
-
-        viewModel.responseMessage.observe(viewLifecycleOwner, Observer {
-            when(it.status) {
-                State.LOADING -> showSnackBar(it.message!!)
-                State.SUCCESS -> showSnackBar(it.message!!)
-                State.ERROR -> showSnackBar(it.message!!)
-            }
-        })
+        if (arguments != null) {
+            val country = requireArguments().getSerializable("country") as Country
+            bottomSheet_confirmed_textView.text = "New Confirmed: ${country.NewConfirmed}"
+            bottomSheet_death_textView.text = "New Deaths: ${country.NewDeaths}"
+            bottomSheet_date_textView.text = "Date: ${country.Date.removeRange(country.Date.indexOf("T") until country.Date.length)}"
+            bottomSheet_recovered_textView.text = "New Recovered: ${country.NewRecovered}"
+            bottomSheet_country_code_textView.text = country.CountryCode
+            bottomSheet_recovered_percentage.text = percentageCase(country.NewRecovered, country.NewConfirmed).plus("%")
+            bottomSheet_death_percentage.text = percentageCase(country.NewDeaths, country.NewConfirmed).plus("%")
+        }
     }
 
-    private fun showSnackBar(message: String) {
-        Snackbar.make(root, message, Snackbar.LENGTH_LONG).show()
+    private fun percentageCase(value: Int, confirmed: Int): String {
+        val percentage = value.toDouble().div(confirmed.toDouble()).times(100.0)
+        val format = DecimalFormat("0.00")
+        return format.format(percentage)
     }
 }

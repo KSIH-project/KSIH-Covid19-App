@@ -3,27 +3,30 @@ package com.android.ksih_covid_19_app.ui.liveByCountryAndStatus
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.android.ksih_covid_19_app.R
 import com.android.ksih_covid_19_app.model.Country
-import com.android.ksih_covid_19_app.utility.LiveByCountryAdapter
-import com.android.ksih_covid_19_app.utility.MarginItemDecoration
+import com.android.ksih_covid_19_app.utility.adapter.LiveByCountryAdapter
+import com.android.ksih_covid_19_app.utility.adapter.MarginItemDecoration
 import com.android.ksih_covid_19_app.utility.State
-import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.live_by_country_and_status_fragment.*
-import kotlinx.android.synthetic.main.live_by_country_bottom_sheet.*
-import kotlinx.android.synthetic.main.live_by_country_bottom_sheet.view.*
 
-class LiveByCountryAndStatusFragment : Fragment(R.layout.live_by_country_and_status_fragment) {
+class LiveByCountryAndStatusFragment : Fragment(R.layout.live_by_country_and_status_fragment),
+    LiveByCountryAdapter.OnCovidItemClickListener {
 
     private lateinit var viewModel: LiveByCountryAndStatusViewModel
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        live_recyclerView.addItemDecoration(MarginItemDecoration(16))
+        live_recyclerView.addItemDecoration(
+            MarginItemDecoration(
+                16
+            )
+        )
         viewModel =
             ViewModelProvider(requireActivity()).get(LiveByCountryAndStatusViewModel::class.java)
         viewModel.responseMessage.observe(viewLifecycleOwner, Observer {
@@ -35,7 +38,7 @@ class LiveByCountryAndStatusFragment : Fragment(R.layout.live_by_country_and_sta
                         refresh(result.isRefreshing!!)
                     }
                     State.ERROR -> {
-                        showSnackBar(result.message!!)
+                        showSnackBar(result.error?.localizedMessage!!)
                         refresh(result.isRefreshing!!)
                     }
                 }
@@ -46,7 +49,10 @@ class LiveByCountryAndStatusFragment : Fragment(R.layout.live_by_country_and_sta
             val countries = countryList.filter { country ->
                 country.NewConfirmed > 0
             }
-            val adapter = LiveByCountryAdapter()
+            val adapter =
+                LiveByCountryAdapter(
+                    this
+                )
             adapter.displayData(countries)
             live_recyclerView.adapter = adapter
             Log.d("LiveByCountrySize", adapter.itemCount.toString())
@@ -55,23 +61,15 @@ class LiveByCountryAndStatusFragment : Fragment(R.layout.live_by_country_and_sta
         live_swipeRefresh.setOnRefreshListener {
             viewModel.refreshList()
         }
+    }
 
-        // Bottom Sheet
-        val sheetBehaviour = BottomSheetBehavior.from(live_by_country_bottomSheet)
-        if (arguments != null) {
-            val country = requireArguments().getSerializable("country") as Country
-            bottomSheet_confirmed_textView.text = "New Confirmed: ${country.NewConfirmed}"
-            bottomSheet_death_textView.text = "New Deaths: ${country.NewDeaths}"
-            bottomSheet_date_textView.text = "Date: ${country.Date.removeRange(country.Date.indexOf("T") until country.Date.length)}"
-            bottomSheet_recovered_textView.text = "New Recovered: ${country.NewRecovered}"
-            bottomSheet_country_code_textView.text = country.CountryCode
-            if (sheetBehaviour.state != BottomSheetBehavior.STATE_EXPANDED) {
-                sheetBehaviour.state = BottomSheetBehavior.STATE_EXPANDED
-            } else {
-                sheetBehaviour.state = BottomSheetBehavior.STATE_COLLAPSED
-            }
-        }
-
+    /**
+     * Navigate to bottomSheetDialog
+     */
+    override fun onItemClick(item: Country) {
+        val individualCountry = IndividualCountryDetailFragment()
+        individualCountry.arguments = bundleOf(Pair("country", item))
+        individualCountry.show(requireActivity().supportFragmentManager, "individualCountry")
     }
 
     private fun showSnackBar(message: String) {

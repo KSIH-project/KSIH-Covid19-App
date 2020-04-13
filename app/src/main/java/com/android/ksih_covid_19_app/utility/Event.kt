@@ -2,6 +2,8 @@ package com.android.ksih_covid_19_app.utility
 
 /**
  * Created by SegunFrancis
+ *
+ * Utility class for [LiveData] that handles single event scenarios
  */
 class Event<out T>(private val content: T) {
     var hasBeenHandled = false

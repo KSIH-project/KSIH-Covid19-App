@@ -1,4 +1,4 @@
-package com.android.ksih_covid_19_app.utility
+package com.android.ksih_covid_19_app.utility.adapter
 
 import android.graphics.Rect
 import android.view.View
@@ -6,6 +6,9 @@ import androidx.recyclerview.widget.RecyclerView
 
 /**
  * Created by SegunFrancis
+ *
+ * A custom [RecyclerView.ItemDecoration] class that gives the same dimension
+ * to all the sides of the [RecyclerView] items
  */
 class MarginItemDecoration(private val spaceHeight: Int) : RecyclerView.ItemDecoration() {
     override fun getItemOffsets(
