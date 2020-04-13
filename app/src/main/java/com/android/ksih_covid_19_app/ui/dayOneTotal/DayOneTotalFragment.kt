@@ -6,7 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.Navigation
 import com.android.ksih_covid_19_app.R
+import kotlinx.android.synthetic.main.home_fragment.*
 
 class DayOneTotalFragment : Fragment() {
 
@@ -21,7 +23,9 @@ class DayOneTotalFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        // TODO: Use the ViewModel
+        // TODO: Remove temporary navigation
+        home_text.setOnClickListener {
+            Navigation.findNavController(it).navigate(R.id.liveByCountryAndStatusFragment)
+        }
     }
-
 }
