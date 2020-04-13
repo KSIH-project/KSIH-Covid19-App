@@ -38,7 +38,7 @@ class LiveByCountryAndStatusFragment : Fragment(R.layout.live_by_country_and_sta
                         refresh(result.isRefreshing!!)
                     }
                     State.ERROR -> {
-                        showSnackBar(result.error?.localizedMessage!!)
+                        showSnackBar(result.message!!)
                         refresh(result.isRefreshing!!)
                     }
                 }

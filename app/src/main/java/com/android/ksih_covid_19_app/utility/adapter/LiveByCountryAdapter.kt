@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.android.ksih_covid_19_app.R
 import com.android.ksih_covid_19_app.model.Country
+import com.android.ksih_covid_19_app.utility.Constants.toFlagEmoji
 import kotlinx.android.synthetic.main.live_by_country_list_item.view.*
 import java.util.*
 
@@ -52,7 +53,7 @@ class LiveByCountryAdapter(private val listener: OnCovidItemClickListener) :
                 new_cases_textView.text = "${item.NewConfirmed} new cases"
             if (item.NewConfirmed == 1)
                 new_cases_textView.text = "${item.NewConfirmed} new case"
-            country_code_textView.text = item.CountryCode
+            country_code_textView.text = item.CountryCode.toFlagEmoji()
 
             itemView.setOnClickListener {
                 listener.onItemClick(item)

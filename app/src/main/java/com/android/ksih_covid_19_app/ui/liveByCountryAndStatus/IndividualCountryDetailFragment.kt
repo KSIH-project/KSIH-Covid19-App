@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.android.ksih_covid_19_app.utility.Constants.toFlagEmoji
 
 import com.android.ksih_covid_19_app.R
 import com.android.ksih_covid_19_app.model.Country
@@ -31,17 +32,10 @@ class IndividualCountryDetailFragment : BottomSheetDialogFragment() {
             val country = requireArguments().getSerializable("country") as Country
             bottomSheet_confirmed_textView.text = "New Confirmed: ${country.NewConfirmed}"
             bottomSheet_death_textView.text = "New Deaths: ${country.NewDeaths}"
-            bottomSheet_date_textView.text = "Date: ${country.Date.removeRange(country.Date.indexOf("T") until country.Date.length)}"
+            bottomSheet_date_textView.text =
+                "Date: ${country.Date.removeRange(country.Date.indexOf("T") until country.Date.length)}"
             bottomSheet_recovered_textView.text = "New Recovered: ${country.NewRecovered}"
-            bottomSheet_country_code_textView.text = country.CountryCode
-            bottomSheet_recovered_percentage.text = percentageCase(country.NewRecovered, country.NewConfirmed).plus("%")
-            bottomSheet_death_percentage.text = percentageCase(country.NewDeaths, country.NewConfirmed).plus("%")
+            bottomSheet_country_code_textView.text = country.CountryCode.toFlagEmoji()
         }
-    }
-
-    private fun percentageCase(value: Int, confirmed: Int): String {
-        val percentage = value.toDouble().div(confirmed.toDouble()).times(100.0)
-        val format = DecimalFormat("0.00")
-        return format.format(percentage)
     }
 }
