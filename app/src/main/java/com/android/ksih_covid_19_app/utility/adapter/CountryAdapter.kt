@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.android.ksih_covid_19_app.R
 import com.android.ksih_covid_19_app.model.Country
 import com.android.ksih_covid_19_app.utility.Constants.toFlagEmoji
-import kotlinx.android.synthetic.main.live_by_country_list_item.view.*
+import kotlinx.android.synthetic.main.item_live_by_country_list.view.*
 import java.util.ArrayList
 
 /**
@@ -21,7 +21,7 @@ class CountryAdapter(private val listener: OnCovidItemClickListener) :
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): LiveByCountryViewHolder {
         return LiveByCountryViewHolder(
             LayoutInflater.from(parent.context)
-                .inflate(R.layout.live_by_country_list_item, parent, false)
+                .inflate(R.layout.item_live_by_country_list, parent, false)
         )
     }
 
@@ -51,7 +51,7 @@ class CountryAdapter(private val listener: OnCovidItemClickListener) :
             country_name_textView.text = item.Country
             if (item.TotalConfirmed > 1)
                 new_cases_textView.text = "${item.TotalConfirmed} cases"
-            if (item.TotalConfirmed == 1)
+            else
                 new_cases_textView.text = "${item.TotalConfirmed} case"
             country_code_textView.text = item.CountryCode.toFlagEmoji()
 

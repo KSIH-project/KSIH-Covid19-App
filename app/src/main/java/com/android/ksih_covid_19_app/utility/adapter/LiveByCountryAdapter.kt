@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import com.android.ksih_covid_19_app.R
 import com.android.ksih_covid_19_app.model.Country
 import com.android.ksih_covid_19_app.utility.Constants.toFlagEmoji
-import kotlinx.android.synthetic.main.live_by_country_list_item.view.*
+import kotlinx.android.synthetic.main.item_live_by_country_list.view.*
 import java.util.*
 
 /**
@@ -21,7 +21,7 @@ class LiveByCountryAdapter(private val listener: OnCovidItemClickListener) :
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): LiveByCountryViewHolder {
         return LiveByCountryViewHolder(
             LayoutInflater.from(parent.context)
-                .inflate(R.layout.live_by_country_list_item, parent, false)
+                .inflate(R.layout.item_live_by_country_list, parent, false)
         )
     }
 
