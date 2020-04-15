@@ -9,6 +9,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
 import com.android.ksih_covid_19_app.R
 import com.android.ksih_covid_19_app.model.Country
+import com.android.ksih_covid_19_app.utility.Constants.COUNTRY_BUNDLE_CODE
 import com.android.ksih_covid_19_app.utility.State
 import com.android.ksih_covid_19_app.utility.adapter.CountryAdapter
 import com.android.ksih_covid_19_app.utility.adapter.MarginItemDecoration
@@ -64,7 +65,7 @@ class DayOneTotalFragment : Fragment(R.layout.fragment_day_one_total),
     override fun onItemClick(item: Country) {
         Navigation.findNavController(requireView()).navigate(
             R.id.dayOneTotalDetailsFragment, bundleOf(
-                Pair("country", item)
+                Pair(COUNTRY_BUNDLE_CODE, item)
             )
         )
     }

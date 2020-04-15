@@ -11,7 +11,6 @@ import com.android.ksih_covid_19_app.dataSource.local.Covid19Dao
 import com.android.ksih_covid_19_app.dataSource.local.Covid19RoomDatabase
 import com.android.ksih_covid_19_app.dataSource.remote.RetrofitBuilder
 import com.android.ksih_covid_19_app.model.Country
-import com.android.ksih_covid_19_app.model.DayOneTotalResponse
 import com.android.ksih_covid_19_app.model.DayOneTotalResponseItem
 import com.android.ksih_covid_19_app.model.Summary
 import com.android.ksih_covid_19_app.utility.Event

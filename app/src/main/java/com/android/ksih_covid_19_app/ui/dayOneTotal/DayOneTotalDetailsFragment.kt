@@ -8,6 +8,7 @@ import androidx.lifecycle.ViewModelProvider
 
 import com.android.ksih_covid_19_app.R
 import com.android.ksih_covid_19_app.model.Country
+import com.android.ksih_covid_19_app.utility.Constants.COUNTRY_BUNDLE_CODE
 import com.android.ksih_covid_19_app.utility.Constants.toFlagEmoji
 import com.android.ksih_covid_19_app.utility.State
 import com.android.ksih_covid_19_app.utility.adapter.DayOneAdapter
@@ -54,7 +55,7 @@ class DayOneTotalDetailsFragment : Fragment(R.layout.fragment_day_one_total_deta
         }
 
         day_one_details_swipeRefresh.setOnRefreshListener {
-            val country = requireArguments().getSerializable("country") as Country
+            val country = requireArguments().getSerializable(COUNTRY_BUNDLE_CODE) as Country
             viewModel.getDayOneTotal(country.Country)
         }
     }
