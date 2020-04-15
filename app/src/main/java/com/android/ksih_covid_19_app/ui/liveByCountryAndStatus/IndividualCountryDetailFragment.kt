@@ -9,6 +9,7 @@ import com.android.ksih_covid_19_app.utility.Constants.toFlagEmoji
 
 import com.android.ksih_covid_19_app.R
 import com.android.ksih_covid_19_app.model.Country
+import com.android.ksih_covid_19_app.utility.Constants.COUNTRY_BUNDLE_CODE
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import kotlinx.android.synthetic.main.fragment_individual_country_detail.*
 import java.text.DecimalFormat
@@ -29,7 +30,7 @@ class IndividualCountryDetailFragment : BottomSheetDialogFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         if (arguments != null) {
-            val country = requireArguments().getSerializable("country") as Country
+            val country = requireArguments().getSerializable(COUNTRY_BUNDLE_CODE) as Country
             bottomSheet_confirmed_textView.text = "New Confirmed: ${country.NewConfirmed}"
             bottomSheet_death_textView.text = "New Deaths: ${country.NewDeaths}"
             bottomSheet_date_textView.text =

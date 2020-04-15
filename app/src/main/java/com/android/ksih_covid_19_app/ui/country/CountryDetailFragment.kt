@@ -7,6 +7,7 @@ import android.view.ViewGroup
 
 import com.android.ksih_covid_19_app.R
 import com.android.ksih_covid_19_app.model.Country
+import com.android.ksih_covid_19_app.utility.Constants.COUNTRY_BUNDLE_CODE
 import com.android.ksih_covid_19_app.utility.Constants.toFlagEmoji
 import com.android.ksih_covid_19_app.utility.Constants.percentageCase
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
@@ -26,7 +27,7 @@ class CountryDetailFragment : BottomSheetDialogFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         if (arguments != null) {
-            val country = requireArguments().getSerializable("country") as Country
+            val country = requireArguments().getSerializable(COUNTRY_BUNDLE_CODE) as Country
             bottomSheet_confirmed_textView.text = "Total Confirmed: ${country.TotalConfirmed}"
             bottomSheet_death_textView.text = "Total Deaths: ${country.TotalDeaths}"
             bottomSheet_date_textView.text =

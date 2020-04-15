@@ -6,7 +6,6 @@ import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import com.android.ksih_covid_19_app.model.Country
-import com.android.ksih_covid_19_app.model.LiveByCountryAndStatus
 import com.android.ksih_covid_19_app.model.LiveByCountryAndStatusItem
 
 /**

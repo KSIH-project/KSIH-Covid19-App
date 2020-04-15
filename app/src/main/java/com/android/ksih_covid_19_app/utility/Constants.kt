@@ -5,6 +5,8 @@ import java.text.DecimalFormat
 object Constants {
     const val BASE_URL = "https://api.covid19api.com/"
 
+    const val COUNTRY_BUNDLE_CODE = "country"
+
     fun String.toFlagEmoji(): String {
         val countryCodeCaps = this.toUpperCase()
         val firstLetter = Character.codePointAt(countryCodeCaps, 0) - 0x41 + 0x1F1E6
