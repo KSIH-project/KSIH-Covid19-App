@@ -24,5 +24,8 @@ class HomeFragment : Fragment(R.layout.home_fragment) {
         button_live_cases.setOnClickListener {
             findNavController(it).navigate(R.id.liveByCountryAndStatusFragment)
         }
+        button_day_one_cases.setOnClickListener {
+            findNavController(it).navigate(R.id.dayOneTotalFragment)
+        }
     }
 }

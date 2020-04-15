@@ -37,4 +37,9 @@
         android:name="com.android.ksih_covid_19_app.ui.summary.SummaryFragment"
         android:label="summary_fragment"
         tools:layout="@layout/summary_fragment" />
+    <fragment
+        android:id="@+id/dayOneTotalDetailsFragment"
+        android:name="com.android.ksih_covid_19_app.ui.dayOneTotal.DayOneTotalDetailsFragment"
+        android:label="fragment_day_one_total_details"
+        tools:layout="@layout/fragment_day_one_total_details" />
 </navigation>

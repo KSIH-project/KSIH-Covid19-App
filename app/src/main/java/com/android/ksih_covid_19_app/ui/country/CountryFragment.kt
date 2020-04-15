@@ -53,7 +53,7 @@ class CountryFragment : Fragment(R.layout.country_fragment), CountryAdapter.OnCo
                 )
             adapter.displayData(countries)
             country_recyclerView.adapter = adapter
-            Log.d("LiveByCountrySize", adapter.itemCount.toString())
+            Log.d("TotalCountrySize", adapter.itemCount.toString())
         })
 
         country_swipeRefresh.setOnRefreshListener {
