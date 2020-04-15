@@ -12,7 +12,7 @@ object Constants {
         return String(Character.toChars(firstLetter)) + String(Character.toChars(secondLetter))
     }
 
-    private fun percentageCase(value: Int, confirmed: Int): String {
+    fun percentageCase(value: Int, confirmed: Int): String {
         val percentage = value.toDouble().div(confirmed.toDouble()).times(100.0)
         val format = DecimalFormat("0.00")
         return format.format(percentage)
