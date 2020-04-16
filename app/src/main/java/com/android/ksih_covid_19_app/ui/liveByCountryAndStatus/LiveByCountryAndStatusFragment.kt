@@ -9,6 +9,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.android.ksih_covid_19_app.R
 import com.android.ksih_covid_19_app.model.Country
+import com.android.ksih_covid_19_app.utility.Constants.COUNTRY_BUNDLE_CODE
 import com.android.ksih_covid_19_app.utility.adapter.LiveByCountryAdapter
 import com.android.ksih_covid_19_app.utility.adapter.MarginItemDecoration
 import com.android.ksih_covid_19_app.utility.State
@@ -68,7 +69,7 @@ class LiveByCountryAndStatusFragment : Fragment(R.layout.live_by_country_and_sta
      */
     override fun onItemClick(item: Country) {
         val individualCountry = IndividualCountryDetailFragment()
-        individualCountry.arguments = bundleOf(Pair("country", item))
+        individualCountry.arguments = bundleOf(Pair(COUNTRY_BUNDLE_CODE, item))
         individualCountry.show(requireActivity().supportFragmentManager, "individualCountry")
     }
 

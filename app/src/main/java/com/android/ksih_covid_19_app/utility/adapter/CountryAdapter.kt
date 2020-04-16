@@ -1,20 +1,20 @@
 package com.android.ksih_covid_19_app.utility.adapter
 
-import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.RecyclerView
 import com.android.ksih_covid_19_app.R
 import com.android.ksih_covid_19_app.model.Country
 import com.android.ksih_covid_19_app.utility.Constants.toFlagEmoji
 import kotlinx.android.synthetic.main.item_live_by_country_list.view.*
-import java.util.*
+import java.util.ArrayList
 
 /**
  * Created by SegunFrancis
  */
-class LiveByCountryAdapter(private val listener: OnCovidItemClickListener) :
-    RecyclerView.Adapter<LiveByCountryAdapter.LiveByCountryViewHolder>() {
+class CountryAdapter(private val listener: OnCovidItemClickListener) :
+    RecyclerView.Adapter<CountryAdapter.LiveByCountryViewHolder>() {
 
     private var countryList: List<Country> = ArrayList()
 
@@ -49,10 +49,10 @@ class LiveByCountryAdapter(private val listener: OnCovidItemClickListener) :
     class LiveByCountryViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bind(item: Country, listener: OnCovidItemClickListener) = with(itemView) {
             country_name_textView.text = item.Country
-            if (item.NewConfirmed > 1)
-                new_cases_textView.text = "${item.NewConfirmed} new cases"
-            if (item.NewConfirmed == 1)
-                new_cases_textView.text = "${item.NewConfirmed} new case"
+            if (item.TotalConfirmed > 1)
+                new_cases_textView.text = "${item.TotalConfirmed} cases"
+            else
+                new_cases_textView.text = "${item.TotalConfirmed} case"
             country_code_textView.text = item.CountryCode.toFlagEmoji()
 
             itemView.setOnClickListener {

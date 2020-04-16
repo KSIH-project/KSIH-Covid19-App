@@ -13,21 +13,19 @@ import kotlinx.android.synthetic.main.home_fragment.*
 /**
  * A simple [Fragment] subclass.
  */
-class HomeFragment : Fragment() {
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.home_fragment, container, false)
-    }
+class HomeFragment : Fragment(R.layout.home_fragment) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         // Todo: Remove temporary navigation
-        home_text.setOnClickListener {
+        button_total_cases.setOnClickListener {
+            findNavController(it).navigate(R.id.countryFragment)
+        }
+        button_live_cases.setOnClickListener {
             findNavController(it).navigate(R.id.liveByCountryAndStatusFragment)
+        }
+        button_day_one_cases.setOnClickListener {
+            findNavController(it).navigate(R.id.dayOneTotalFragment)
         }
     }
 }
