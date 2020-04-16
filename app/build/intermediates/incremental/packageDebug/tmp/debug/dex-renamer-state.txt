@@ -1,0 +1,4 @@
+#Mon Apr 13 21:29:55 WAT 2020
+base.0=/home/dablaze/AndroidStudioProjects/KSIH-Covid19-App/app/build/intermediates/dex/debug/out/classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
