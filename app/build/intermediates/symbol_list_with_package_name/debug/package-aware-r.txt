@@ -59,6 +59,7 @@ animator mtrl_fab_transformation_sheet_expand_spec
 array com_google_android_gms_fonts_certs
 array com_google_android_gms_fonts_certs_dev
 array com_google_android_gms_fonts_certs_prod
+array preloaded_fonts
 attr action
 attr actionBarDivider
 attr actionBarItemBackground
@@ -1502,6 +1503,7 @@ drawable tooltip_frame_dark
 drawable tooltip_frame_light
 drawable wash_hands
 font lily_script_one
+font salsa
 font sanchez
 font source_serif_pro_bold
 id ALT
@@ -1584,6 +1586,9 @@ id bottomSheet_date_textView
 id bottomSheet_death_textView
 id bottomSheet_recovered_textView
 id buttonPanel
+id button_day_one_cases
+id button_live_cases
+id button_total_cases
 id cancel_action
 id cancel_button
 id cardView
@@ -1621,7 +1626,15 @@ id custom
 id customPanel
 id cut
 id date_picker_actions
+id dayOneTotalDetailsFragment
 id dayOneTotalFragment
+id day_one_cases_textView
+id day_one_date_textView
+id day_one_details_recyclerView
+id day_one_details_swipeRefresh
+id day_one_emojiTextView
+id day_one_recyclerView
+id day_one_status_textView
 id decor_content_parent
 id defaultStrategy
 id default_activity_button
@@ -1643,7 +1656,6 @@ id enterAlwaysCollapsed
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
-id fab
 id fade
 id fill
 id fill_horizontal
@@ -1652,6 +1664,7 @@ id filled
 id fitToContents
 id fixed
 id floating
+id floatingActionButton
 id forever
 id fragment
 id fragment_container_view_tag
@@ -1664,6 +1677,7 @@ id hideable
 id home
 id homeAsUp
 id homeFragment
+id home_text
 id icon
 id icon_group
 id ifRoom
@@ -1804,6 +1818,7 @@ id stretch
 id submenuarrow
 id submit_area
 id summaryFragment
+id swipeRefresh_day_one
 id tabMode
 id tag_accessibility_actions
 id tag_accessibility_clickable_spans
@@ -1816,7 +1831,9 @@ id tag_unhandled_key_listeners
 id test_checkbox_android_button_tint
 id test_checkbox_app_button_tint
 id text
+id text1
 id text2
+id text3
 id textCountryName
 id textEnd
 id textSpacerNoButtons
@@ -1825,6 +1842,7 @@ id textStart
 id textTotalCasesConfirmed
 id textView
 id textView1
+id textView10
 id textView2
 id textView3
 id textView4
@@ -1948,11 +1966,13 @@ layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout fragment_country_detail
 layout fragment_day_one_total
+layout fragment_day_one_total_details
 layout fragment_individual_country_detail
 layout home_fragment
 layout input_method_extract_view
+layout item_day_one_list
+layout item_live_by_country_list
 layout live_by_country_and_status_fragment
-layout live_by_country_list_item
 layout mtrl_alert_dialog
 layout mtrl_alert_dialog_actions
 layout mtrl_alert_dialog_title

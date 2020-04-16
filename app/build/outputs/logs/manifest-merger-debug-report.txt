@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/pecpaker/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:2:1-26:12
-INJECTED from /home/pecpaker/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:2:1-26:12
-INJECTED from /home/pecpaker/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:2:1-26:12
-INJECTED from /home/pecpaker/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:2:1-26:12
+ADDED from /home/pecpaker/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:2:1-29:12
+INJECTED from /home/pecpaker/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:2:1-29:12
+INJECTED from /home/pecpaker/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:2:1-29:12
+INJECTED from /home/pecpaker/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:2:1-29:12
 MERGED from [androidx.fragment:fragment-ktx:1.2.4] /home/pecpaker/.gradle/caches/transforms-2/files-2.1/ed1659aa6ce3170bbfbc2990e9ccaf31/jetified-fragment-ktx-1.2.4/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.activity:activity-ktx:1.1.0] /home/pecpaker/.gradle/caches/transforms-2/files-2.1/04ab9dcb7c43b2574e95821655e91a3b/jetified-activity-ktx-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0] /home/pecpaker/.gradle/caches/transforms-2/files-2.1/14a6756ae504b2b1d9ca81f3cc7f1fcc/jetified-lifecycle-viewmodel-ktx-2.2.0/AndroidManifest.xml:17:1-24:12
@@ -62,20 +62,20 @@ MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/p
 MERGED from [androidx.print:print:1.0.0] /home/pecpaker/.gradle/caches/transforms-2/files-2.1/29e44146c3dd9b9ad0fa78f233fd1a78/print-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.interpolator:interpolator:1.0.0] /home/pecpaker/.gradle/caches/transforms-2/files-2.1/15469d695bbb0b51f214d015af2ddddd/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.annotation:annotation-experimental:1.0.0] /home/pecpaker/.gradle/caches/transforms-2/files-2.1/8215774180598458212959988a14447e/jetified-annotation-experimental-1.0.0/AndroidManifest.xml:17:1-24:12
-INJECTED from /home/pecpaker/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:2:1-26:12
-INJECTED from /home/pecpaker/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:2:1-26:12
-INJECTED from /home/pecpaker/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:2:1-26:12
+INJECTED from /home/pecpaker/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:2:1-29:12
+INJECTED from /home/pecpaker/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:2:1-29:12
+INJECTED from /home/pecpaker/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:2:1-29:12
 	package
 		ADDED from /home/pecpaker/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:3:5-44
 		INJECTED from /home/pecpaker/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml
 		INJECTED from /home/pecpaker/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /home/pecpaker/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml
-		ADDED from /home/pecpaker/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:2:1-26:12
+		ADDED from /home/pecpaker/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:2:1-29:12
 		INJECTED from /home/pecpaker/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml
 	android:versionCode
 		INJECTED from /home/pecpaker/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml
-		ADDED from /home/pecpaker/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:2:1-26:12
+		ADDED from /home/pecpaker/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:2:1-29:12
 		INJECTED from /home/pecpaker/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /home/pecpaker/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:2:11-69
@@ -84,7 +84,7 @@ ADDED from /home/pecpaker/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/An
 	android:name
 		ADDED from /home/pecpaker/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:5:22-64
 application
-ADDED from /home/pecpaker/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:7:5-24:19
+ADDED from /home/pecpaker/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:7:5-27:19
 MERGED from [com.google.android.material:material:1.2.0-alpha05] /home/pecpaker/.gradle/caches/transforms-2/files-2.1/bea856fe064566a05cba6ce905c34e8d/material-1.2.0-alpha05/AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.2.0-alpha05] /home/pecpaker/.gradle/caches/transforms-2/files-2.1/bea856fe064566a05cba6ce905c34e8d/material-1.2.0-alpha05/AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] /home/pecpaker/.gradle/caches/transforms-2/files-2.1/1d64567cdd8dbbf68b26476dac070845/constraintlayout-1.1.3/AndroidManifest.xml:9:5-20
@@ -131,6 +131,12 @@ category#android.intent.category.LAUNCHER
 ADDED from /home/pecpaker/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:20:17-77
 	android:name
 		ADDED from /home/pecpaker/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:20:27-74
+meta-data#preloaded_fonts
+ADDED from /home/pecpaker/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:24:9-26:57
+	android:resource
+		ADDED from /home/pecpaker/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:26:13-54
+	android:name
+		ADDED from /home/pecpaker/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:25:13-43
 uses-sdk
 INJECTED from /home/pecpaker/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /home/pecpaker/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml

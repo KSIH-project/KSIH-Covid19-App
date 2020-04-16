@@ -32,12 +32,12 @@
         "source": "/home/pecpaker/AndroidStudioProjects/KSIH-Covid19-App/app/build/generated/res/pngs/debug/drawable-xxhdpi/ic_search.png"
     },
     {
-        "merged": "/home/pecpaker/AndroidStudioProjects/KSIH-Covid19-App/app/build/intermediates/res/merged/debug/layout_fragment_country_detail.xml.flat",
-        "source": "/home/pecpaker/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/res/layout/fragment_country_detail.xml"
-    },
-    {
         "merged": "/home/pecpaker/AndroidStudioProjects/KSIH-Covid19-App/app/build/intermediates/res/merged/debug/drawable_country_code_background.xml.flat",
         "source": "/home/pecpaker/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/res/drawable/country_code_background.xml"
+    },
+    {
+        "merged": "/home/pecpaker/AndroidStudioProjects/KSIH-Covid19-App/app/build/intermediates/res/merged/debug/layout_fragment_country_detail.xml.flat",
+        "source": "/home/pecpaker/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/res/layout/fragment_country_detail.xml"
     },
     {
         "merged": "/home/pecpaker/AndroidStudioProjects/KSIH-Covid19-App/app/build/intermediates/res/merged/debug/drawable_bottom_sheet_box_background.xml.flat",
@@ -148,6 +148,10 @@
         "source": "/home/pecpaker/AndroidStudioProjects/KSIH-Covid19-App/app/build/generated/res/pngs/debug/drawable-xxxhdpi/ic_world.png"
     },
     {
+        "merged": "/home/pecpaker/AndroidStudioProjects/KSIH-Covid19-App/app/build/intermediates/res/merged/debug/layout_item_live_by_country_list.xml.flat",
+        "source": "/home/pecpaker/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/res/layout/item_live_by_country_list.xml"
+    },
+    {
         "merged": "/home/pecpaker/AndroidStudioProjects/KSIH-Covid19-App/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_doctor.png.flat",
         "source": "/home/pecpaker/AndroidStudioProjects/KSIH-Covid19-App/app/build/generated/res/pngs/debug/drawable-xxhdpi/ic_doctor.png"
     },
@@ -202,10 +206,6 @@
     {
         "merged": "/home/pecpaker/AndroidStudioProjects/KSIH-Covid19-App/app/build/intermediates/res/merged/debug/drawable_background.png.flat",
         "source": "/home/pecpaker/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/res/drawable/background.png"
-    },
-    {
-        "merged": "/home/pecpaker/AndroidStudioProjects/KSIH-Covid19-App/app/build/intermediates/res/merged/debug/layout_live_by_country_list_item.xml.flat",
-        "source": "/home/pecpaker/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/res/layout/live_by_country_list_item.xml"
     },
     {
         "merged": "/home/pecpaker/AndroidStudioProjects/KSIH-Covid19-App/app/build/intermediates/res/merged/debug/drawable-ldpi_ic_doctor.png.flat",
@@ -320,6 +320,10 @@
         "source": "/home/pecpaker/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png"
     },
     {
+        "merged": "/home/pecpaker/AndroidStudioProjects/KSIH-Covid19-App/app/build/intermediates/res/merged/debug/layout_fragment_day_one_total_details.xml.flat",
+        "source": "/home/pecpaker/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/res/layout/fragment_day_one_total_details.xml"
+    },
+    {
         "merged": "/home/pecpaker/AndroidStudioProjects/KSIH-Covid19-App/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_ic_live.png.flat",
         "source": "/home/pecpaker/AndroidStudioProjects/KSIH-Covid19-App/app/build/generated/res/pngs/debug/drawable-xxxhdpi/ic_live.png"
     },
@@ -340,6 +344,10 @@
         "source": "/home/pecpaker/AndroidStudioProjects/KSIH-Covid19-App/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_search.xml"
     },
     {
+        "merged": "/home/pecpaker/AndroidStudioProjects/KSIH-Covid19-App/app/build/intermediates/res/merged/debug/layout_item_day_one_list.xml.flat",
+        "source": "/home/pecpaker/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/res/layout/item_day_one_list.xml"
+    },
+    {
         "merged": "/home/pecpaker/AndroidStudioProjects/KSIH-Covid19-App/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_world.png.flat",
         "source": "/home/pecpaker/AndroidStudioProjects/KSIH-Covid19-App/app/build/generated/res/pngs/debug/drawable-xhdpi/ic_world.png"
     },
@@ -350,6 +358,10 @@
     {
         "merged": "/home/pecpaker/AndroidStudioProjects/KSIH-Covid19-App/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_calendar.png.flat",
         "source": "/home/pecpaker/AndroidStudioProjects/KSIH-Covid19-App/app/build/generated/res/pngs/debug/drawable-hdpi/ic_calendar.png"
+    },
+    {
+        "merged": "/home/pecpaker/AndroidStudioProjects/KSIH-Covid19-App/app/build/intermediates/res/merged/debug/font_salsa.xml.flat",
+        "source": "/home/pecpaker/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/res/font/salsa.xml"
     },
     {
         "merged": "/home/pecpaker/AndroidStudioProjects/KSIH-Covid19-App/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_patient.png.flat",
