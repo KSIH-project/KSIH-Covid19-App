@@ -20,6 +20,13 @@
         android:name="com.android.ksih_covid_19_app.ui.liveByCountryAndStatus.LiveByCountryAndStatusFragment"
         android:label="live_by_country_and_status_fragment"
         tools:layout="@layout/live_by_country_and_status_fragment" />
+
+    <fragment
+        android:id="@+id/dayOneTotalFragment"
+        android:name="com.android.ksih_covid_19_app.ui.dayOneTotal.DayOneTotalFragment"
+        android:label="Day one Total"
+        tools:layout="@layout/fragment_day_one_total" />
+
     <fragment
         android:id="@+id/searchFragment"
         android:name="com.android.ksih_covid_19_app.ui.search.SearchFragment"
@@ -30,10 +37,9 @@
         android:name="com.android.ksih_covid_19_app.ui.summary.SummaryFragment"
         android:label="summary_fragment"
         tools:layout="@layout/summary_fragment" />
-
     <fragment
-        android:id="@+id/dayOneTotalFragment"
-        android:name="com.android.ksih_covid_19_app.ui.dayOneTotal.DayOneTotalFragment"
-        android:label="day one total"
-        tools:layout="@layout/fragment_day_one_total" />
+        android:id="@+id/dayOneTotalDetailsFragment"
+        android:name="com.android.ksih_covid_19_app.ui.dayOneTotal.DayOneTotalDetailsFragment"
+        android:label="fragment_day_one_total_details"
+        tools:layout="@layout/fragment_day_one_total_details" />
 </navigation>

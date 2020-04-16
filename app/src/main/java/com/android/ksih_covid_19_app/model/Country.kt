@@ -2,6 +2,7 @@ package com.android.ksih_covid_19_app.model
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import java.io.Serializable
 
 @Entity
 data class Country(
@@ -16,4 +17,4 @@ data class Country(
     val TotalConfirmed: Int,
     val TotalDeaths: Int,
     val TotalRecovered: Int
-)
+) : Serializable

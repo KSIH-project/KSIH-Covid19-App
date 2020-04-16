@@ -5,23 +5,27 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.Navigation.findNavController
 
 import com.android.ksih_covid_19_app.R
+import kotlinx.android.synthetic.main.home_fragment.*
 
-class HomeFragment : Fragment() {
+/**
+ * A simple [Fragment] subclass.
+ */
+class HomeFragment : Fragment(R.layout.home_fragment) {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        // Todo: Remove temporary navigation
+        button_total_cases.setOnClickListener {
+            findNavController(it).navigate(R.id.countryFragment)
+        }
+        button_live_cases.setOnClickListener {
+            findNavController(it).navigate(R.id.liveByCountryAndStatusFragment)
+        }
+        button_day_one_cases.setOnClickListener {
+            findNavController(it).navigate(R.id.dayOneTotalFragment)
+        }
     }
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.home_fragment, container, false)
-    }
-
-
 }
