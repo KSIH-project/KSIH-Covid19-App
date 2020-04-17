@@ -9,6 +9,7 @@ object Constants {
 
 
     fun String.toFlagEmoji(): String {
+
         val countryCodeCaps = this.toUpperCase()
         val firstLetter = Character.codePointAt(countryCodeCaps, 0) - 0x41 + 0x1F1E6
         val secondLetter = Character.codePointAt(countryCodeCaps, 1) - 0x41 + 0x1F1E6
