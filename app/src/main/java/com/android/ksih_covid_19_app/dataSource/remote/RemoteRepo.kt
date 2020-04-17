@@ -2,6 +2,7 @@ package com.android.ksih_covid_19_app.dataSource.remote
 
 import com.android.ksih_covid_19_app.model.DayOneTotalResponseItem
 import com.android.ksih_covid_19_app.model.LiveByCountryAndStatusItem
+import com.android.ksih_covid_19_app.model.SearchByDateItem
 import com.android.ksih_covid_19_app.model.Summary
 import retrofit2.Call
 
@@ -16,4 +17,5 @@ interface RemoteRepo {
 
     fun getDayOneTotal(country: String): Call<List<DayOneTotalResponseItem>>
 
+    fun getSearchByDate(country: String, status:String, date:String): Call<List<SearchByDateItem>>
 }

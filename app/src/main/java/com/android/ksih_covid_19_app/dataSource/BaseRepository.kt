@@ -36,4 +36,8 @@ class BaseRepository(private val api: Covid19Api, private val dao: Covid19Dao): 
     override fun getDayOneTotal(country: String): Call<List<DayOneTotalResponseItem>> {
         return api.getDayOneTotal(country)
     }
+
+    override fun getSearchByDate(country: String, status: String, date: String): Call<List<SearchByDateItem>> {
+        return api.getSearchByDate(country,status,date)
+    }
 }
