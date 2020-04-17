@@ -15,4 +15,5 @@ interface RemoteRepo {
     fun getSummary(): Call<Summary>
 
     fun getDayOneTotal(country: String): Call<List<DayOneTotalResponseItem>>
+
 }
