@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.activityViewModels
+import androidx.navigation.Navigation
 import androidx.navigation.Navigation.findNavController
 
 import com.android.ksih_covid_19_app.R
@@ -32,6 +34,10 @@ class HomeFragment : Fragment(R.layout.home_fragment) {
         }
         button_day_one_cases.setOnClickListener {
             findNavController(it).navigate(R.id.dayOneTotalFragment)
+        }
+
+        summary_button.setOnClickListener {
+            findNavController(it).navigate(R.id.summaryFragment)
         }
 
         val bottomSheetBehavior =

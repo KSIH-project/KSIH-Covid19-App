@@ -21,4 +21,6 @@ object Constants {
         val format = DecimalFormat("0.00")
         return format.format(percentage)
     }
+    const val REQUEST_TIMEOUT_DURATION = 20
+    const val DEBUG = true
 }
