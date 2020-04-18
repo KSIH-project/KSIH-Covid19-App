@@ -2,6 +2,7 @@ package com.android.ksih_covid_19_app.ui.summary
 
 import androidx.lifecycle.MutableLiveData
 import com.android.ksih_covid_19_app.dataSource.BaseRepository
+import com.android.ksih_covid_19_app.dataSource.Repository
 import com.android.ksih_covid_19_app.model.Country
 
 class MainSummaryViewModel : SummaryViewModel() {
@@ -10,7 +11,7 @@ class MainSummaryViewModel : SummaryViewModel() {
 
     fun fetchSummaryList(){
         dataLoading.value = true
-        BaseRepository.getInstance().getSummaryList { isSuccess, response ->
+        Repository.getInstance().getSummaryList { isSuccess, response ->
             dataLoading.value = false
             if (isSuccess) {
                 summaryList.value = response?.Countries

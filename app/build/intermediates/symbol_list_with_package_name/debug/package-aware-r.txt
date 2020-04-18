@@ -56,6 +56,10 @@ animator mtrl_fab_hide_motion_spec
 animator mtrl_fab_show_motion_spec
 animator mtrl_fab_transformation_sheet_collapse_spec
 animator mtrl_fab_transformation_sheet_expand_spec
+array com_google_android_gms_fonts_certs
+array com_google_android_gms_fonts_certs_dev
+array com_google_android_gms_fonts_certs_prod
+array preloaded_fonts
 attr action
 attr actionBarDivider
 attr actionBarItemBackground
@@ -311,6 +315,7 @@ attr editTextStyle
 attr elevation
 attr elevationOverlayColor
 attr elevationOverlayEnabled
+attr emojiReplaceStrategy
 attr emptyVisibility
 attr endIconCheckable
 attr endIconContentDescription
@@ -540,6 +545,7 @@ attr materialThemeOverlay
 attr maxActionInlineWidth
 attr maxButtonHeight
 attr maxCharacterCount
+attr maxEmojiCount
 attr maxImageSize
 attr maxLines
 attr measureWithLargestChild
@@ -834,6 +840,9 @@ color checkbox_themeable_attribute_color
 color colorAccent
 color colorPrimary
 color colorPrimaryDark
+color covid_green
+color covid_red
+color covid_yellow
 color design_bottom_navigation_shadow_color
 color design_box_stroke_color
 color design_dark_default_color_background
@@ -1428,6 +1437,10 @@ drawable abc_vector_test
 drawable avd_hide_password
 drawable avd_show_password
 drawable background
+drawable background_image_shape
+drawable bg_blue
+drawable bg_red
+drawable bottom_sheet_box_background
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
 drawable btn_checkbox_unchecked_mtrl
@@ -1436,6 +1449,7 @@ drawable btn_radio_off_mtrl
 drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
+drawable country_code_background
 drawable country_code_shape
 drawable covid_image
 drawable design_bottom_navigation_item_background
@@ -1444,10 +1458,15 @@ drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable dont_touch_face
+drawable fab
+drawable ic_add_black_24dp
 drawable ic_arrow_back
 drawable ic_calendar
 drawable ic_calendar_black_24dp
+drawable ic_check_circle_black_24dp
 drawable ic_clear_black_24dp
+drawable ic_cloud_upload_black_24dp
 drawable ic_doctor
 drawable ic_edit_black_24dp
 drawable ic_germany
@@ -1489,16 +1508,24 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable respiratory_hygiene
+drawable round_corners
+drawable round_right_corner
+drawable social_distance
 drawable test_custom_background
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
+drawable top_card_view
+drawable wash_hands
 font lily_script_one
+font salsa
 font sanchez
 font source_serif_pro_bold
 id ALT
 id BOTTOM_END
 id BOTTOM_START
 id CTRL
+id CardView5
 id FUNCTION
 id META
 id SHIFT
@@ -1569,9 +1596,22 @@ id be_safe
 id beginning
 id blocking
 id bottom
+id bottomSheet_confirmed_textView
+id bottomSheet_country_code_textView
+id bottomSheet_date_textView
+id bottomSheet_death_textView
+id bottomSheet_recovered_textView
 id buttonPanel
+id button_day_one_cases
+id button_live_cases
+id button_total_cases
 id cancel_action
 id cancel_button
+id cardView
+id cardView1
+id cardView2
+id cardView3
+id cardView4
 id center
 id center_horizontal
 id center_vertical
@@ -1594,12 +1634,25 @@ id content
 id contentPanel
 id coordinator
 id countryFragment
+id country_code_textView
+id country_name_textView
+id country_recyclerView
+id country_swipeRefresh
 id custom
 id customPanel
 id cut
 id date_picker_actions
+id dayOneTotalDetailsFragment
 id dayOneTotalFragment
+id day_one_cases_textView
+id day_one_date_textView
+id day_one_details_recyclerView
+id day_one_details_swipeRefresh
+id day_one_emojiTextView
+id day_one_recyclerView
+id day_one_status_textView
 id decor_content_parent
+id defaultStrategy
 id default_activity_button
 id design_bottom_sheet
 id design_menu_item_action_area
@@ -1627,6 +1680,8 @@ id filled
 id fitToContents
 id fixed
 id floating
+id floatingActionButton
+id floatingActionButton2
 id forever
 id fragment
 id fragment_container_view_tag
@@ -1641,11 +1696,20 @@ id hideable
 id home
 id homeAsUp
 id homeFragment
+id home_text
 id icon
 id icon_group
 id ifRoom
 id image
+id imageView
+id imageView2
+id imageView3
+id imageView4
+id imageView5
+id imageView7
 id info
+id inputExtractAccessories
+id inputExtractAction
 id invisible
 id italic
 id item_touch_helper_previous_elevation
@@ -1658,6 +1722,9 @@ id line3
 id listMode
 id list_item
 id liveByCountryAndStatusFragment
+id live_by_country_bottomSheet
+id live_recyclerView
+id live_swipeRefresh
 id masked
 id media_actions
 id message
@@ -1695,7 +1762,9 @@ id nav_graph
 id nav_host_fragment_container
 id navigation_header_container
 id never
+id new_cases_textView
 id noScroll
+id nonExistent
 id none
 id normal
 id notification_background
@@ -1713,6 +1782,7 @@ id password_toggle
 id peekHeight
 id percent
 id pin
+id prevention_bottom_sheet
 id progress_circular
 id progress_horizontal
 id radio
@@ -1768,6 +1838,7 @@ id stretch
 id submenuarrow
 id submit_area
 id summaryFragment
+id summary_button
 id summary_country
 id summary_countryTag
 id summary_newConfirmed
@@ -1777,6 +1848,7 @@ id summary_recyclerView
 id summary_totalConfirmed
 id summary_totalDeath
 id summary_totalRecovered
+id swipeRefresh_day_one
 id tabMode
 id tag_accessibility_actions
 id tag_accessibility_clickable_spans
@@ -1789,7 +1861,9 @@ id tag_unhandled_key_listeners
 id test_checkbox_android_button_tint
 id test_checkbox_app_button_tint
 id text
+id text1
 id text2
+id text3
 id textEnd
 id textSpacerNoButtons
 id textSpacerNoTitle
@@ -1801,6 +1875,11 @@ id textView3
 id textView4
 id textView5
 id textView6
+id textView7
+id textView8
+id textViewCOVID
+id textView_percentage_death
+id textView_percentage_recovered
 id text_input_end_icon
 id text_input_start_icon
 id textinput_counter
@@ -1912,8 +1991,16 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout fragment_country_detail
 layout fragment_day_one_total
+layout fragment_day_one_total_details
+layout fragment_individual_country_detail
+layout fragment_symptoms
 layout home_fragment
+layout input_method_extract_view
+layout item_day_one_list
+layout item_live_by_country_list
+layout item_symptoms_list
 layout live_by_country_and_status_fragment
 layout mtrl_alert_dialog
 layout mtrl_alert_dialog_actions
@@ -1958,6 +2045,7 @@ layout notification_template_media
 layout notification_template_media_custom
 layout notification_template_part_chronometer
 layout notification_template_part_time
+layout prevention_bottom_sheet
 layout search_fragment
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
@@ -2016,6 +2104,7 @@ string character_counter_overflowed_content_description
 string character_counter_pattern
 string chip_text
 string clear_text_end_icon_content_description
+string country_code_image_description
 string countryname
 string error_icon_content_description
 string exposed_dropdown_menu_content_description
@@ -2297,6 +2386,7 @@ style Base_Widget_MaterialComponents_TextView
 style CardView
 style CardView_Dark
 style CardView_Light
+style CustomCardViewStyle
 style EmptyTheme
 style MaterialAlertDialog_MaterialComponents
 style MaterialAlertDialog_MaterialComponents_Body_Text
@@ -2360,6 +2450,7 @@ style ShapeAppearanceOverlay_MaterialComponents_MaterialCalendar_Year
 style ShapeAppearanceOverlay_MaterialComponents_TextInputLayout_FilledBox
 style ShapeAppearanceOverlay_TopLeftCut
 style ShapeAppearanceOverlay_TopRightDifferentCornerSize
+style ShapeAppearanceOverlay_card_custom_corners
 style Test_ShapeAppearanceOverlay_MaterialComponents_MaterialCalendar_Day
 style Test_Theme_MaterialComponents_MaterialCalendar
 style Test_Widget_MaterialComponents_MaterialCalendar
@@ -2804,6 +2895,8 @@ styleable CoordinatorLayout keylines statusBarBackground
 styleable CoordinatorLayout_Layout android_layout_gravity layout_anchor layout_anchorGravity layout_behavior layout_dodgeInsetEdges layout_insetEdge layout_keyline
 styleable DialogFragmentNavigator android_name
 styleable DrawerArrowToggle arrowHeadLength arrowShaftLength barLength color drawableSize gapBetweenBars spinBars thickness
+styleable EmojiEditText maxEmojiCount
+styleable EmojiExtractTextLayout emojiReplaceStrategy
 styleable ExtendedFloatingActionButton elevation extendMotionSpec hideMotionSpec showMotionSpec shrinkMotionSpec
 styleable ExtendedFloatingActionButton_Behavior_Layout behavior_autoHide behavior_autoShrink
 styleable FloatingActionButton android_enabled backgroundTint backgroundTintMode borderWidth elevation ensureMinTouchTargetSize fabCustomSize fabSize hideMotionSpec hoveredFocusedTranslationZ maxImageSize pressedTranslationZ rippleColor shapeAppearance shapeAppearanceOverlay showMotionSpec useCompatPadding

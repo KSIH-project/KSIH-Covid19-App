@@ -1,12 +1,13 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:2:1-25:12
-INJECTED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:2:1-25:12
-INJECTED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:2:1-25:12
-INJECTED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:2:1-25:12
+ADDED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:2:1-26:12
+INJECTED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:2:1-26:12
+INJECTED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:2:1-26:12
+INJECTED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:2:1-26:12
 MERGED from [androidx.fragment:fragment-ktx:1.2.4] /home/sundaydavid/.gradle/caches/transforms-2/files-2.1/0cc7c7bf5463ed6bee90856da0700bc6/jetified-fragment-ktx-1.2.4/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.activity:activity-ktx:1.1.0] /home/sundaydavid/.gradle/caches/transforms-2/files-2.1/e097c60eb5f34023431f5b655ace11ce/jetified-activity-ktx-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0] /home/sundaydavid/.gradle/caches/transforms-2/files-2.1/832ca3f7026133f6241ad16f77007d4d/jetified-lifecycle-viewmodel-ktx-2.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.room:room-ktx:2.2.5] /home/sundaydavid/.gradle/caches/transforms-2/files-2.1/44938d255002ea83ce864139753fb782/jetified-room-ktx-2.2.5/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.2.0] /home/sundaydavid/.gradle/caches/transforms-2/files-2.1/8615916d8b3518df554d88cba6b13edc/jetified-lifecycle-runtime-ktx-2.2.0/AndroidManifest.xml:17:1-24:12
 MERGED from [org.jetbrains.anko:anko:0.10.8] /home/sundaydavid/.gradle/caches/transforms-2/files-2.1/fa7f3f7514486ad96f0cbb42626dbcb0/jetified-anko-0.10.8/AndroidManifest.xml:2:1-13:12
 MERGED from [org.jetbrains.anko:anko-coroutines:0.10.8] /home/sundaydavid/.gradle/caches/transforms-2/files-2.1/3c4cfff55c14a27ddfcb1b3a79186207/jetified-anko-coroutines-0.10.8/AndroidManifest.xml:2:1-13:12
@@ -14,6 +15,7 @@ MERGED from [org.jetbrains.anko:anko-sdk27-coroutines:0.10.8] /home/sundaydavid/
 MERGED from [org.jetbrains.anko:anko-appcompat-v7-coroutines:0.10.8] /home/sundaydavid/.gradle/caches/transforms-2/files-2.1/9812089ba015042101b90d60480ca1da/jetified-anko-appcompat-v7-coroutines-0.10.8/AndroidManifest.xml:2:1-13:12
 MERGED from [androidx.navigation:navigation-ui:2.2.1] /home/sundaydavid/.gradle/caches/transforms-2/files-2.1/d09e266fdac6ee059ae6151d30a0942e/navigation-ui-2.2.1/AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.material:material:1.2.0-alpha05] /home/sundaydavid/.gradle/caches/transforms-2/files-2.1/a977b27854041d0eb768ec246c30c78d/material-1.2.0-alpha05/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.emoji:emoji-appcompat:1.0.0] /home/sundaydavid/.gradle/caches/transforms-2/files-2.1/f426453b7570bc4116ab13017de1e946/emoji-appcompat-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [org.jetbrains.anko:anko-appcompat-v7:0.10.8] /home/sundaydavid/.gradle/caches/transforms-2/files-2.1/814dec1e84c6afd13b7739c97c5e86cd/jetified-anko-appcompat-v7-0.10.8/AndroidManifest.xml:2:1-13:12
 MERGED from [org.jetbrains.anko:anko-appcompat-v7-commons:0.10.8] /home/sundaydavid/.gradle/caches/transforms-2/files-2.1/c7118d2373fe8ba33cd1b5c81a05f81f/jetified-anko-appcompat-v7-commons-0.10.8/AndroidManifest.xml:2:1-13:12
 MERGED from [org.jetbrains.anko:appcompatV7-base:0.10.8] /home/sundaydavid/.gradle/caches/transforms-2/files-2.1/fd5dacfa7365a397dc6fff49ba1bfcb7/jetified-appcompatV7-base-0.10.8/AndroidManifest.xml:2:1-11:12
@@ -31,6 +33,7 @@ MERGED from [org.jetbrains.anko:anko-sdk27:0.10.8] /home/sundaydavid/.gradle/cac
 MERGED from [org.jetbrains.anko:anko-commons:0.10.8] /home/sundaydavid/.gradle/caches/transforms-2/files-2.1/5dda23ed4e78bb8324340bfc7d15248e/jetified-anko-commons-0.10.8/AndroidManifest.xml:2:1-13:12
 MERGED from [com.squareup.picasso:picasso:2.71828] /home/sundaydavid/.gradle/caches/transforms-2/files-2.1/e130ea91a49e58de6303debbce351035/jetified-picasso-2.71828/AndroidManifest.xml:2:1-14:12
 MERGED from [androidx.room:room-runtime:2.2.5] /home/sundaydavid/.gradle/caches/transforms-2/files-2.1/34cbb4bf242c2ae589f663cec2c7c3d4/room-runtime-2.2.5/AndroidManifest.xml:17:1-31:12
+MERGED from [androidx.emoji:emoji:1.0.0] /home/sundaydavid/.gradle/caches/transforms-2/files-2.1/4d332e5ebd18cad4caf077dd032e234b/emoji-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.2.0] /home/sundaydavid/.gradle/caches/transforms-2/files-2.1/9ad2317d1315ab66069b62aa22265c17/jetified-lifecycle-livedata-core-ktx-2.2.0/AndroidManifest.xml:17:1-24:12
 MERGED from [org.jetbrains.anko:sqlite-base:0.10.8] /home/sundaydavid/.gradle/caches/transforms-2/files-2.1/44aab97b4c5f6a5c83364123189d3054/jetified-sqlite-base-0.10.8/AndroidManifest.xml:2:1-11:12
 MERGED from [org.jetbrains.anko:platform-base:0.10.8] /home/sundaydavid/.gradle/caches/transforms-2/files-2.1/0008653c95dba3fc254b10f9ea15c1a2/jetified-platform-base-0.10.8/AndroidManifest.xml:2:1-11:12
@@ -77,20 +80,20 @@ MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/s
 MERGED from [androidx.print:print:1.0.0] /home/sundaydavid/.gradle/caches/transforms-2/files-2.1/7f965f507d38b4c2f90b65950242b04b/print-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.interpolator:interpolator:1.0.0] /home/sundaydavid/.gradle/caches/transforms-2/files-2.1/c7f0935e7d55a72aff026eb580088845/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.annotation:annotation-experimental:1.0.0] /home/sundaydavid/.gradle/caches/transforms-2/files-2.1/966d2e0c8f35c940208afdfe033085dd/jetified-annotation-experimental-1.0.0/AndroidManifest.xml:17:1-24:12
-INJECTED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:2:1-25:12
-INJECTED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:2:1-25:12
-INJECTED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:2:1-25:12
+INJECTED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:2:1-26:12
+INJECTED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:2:1-26:12
+INJECTED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:2:1-26:12
 	package
 		ADDED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:3:5-44
 		INJECTED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml
 		INJECTED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml
-		ADDED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:2:1-25:12
+		ADDED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:2:1-26:12
 		INJECTED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml
 	android:versionCode
 		INJECTED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml
-		ADDED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:2:1-25:12
+		ADDED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:2:1-26:12
 		INJECTED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:2:11-69
@@ -103,7 +106,7 @@ ADDED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main
 	android:name
 		ADDED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:6:22-64
 application
-ADDED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:7:5-23:19
+ADDED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:7:5-24:19
 MERGED from [org.jetbrains.anko:anko:0.10.8] /home/sundaydavid/.gradle/caches/transforms-2/files-2.1/fa7f3f7514486ad96f0cbb42626dbcb0/jetified-anko-0.10.8/AndroidManifest.xml:11:5-20
 MERGED from [org.jetbrains.anko:anko:0.10.8] /home/sundaydavid/.gradle/caches/transforms-2/files-2.1/fa7f3f7514486ad96f0cbb42626dbcb0/jetified-anko-0.10.8/AndroidManifest.xml:11:5-20
 MERGED from [org.jetbrains.anko:anko-coroutines:0.10.8] /home/sundaydavid/.gradle/caches/transforms-2/files-2.1/3c4cfff55c14a27ddfcb1b3a79186207/jetified-anko-coroutines-0.10.8/AndroidManifest.xml:11:5-20
@@ -145,33 +148,35 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /home/sunda
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.2.0] /home/sundaydavid/.gradle/caches/transforms-2/files-2.1/f8a25a8e7a6c14f5ca703a491b755ba2/core-1.2.0/AndroidManifest.xml:24:18-86
 	android:supportsRtl
-		ADDED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:12:9-35
+		ADDED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:13:9-35
 	android:label
-		ADDED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:10:9-41
+		ADDED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:11:9-41
 	android:roundIcon
-		ADDED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:11:9-54
+		ADDED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:12:9-54
 	android:icon
-		ADDED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:9:9-43
+		ADDED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:10:9-43
 	android:allowBackup
-		ADDED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:8:9-35
+		ADDED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:9:9-35
 	android:theme
-		ADDED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:13:9-40
-activity#com.android.ksih_covid_19_app.MainActivity
-ADDED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:14:9-22:20
+		ADDED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:14:9-40
+	android:name
+		ADDED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:8:9-45
+activity#com.android.ksih_covid_19_app.ui.MainActivity
+ADDED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:15:9-23:20
 	android:label
-		ADDED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:15:13-45
+		ADDED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:16:13-45
 	android:name
-		ADDED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:14:19-47
+		ADDED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:15:19-50
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:16:13-20:29
+ADDED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:17:13-21:29
 action#android.intent.action.MAIN
-ADDED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:17:17-69
+ADDED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:18:17-69
 	android:name
-		ADDED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:17:25-66
+		ADDED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:18:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:19:17-77
+ADDED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:20:17-77
 	android:name
-		ADDED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:19:27-74
+		ADDED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml:20:27-74
 uses-sdk
 INJECTED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /home/sundaydavid/AndroidStudioProjects/KSIH-Covid19-App/app/src/main/AndroidManifest.xml
@@ -182,6 +187,8 @@ MERGED from [androidx.activity:activity-ktx:1.1.0] /home/sundaydavid/.gradle/cac
 MERGED from [androidx.activity:activity-ktx:1.1.0] /home/sundaydavid/.gradle/caches/transforms-2/files-2.1/e097c60eb5f34023431f5b655ace11ce/jetified-activity-ktx-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0] /home/sundaydavid/.gradle/caches/transforms-2/files-2.1/832ca3f7026133f6241ad16f77007d4d/jetified-lifecycle-viewmodel-ktx-2.2.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0] /home/sundaydavid/.gradle/caches/transforms-2/files-2.1/832ca3f7026133f6241ad16f77007d4d/jetified-lifecycle-viewmodel-ktx-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.room:room-ktx:2.2.5] /home/sundaydavid/.gradle/caches/transforms-2/files-2.1/44938d255002ea83ce864139753fb782/jetified-room-ktx-2.2.5/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.room:room-ktx:2.2.5] /home/sundaydavid/.gradle/caches/transforms-2/files-2.1/44938d255002ea83ce864139753fb782/jetified-room-ktx-2.2.5/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.2.0] /home/sundaydavid/.gradle/caches/transforms-2/files-2.1/8615916d8b3518df554d88cba6b13edc/jetified-lifecycle-runtime-ktx-2.2.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.2.0] /home/sundaydavid/.gradle/caches/transforms-2/files-2.1/8615916d8b3518df554d88cba6b13edc/jetified-lifecycle-runtime-ktx-2.2.0/AndroidManifest.xml:20:5-22:41
 MERGED from [org.jetbrains.anko:anko:0.10.8] /home/sundaydavid/.gradle/caches/transforms-2/files-2.1/fa7f3f7514486ad96f0cbb42626dbcb0/jetified-anko-0.10.8/AndroidManifest.xml:7:5-9:41
@@ -196,6 +203,8 @@ MERGED from [androidx.navigation:navigation-ui:2.2.1] /home/sundaydavid/.gradle/
 MERGED from [androidx.navigation:navigation-ui:2.2.1] /home/sundaydavid/.gradle/caches/transforms-2/files-2.1/d09e266fdac6ee059ae6151d30a0942e/navigation-ui-2.2.1/AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.android.material:material:1.2.0-alpha05] /home/sundaydavid/.gradle/caches/transforms-2/files-2.1/a977b27854041d0eb768ec246c30c78d/material-1.2.0-alpha05/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.material:material:1.2.0-alpha05] /home/sundaydavid/.gradle/caches/transforms-2/files-2.1/a977b27854041d0eb768ec246c30c78d/material-1.2.0-alpha05/AndroidManifest.xml:20:5-44
+MERGED from [androidx.emoji:emoji-appcompat:1.0.0] /home/sundaydavid/.gradle/caches/transforms-2/files-2.1/f426453b7570bc4116ab13017de1e946/emoji-appcompat-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.emoji:emoji-appcompat:1.0.0] /home/sundaydavid/.gradle/caches/transforms-2/files-2.1/f426453b7570bc4116ab13017de1e946/emoji-appcompat-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [org.jetbrains.anko:anko-appcompat-v7:0.10.8] /home/sundaydavid/.gradle/caches/transforms-2/files-2.1/814dec1e84c6afd13b7739c97c5e86cd/jetified-anko-appcompat-v7-0.10.8/AndroidManifest.xml:7:5-9:41
 MERGED from [org.jetbrains.anko:anko-appcompat-v7:0.10.8] /home/sundaydavid/.gradle/caches/transforms-2/files-2.1/814dec1e84c6afd13b7739c97c5e86cd/jetified-anko-appcompat-v7-0.10.8/AndroidManifest.xml:7:5-9:41
 MERGED from [org.jetbrains.anko:anko-appcompat-v7-commons:0.10.8] /home/sundaydavid/.gradle/caches/transforms-2/files-2.1/c7118d2373fe8ba33cd1b5c81a05f81f/jetified-anko-appcompat-v7-commons-0.10.8/AndroidManifest.xml:7:5-9:41
@@ -230,6 +239,8 @@ MERGED from [com.squareup.picasso:picasso:2.71828] /home/sundaydavid/.gradle/cac
 MERGED from [com.squareup.picasso:picasso:2.71828] /home/sundaydavid/.gradle/caches/transforms-2/files-2.1/e130ea91a49e58de6303debbce351035/jetified-picasso-2.71828/AndroidManifest.xml:5:5-44
 MERGED from [androidx.room:room-runtime:2.2.5] /home/sundaydavid/.gradle/caches/transforms-2/files-2.1/34cbb4bf242c2ae589f663cec2c7c3d4/room-runtime-2.2.5/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.room:room-runtime:2.2.5] /home/sundaydavid/.gradle/caches/transforms-2/files-2.1/34cbb4bf242c2ae589f663cec2c7c3d4/room-runtime-2.2.5/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.emoji:emoji:1.0.0] /home/sundaydavid/.gradle/caches/transforms-2/files-2.1/4d332e5ebd18cad4caf077dd032e234b/emoji-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.emoji:emoji:1.0.0] /home/sundaydavid/.gradle/caches/transforms-2/files-2.1/4d332e5ebd18cad4caf077dd032e234b/emoji-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.2.0] /home/sundaydavid/.gradle/caches/transforms-2/files-2.1/9ad2317d1315ab66069b62aa22265c17/jetified-lifecycle-livedata-core-ktx-2.2.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.2.0] /home/sundaydavid/.gradle/caches/transforms-2/files-2.1/9ad2317d1315ab66069b62aa22265c17/jetified-lifecycle-livedata-core-ktx-2.2.0/AndroidManifest.xml:20:5-22:41
 MERGED from [org.jetbrains.anko:sqlite-base:0.10.8] /home/sundaydavid/.gradle/caches/transforms-2/files-2.1/44aab97b4c5f6a5c83364123189d3054/jetified-sqlite-base-0.10.8/AndroidManifest.xml:7:5-9:41

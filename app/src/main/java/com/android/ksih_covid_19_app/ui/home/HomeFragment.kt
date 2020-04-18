@@ -36,6 +36,10 @@ class HomeFragment : Fragment(R.layout.home_fragment) {
             findNavController(it).navigate(R.id.dayOneTotalFragment)
         }
 
+        summary_button.setOnClickListener {
+            findNavController(it).navigate(R.id.summaryFragment)
+        }
+
         val bottomSheetBehavior =
             BottomSheetBehavior.from(prevention_bottom_sheet)
 

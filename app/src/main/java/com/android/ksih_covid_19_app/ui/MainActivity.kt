@@ -13,9 +13,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        mNavController = Navigation.findNavController(this,
-            R.id.fragment
-        )
         mNavController = Navigation.findNavController(this, R.id.fragment)
         setDestinationListener()
 
