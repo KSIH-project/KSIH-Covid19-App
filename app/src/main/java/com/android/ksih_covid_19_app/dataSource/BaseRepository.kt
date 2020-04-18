@@ -25,6 +25,12 @@ class BaseRepository(private val api: Covid19Api, private val dao: Covid19Dao): 
         return dao.getCountryAndNewCasesListLocal()
     }
 
+    fun getSearchAllCountries(searchString: String): LiveData<List<Country>>{
+        return dao.getSearchAllCountries(searchString)
+    }
+
+
+
     override suspend fun setCountryAndNewCasesListLocal(countryList: List<Country>) {
         dao.setCountryAndNewCasesList(countryList)
     }

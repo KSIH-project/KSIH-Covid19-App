@@ -31,6 +31,7 @@ class LiveByCountryAndStatusViewModel(myApplication: Application) :
         getSummaryRemote()
     }
 
+
     private fun getSummaryRemote() {
         responseMessage.postValue(
             Event(
@@ -72,6 +73,11 @@ class LiveByCountryAndStatusViewModel(myApplication: Application) :
                 Log.e("LiveByCountryViewModel", t.localizedMessage!!)
             }
         })
+    }
+
+    fun getSearchResults(searchString: String): LiveData<List<Country>> {
+
+        return repository.getSearchAllCountries(searchString)
     }
 
     fun getCountryAndNewCasesList(): LiveData<List<Country>> {

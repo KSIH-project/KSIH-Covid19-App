@@ -2,6 +2,11 @@ package com.android.ksih_covid_19_app.ui.dayOneTotal
 
 import android.os.Bundle
 import android.util.Log
+import android.view.Menu
+import android.view.MenuInflater
+import android.view.View
+import androidx.appcompat.widget.SearchView
+import androidx.appcompat.widget.Toolbar
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
@@ -20,6 +25,12 @@ class DayOneTotalFragment : Fragment(R.layout.fragment_day_one_total),
     CountryAdapter.OnCovidItemClickListener {
 
     private lateinit var dayOneViewModel: DayOneTotalViewModel
+    private lateinit var toolbar: Toolbar
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        toolbar = view.findViewById(R.id.toolbar)
+        toolbar.inflateMenu(R.menu.main_menu)
+    }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
@@ -57,6 +68,20 @@ class DayOneTotalFragment : Fragment(R.layout.fragment_day_one_total),
         swipeRefresh_day_one.setOnRefreshListener {
             dayOneViewModel.refreshList()
         }
+    }
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        inflater.inflate(R.menu.main_menu,menu)
+        val searchMenu = menu.findItem(R.id.menu_search)
+        val searchView = searchMenu.actionView as SearchView
+        searchView.setOnQueryTextListener( object: SearchView.OnQueryTextListener{
+            override fun onQueryTextSubmit(query: String?): Boolean {
+                TODO("Not yet implemented")
+            }
+
+            override fun onQueryTextChange(newText: String?): Boolean {
+                TODO("Not yet implemented")
+            }
+        })
     }
 
     /**

@@ -2,7 +2,12 @@ package com.android.ksih_covid_19_app.ui.liveByCountryAndStatus
 
 import android.os.Bundle
 import android.util.Log
+import android.view.Menu
+import android.view.MenuInflater
+import android.view.MenuItem
 import android.view.View
+import androidx.appcompat.widget.SearchView
+import androidx.appcompat.widget.Toolbar
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
@@ -10,19 +15,22 @@ import androidx.lifecycle.ViewModelProvider
 import com.android.ksih_covid_19_app.R
 import com.android.ksih_covid_19_app.model.Country
 import com.android.ksih_covid_19_app.utility.Constants.COUNTRY_BUNDLE_CODE
+import com.android.ksih_covid_19_app.utility.State
 import com.android.ksih_covid_19_app.utility.adapter.LiveByCountryAdapter
 import com.android.ksih_covid_19_app.utility.adapter.MarginItemDecoration
-import com.android.ksih_covid_19_app.utility.State
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.live_by_country_and_status_fragment.*
 
 class LiveByCountryAndStatusFragment : Fragment(R.layout.live_by_country_and_status_fragment),
     LiveByCountryAdapter.OnCovidItemClickListener {
+    private lateinit var toolbar: Toolbar
 
     private lateinit var viewModel: LiveByCountryAndStatusViewModel
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        toolbar = view.findViewById(R.id.toolbar)
+        toolbar.inflateMenu(R.menu.main_menu)
         live_recyclerView.addItemDecoration(
             MarginItemDecoration(
                 16
@@ -63,6 +71,32 @@ class LiveByCountryAndStatusFragment : Fragment(R.layout.live_by_country_and_sta
             viewModel.refreshList()
         }
     }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+
+        return when (item.itemId) {
+            R.id.menu_search -> {
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+       inflater.inflate(R.menu.main_menu,menu)
+        val searchMenu = menu.findItem(R.id.menu_search)
+       val searchView = searchMenu.actionView as SearchView
+        searchView.setOnQueryTextListener( object: SearchView.OnQueryTextListener{
+            override fun onQueryTextSubmit(query: String?): Boolean {
+                TODO("Not yet implemented")
+            }
+
+            override fun onQueryTextChange(newText: String?): Boolean {
+                TODO("Not yet implemented")
+            }
+        })
+    }
+
 
     /**
      * Navigate to bottomSheetDialog
