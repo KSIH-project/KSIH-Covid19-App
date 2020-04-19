@@ -1,6 +1,9 @@
 package com.android.ksih_covid_19_app.dataSource.remote
 
-import com.android.ksih_covid_19_app.model.*
+import com.android.ksih_covid_19_app.model.DayOneTotalResponseItem
+import com.android.ksih_covid_19_app.model.LiveByCountryAndStatusItem
+import com.android.ksih_covid_19_app.model.SearchByDateItem
+import com.android.ksih_covid_19_app.model.Summary
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Path
@@ -14,4 +17,8 @@ interface Covid19Api {
 
     @GET("summary")
     fun getSummary(): Call<Summary>
+
+    @GET("live/country/{country}/status/{status}/date/{date}")
+    fun getSearchByDate(@Path("country") country: String,@Path ("status") status:String,
+                        @Path("date") date:String): Call<List<SearchByDateItem>>
 }

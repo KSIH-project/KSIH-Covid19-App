@@ -2,6 +2,11 @@ package com.android.ksih_covid_19_app.ui.country
 
 import android.os.Bundle
 import android.util.Log
+import android.view.Menu
+import android.view.MenuInflater
+import android.view.View
+import androidx.appcompat.widget.SearchView
+import androidx.appcompat.widget.Toolbar
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
@@ -18,7 +23,12 @@ import kotlinx.android.synthetic.main.country_fragment.*
 class CountryFragment : Fragment(R.layout.country_fragment), CountryAdapter.OnCovidItemClickListener  {
 
     private lateinit var viewModel: CountryViewModel
-
+    private lateinit var toolbar: Toolbar
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        toolbar = view.findViewById(R.id.toolbar)
+        toolbar.inflateMenu(R.menu.main_menu)
+    }
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         country_recyclerView.addItemDecoration(
@@ -60,6 +70,21 @@ class CountryFragment : Fragment(R.layout.country_fragment), CountryAdapter.OnCo
         country_swipeRefresh.setOnRefreshListener {
             viewModel.refreshList()
         }
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        inflater.inflate(R.menu.main_menu,menu)
+        val searchMenu = menu.findItem(R.id.menu_search)
+        val searchView = searchMenu.actionView as SearchView
+        searchView.setOnQueryTextListener( object: SearchView.OnQueryTextListener{
+            override fun onQueryTextSubmit(query: String?): Boolean {
+                TODO("Not yet implemented")
+            }
+
+            override fun onQueryTextChange(newText: String?): Boolean {
+                TODO("Not yet implemented")
+            }
+        })
     }
     /**
      * Navigate to bottomSheetDialog

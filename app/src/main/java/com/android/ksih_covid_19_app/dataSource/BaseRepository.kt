@@ -33,16 +33,25 @@ import com.android.ksih_covid_19_app.model.*
             return dao.getCountryAndNewCasesListLocal()
         }
 
-        override suspend fun setCountryAndNewCasesListLocal(countryList: List<Country>) {
-            dao.setCountryAndNewCasesList(countryList)
-        }
+    fun getSearchAllCountries(searchString: String): LiveData<List<Country>>{
+        return dao.getSearchAllCountries(searchString)
+    }
+
+
+
+    override suspend fun setCountryAndNewCasesListLocal(countryList: List<Country>) {
+        dao.setCountryAndNewCasesList(countryList)
+    }
 
         override fun getSummary(): Call<Summary> {
             return api.getSummary()
         }
 
-        override fun getDayOneTotal(country: String): Call<List<DayOneTotalResponseItem>> {
-            return api.getDayOneTotal(country)
-        }
-
+    override fun getDayOneTotal(country: String): Call<List<DayOneTotalResponseItem>> {
+        return api.getDayOneTotal(country)
     }
+
+    override fun getSearchByDate(country: String, status: String, date: String): Call<List<SearchByDateItem>> {
+        return api.getSearchByDate(country,status,date)
+    }
+}
