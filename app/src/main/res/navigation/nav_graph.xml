@@ -3,13 +3,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/homeFragment">
+    app:startDestination="@id/symptomsFragment">
 
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.android.ksih_covid_19_app.ui.home.HomeFragment"
         android:label="home_fragment"
-        tools:layout="@layout/home_fragment" />
+        tools:layout="@layout/home_fragment">
+        <action
+            android:id="@+id/action_homeFragment_to_symptomsFragment"
+            app:destination="@id/symptomsFragment" />
+    </fragment>
     <fragment
         android:id="@+id/countryFragment"
         android:name="com.android.ksih_covid_19_app.ui.country.CountryFragment"
@@ -42,4 +46,18 @@
         android:name="com.android.ksih_covid_19_app.ui.dayOneTotal.DayOneTotalDetailsFragment"
         android:label="fragment_day_one_total_details"
         tools:layout="@layout/fragment_day_one_total_details" />
+    <fragment
+        android:id="@+id/symptomsFragment"
+        android:name="com.android.ksih_covid_19_app.ui.symptoms.SymptomsFragment"
+        android:label="fragment_symptoms"
+        tools:layout="@layout/fragment_symptoms">
+        <action
+            android:id="@+id/action_symptomsFragment_to_symptomsDialogFragment"
+            app:destination="@id/symptomsDialogFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/symptomsDialogFragment"
+        android:name="com.android.ksih_covid_19_app.ui.symptoms.SymptomsDialogFragment"
+        android:label="fragment_symptoms_dialog"
+        tools:layout="@layout/fragment_symptoms_dialog" />
 </navigation>
