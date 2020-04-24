@@ -5,7 +5,6 @@ import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-
 import com.android.ksih_covid_19_app.R
 import com.android.ksih_covid_19_app.model.Country
 import com.android.ksih_covid_19_app.utility.Constants.COUNTRY_BUNDLE_CODE
@@ -23,8 +22,10 @@ class DayOneTotalDetailsFragment : Fragment(R.layout.fragment_day_one_total_deta
 
     private lateinit var viewModel: DayOneTotalViewModel
 
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
 
         viewModel = ViewModelProvider(requireActivity()).get(DayOneTotalViewModel::class.java)
         day_one_details_recyclerView.addItemDecoration(MarginItemDecoration(16))

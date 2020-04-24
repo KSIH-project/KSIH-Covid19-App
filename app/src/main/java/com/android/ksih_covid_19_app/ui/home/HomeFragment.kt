@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.activityViewModels
 import androidx.navigation.Navigation
 import androidx.navigation.Navigation.findNavController
 
@@ -34,8 +35,9 @@ class HomeFragment : Fragment(R.layout.home_fragment) {
         button_day_one_cases.setOnClickListener {
             findNavController(it).navigate(R.id.dayOneTotalFragment)
         }
-        fab.setOnClickListener { view ->
-            Navigation.findNavController(fab).navigate(R.id.action_homeFragment_to_symptomsFragment)
+
+        summary_button.setOnClickListener {
+            findNavController(it).navigate(R.id.summaryFragment)
         }
 
         val bottomSheetBehavior =
@@ -49,6 +51,8 @@ class HomeFragment : Fragment(R.layout.home_fragment) {
                 bottomSheetBehavior.state = BottomSheetBehavior.STATE_EXPANDED
             } else {
                 bottomSheetBehavior.state = BottomSheetBehavior.STATE_COLLAPSED
+
+
                 bottomSheetBehavior.setBottomSheetCallback(object :
                     BottomSheetBehavior.BottomSheetCallback() {
 
@@ -62,10 +66,10 @@ class HomeFragment : Fragment(R.layout.home_fragment) {
                             }
                         }
                     }
+
                     override fun onSlide(view: View, p1: Float) {
                     }
                 })
-
             }
         }
     }
