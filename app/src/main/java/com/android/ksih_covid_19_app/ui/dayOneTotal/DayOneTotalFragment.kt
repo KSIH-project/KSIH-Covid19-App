@@ -30,10 +30,7 @@ class DayOneTotalFragment : Fragment(R.layout.fragment_day_one_total),
         super.onViewCreated(view, savedInstanceState)
         toolbar = view.findViewById(R.id.toolbar)
         toolbar.inflateMenu(R.menu.main_menu)
-    }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
         day_one_recyclerView.addItemDecoration(MarginItemDecoration(16))
         dayOneViewModel = ViewModelProvider(requireActivity()).get(DayOneTotalViewModel::class.java)
         dayOneViewModel.responseMessage.observe(viewLifecycleOwner, Observer {
@@ -60,7 +57,7 @@ class DayOneTotalFragment : Fragment(R.layout.fragment_day_one_total),
                 CountryAdapter(
                     this
                 )
-            adapter.displayData(countries)
+            adapter.submitList(countries)
             day_one_recyclerView.adapter = adapter
             Log.d("DayOneTotalFragment", adapter.itemCount.toString())
         })
@@ -69,6 +66,7 @@ class DayOneTotalFragment : Fragment(R.layout.fragment_day_one_total),
             dayOneViewModel.refreshList()
         }
     }
+
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         inflater.inflate(R.menu.main_menu,menu)
         val searchMenu = menu.findItem(R.id.menu_search)

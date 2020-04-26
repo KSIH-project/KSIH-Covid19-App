@@ -28,9 +28,7 @@ class CountryFragment : Fragment(R.layout.country_fragment), CountryAdapter.OnCo
         super.onViewCreated(view, savedInstanceState)
         toolbar = view.findViewById(R.id.toolbar)
         toolbar.inflateMenu(R.menu.main_menu)
-    }
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
+
         country_recyclerView.addItemDecoration(
             MarginItemDecoration(
                 16
@@ -62,7 +60,7 @@ class CountryFragment : Fragment(R.layout.country_fragment), CountryAdapter.OnCo
                 CountryAdapter(
                     this
                 )
-            adapter.displayData(countries)
+            adapter.submitList(countries)
             country_recyclerView.adapter = adapter
             Log.d("TotalCountrySize", adapter.itemCount.toString())
         })
