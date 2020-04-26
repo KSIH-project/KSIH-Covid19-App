@@ -6,7 +6,6 @@ import android.view.Menu
 import android.view.MenuInflater
 import android.view.View
 import androidx.appcompat.widget.SearchView
-import androidx.appcompat.widget.Toolbar
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
@@ -25,11 +24,9 @@ class DayOneTotalFragment : Fragment(R.layout.fragment_day_one_total),
     CountryAdapter.OnCovidItemClickListener {
 
     private lateinit var dayOneViewModel: DayOneTotalViewModel
-    private lateinit var toolbar: Toolbar
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        toolbar = view.findViewById(R.id.toolbar)
-        toolbar.inflateMenu(R.menu.main_menu)
+        setHasOptionsMenu(true)
 
         day_one_recyclerView.addItemDecoration(MarginItemDecoration(16))
         dayOneViewModel = ViewModelProvider(requireActivity()).get(DayOneTotalViewModel::class.java)
@@ -49,7 +46,7 @@ class DayOneTotalFragment : Fragment(R.layout.fragment_day_one_total),
             }
         })
 
-        dayOneViewModel.getDayOneCasesList().observe(viewLifecycleOwner, Observer { countryList ->
+        dayOneViewModel.getCountriesFromLocal().observe(viewLifecycleOwner, Observer { countryList ->
             val countries = countryList.filter { country ->
                 country.TotalConfirmed > 0
             }
@@ -73,11 +70,12 @@ class DayOneTotalFragment : Fragment(R.layout.fragment_day_one_total),
         val searchView = searchMenu.actionView as SearchView
         searchView.setOnQueryTextListener( object: SearchView.OnQueryTextListener{
             override fun onQueryTextSubmit(query: String?): Boolean {
-                TODO("Not yet implemented")
+                return false
             }
 
             override fun onQueryTextChange(newText: String?): Boolean {
-                TODO("Not yet implemented")
+                dayOneViewModel.getSearchResults(newText)
+                return false
             }
         })
     }

@@ -86,10 +86,6 @@ class LiveByCountryAndStatusViewModel(myApplication: Application) :
         _searchQuery.value = searchString
     }
 
-    fun getCountryAndNewCasesList(): LiveData<List<Country>> {
-        return repository.getCountryAndNewCasesListLocal()
-    }
-
     fun refreshList() {
         getSummaryRemote()
     }

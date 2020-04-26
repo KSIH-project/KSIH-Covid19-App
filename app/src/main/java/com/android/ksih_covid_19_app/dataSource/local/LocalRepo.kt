@@ -14,7 +14,7 @@ interface LocalRepo {
 
     suspend fun setLiveByCountryAndStatusLocal(responseList: List<LiveByCountryAndStatusItem?>)
 
-    fun getCountryAndNewCasesListLocal(): LiveData<List<Country>>
-
     suspend fun setCountryAndNewCasesListLocal(countryList: List<Country>)
+
+    fun getSearchAllCountries(query: String?): LiveData<List<Country>>
 }

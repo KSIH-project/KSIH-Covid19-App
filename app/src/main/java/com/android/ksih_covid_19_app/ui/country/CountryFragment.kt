@@ -6,7 +6,6 @@ import android.view.Menu
 import android.view.MenuInflater
 import android.view.View
 import androidx.appcompat.widget.SearchView
-import androidx.appcompat.widget.Toolbar
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
@@ -23,11 +22,9 @@ import kotlinx.android.synthetic.main.country_fragment.*
 class CountryFragment : Fragment(R.layout.country_fragment), CountryAdapter.OnCovidItemClickListener  {
 
     private lateinit var viewModel: CountryViewModel
-    private lateinit var toolbar: Toolbar
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        toolbar = view.findViewById(R.id.toolbar)
-        toolbar.inflateMenu(R.menu.main_menu)
+        setHasOptionsMenu(true)
 
         country_recyclerView.addItemDecoration(
             MarginItemDecoration(
@@ -52,7 +49,7 @@ class CountryFragment : Fragment(R.layout.country_fragment), CountryAdapter.OnCo
             }
         })
 
-        viewModel.getCountryAndNewCasesList().observe(viewLifecycleOwner, Observer { countryList ->
+        viewModel.getCountriesFromLocal().observe(viewLifecycleOwner, Observer { countryList ->
             val countries = countryList.filter { country ->
                 country.TotalConfirmed > 0
             }
@@ -76,11 +73,12 @@ class CountryFragment : Fragment(R.layout.country_fragment), CountryAdapter.OnCo
         val searchView = searchMenu.actionView as SearchView
         searchView.setOnQueryTextListener( object: SearchView.OnQueryTextListener{
             override fun onQueryTextSubmit(query: String?): Boolean {
-                TODO("Not yet implemented")
+                return false
             }
 
             override fun onQueryTextChange(newText: String?): Boolean {
-                TODO("Not yet implemented")
+                viewModel.getSearchResults(newText)
+                return false
             }
         })
     }

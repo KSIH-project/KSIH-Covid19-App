@@ -16,20 +16,17 @@ import com.android.ksih_covid_19_app.utility.Constants.COUNTRY_BUNDLE_CODE
 import com.android.ksih_covid_19_app.utility.State
 import com.android.ksih_covid_19_app.utility.adapter.LiveByCountryAdapter
 import com.android.ksih_covid_19_app.utility.adapter.MarginItemDecoration
-import com.google.android.material.appbar.MaterialToolbar
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.live_by_country_and_status_fragment.*
 
 class LiveByCountryAndStatusFragment : Fragment(R.layout.live_by_country_and_status_fragment),
     LiveByCountryAdapter.OnCovidItemClickListener {
-    private lateinit var toolbar: MaterialToolbar
 
     private lateinit var viewModel: LiveByCountryAndStatusViewModel
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        toolbar = view.findViewById(R.id.material_toolbar)
-        toolbar.inflateMenu(R.menu.main_menu)
+        setHasOptionsMenu(true)
 
         live_recyclerView.addItemDecoration(
             MarginItemDecoration(
@@ -83,7 +80,6 @@ class LiveByCountryAndStatusFragment : Fragment(R.layout.live_by_country_and_sta
 
             override fun onQueryTextChange(newText: String?): Boolean {
                 viewModel.getSearchResults(newText)
-                Log.d("QueryTextChange", newText)
                 return false
             }
         })
