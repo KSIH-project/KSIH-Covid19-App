@@ -39,6 +39,9 @@ class HomeFragment : Fragment(R.layout.home_fragment) {
         summary_button.setOnClickListener {
             findNavController(it).navigate(R.id.summaryFragment)
         }
+        fab.setOnClickListener {
+            findNavController(fab).navigate(R.id.action_homeFragment_to_symptomsFragment)
+        }
 
         val bottomSheetBehavior =
             BottomSheetBehavior.from(prevention_bottom_sheet)
