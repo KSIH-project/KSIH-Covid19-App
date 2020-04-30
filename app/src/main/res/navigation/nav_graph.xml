@@ -67,5 +67,5 @@
         android:id="@+id/symptomsDialogFragment"
         android:name="com.android.ksih_covid_19_app.ui.symptoms.PreventionDialogFragment"
         android:label="fragment_symptoms_dialog"
-        tools:layout="@layout/fragment_symptoms_dialog" />
+        tools:layout="@layout/symptoms_alert_dialog" />
 </navigation>

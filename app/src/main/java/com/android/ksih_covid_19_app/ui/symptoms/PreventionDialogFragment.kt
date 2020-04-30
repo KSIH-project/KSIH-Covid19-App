@@ -42,7 +42,7 @@ class PreventionDialogFragment : BottomSheetDialogFragment() {
         val recyclerView:RecyclerView = view.findViewById(R.id.recycler_bottom_sheet)
         val fab = view.findViewById<RoundedImageView>(R.id.bottom_sheet_fab)
         fab.setOnClickListener {
-         Navigation.findNavController(parentFragment?.view!!).navigate(R.id.action_bottomSheet_to_symptomsFragment)
+         Navigation.findNavController(requireParentFragment().requireView()).navigate(R.id.action_bottomSheet_to_symptomsFragment)
         }
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
         recyclerView.adapter  = BottomSheetAdapter(requireContext(),items)
