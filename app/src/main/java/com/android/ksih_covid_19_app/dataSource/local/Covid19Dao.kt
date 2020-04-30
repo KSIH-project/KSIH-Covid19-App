@@ -20,10 +20,7 @@ interface Covid19Dao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun setLiveByCountryAndStatus(responseList: List<LiveByCountryAndStatusItem?>)
 
-    @Query("SELECT * FROM Country")
-    fun getCountryAndNewCasesListLocal(): LiveData<List<Country>>
-
-    @Query("SELECT * FROM Country WHERE Country LIKE :searchString")
+    @Query("SELECT * FROM country_table WHERE Country LIKE :searchString")
     fun getSearchAllCountries(searchString: String): LiveData<List<Country>>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)

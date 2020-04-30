@@ -15,23 +15,18 @@ class MainActivity : AppCompatActivity() {
 
         mNavController = Navigation.findNavController(this, R.id.fragment)
         setDestinationListener()
-
     }
 
-    private fun setDestinationListener(){
-        mNavController.addOnDestinationChangedListener{controller, destination, arguments ->
+    private fun setDestinationListener() {
+        mNavController.addOnDestinationChangedListener { _, destination, _ ->
             val dest = resources.getResourceName(destination.id)
 
-            when(destination.id) {
-                R.id.summaryFragment -> {
-                    hideCustomToolBar()
-                }
-                else -> {
-                    showCustomToolBar()
-                }
+            when (destination.id) {
+                R.id.summaryFragment -> hideCustomToolBar()
+                R.id.homeFragment -> hideCustomToolBar()
+                else -> showCustomToolBar()
             }
         }
-
     }
 
     private fun hideCustomToolBar() {

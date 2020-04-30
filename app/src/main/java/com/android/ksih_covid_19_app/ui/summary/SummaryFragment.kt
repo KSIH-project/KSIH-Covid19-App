@@ -11,11 +11,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
-import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProviders
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -36,7 +35,7 @@ class SummaryFragment : Fragment() {
     ): View? {
         val root = inflater.inflate(R.layout.summary_fragment, container, false).apply {
             viewModel =
-                ViewModelProviders.of(this@SummaryFragment).get(MainSummaryViewModel::class.java)
+                ViewModelProvider(this@SummaryFragment).get(MainSummaryViewModel::class.java)
 
         }
 
