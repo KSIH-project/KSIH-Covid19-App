@@ -9,7 +9,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.android.ksih_covid_19_app.R
 
-class BottomSheetAdapter(val context: Context, var bottomSheetItems: List<BottomSheetItems>) :
+class BottomSheetAdapter(val context: Context, var bottomSheetItems: List<PreventionDialogFragment.BottomSheetItems>) :
     RecyclerView.Adapter<BottomSheetAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -33,7 +33,7 @@ class BottomSheetAdapter(val context: Context, var bottomSheetItems: List<Bottom
         lateinit var image: ImageView
 
 
-        fun setData(sheetItem: BottomSheetItems) {
+        fun setData(sheetItem: PreventionDialogFragment.BottomSheetItems) {
             title = itemView.findViewById(R.id.text_bottom_sheet_item_tittle)
             title.text = context.resources.getString(sheetItem.tittle)
             body = itemView.findViewById(R.id.text_bottom_sheet_item_contents)

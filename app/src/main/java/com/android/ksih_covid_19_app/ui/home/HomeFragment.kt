@@ -5,7 +5,6 @@ import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation.findNavController
 import com.android.ksih_covid_19_app.R
-import com.android.ksih_covid_19_app.ui.symptoms.PreventionDialogFragment
 import kotlinx.android.synthetic.main.home_fragment.*
 
 /**
@@ -33,9 +32,10 @@ class HomeFragment : Fragment(R.layout.home_fragment) {
             findNavController(it).navigate(R.id.summaryFragment)
         }
 
-        floatingActionButton.setOnClickListener { view ->
-           val bottomSheet = PreventionDialogFragment()
-            bottomSheet.show(requireActivity().supportFragmentManager,bottomSheet.tag)
+        floatingActionButton.setOnClickListener {
+            findNavController(it).navigate(R.id.bottomSheet)
+//           val bottomSheet = PreventionDialogFragment()
+//            bottomSheet.show(requireActivity().supportFragmentManager,bottomSheet.tag)
         }
     }
 }
