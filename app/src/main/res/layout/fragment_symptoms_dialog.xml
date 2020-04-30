@@ -2,57 +2,10 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:padding="16dp"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.symptoms.SymptomsDialogFragment">
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView5"
-        android:layout_width="343dp"
-        android:layout_height="222dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="50dp"
-        app:cardCornerRadius="25dp"
-        app:cardElevation="20dp"
-        app:cardPreventCornerOverlap="true"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView10">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/symptoms">
-
-            <TextView
-                android:id="@+id/textsymptoms"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="8dp"
-                android:gravity="center"
-                android:text="@string/symptom_dialog"
-                android:textColor="#ffffff"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/texttitle" />
-
-            <TextView
-                android:id="@+id/texttitle"
-                android:layout_width="347dp"
-                android:layout_height="38dp"
-                android:gravity="center"
-                android:text="Title Dialog"
-                android:textColor="#ffffff"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.cardview.widget.CardView>
-
+    android:layout_height="wrap_content"
+    tools:context=".ui.symptoms.PreventionDialogFragment">
     <TextView
         android:id="@+id/textView9"
         android:layout_width="0dp"
