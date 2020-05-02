@@ -13,7 +13,7 @@
     app:behavior_hideable="true"
     app:behavior_peekHeight="0dp"
     app:layout_behavior="@string/bottom_sheet_behavior"
-    tools:context="ui.symptoms">
+    tools:context="ui.symptoms.PreventionDialogFragment">
 
 
     <ImageView
