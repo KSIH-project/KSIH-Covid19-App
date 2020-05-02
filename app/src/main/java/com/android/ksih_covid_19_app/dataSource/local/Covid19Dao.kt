@@ -6,7 +6,9 @@ import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import com.android.ksih_covid_19_app.model.Country
+import com.android.ksih_covid_19_app.model.Global
 import com.android.ksih_covid_19_app.model.LiveByCountryAndStatusItem
+
 
 /**
  * Created by SegunFrancis
@@ -25,4 +27,11 @@ interface Covid19Dao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun setCountryAndNewCasesList(countryList: List<Country>)
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun setGlobalList(responseList:Global)
+
+    @Query("SELECT * FROM Global ")
+    fun getGlobalList(): LiveData<Global>
+
 }

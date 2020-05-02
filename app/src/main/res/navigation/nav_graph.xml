@@ -11,9 +11,17 @@
         android:label="home_fragment"
         tools:layout="@layout/home_fragment">
         <action
-            android:id="@+id/action_homeFragment_to_symptomsFragment"
-            app:destination="@id/symptomsFragment" />
+            android:id="@+id/action_homeFragment_to_bottomSheet"
+            app:destination="@id/bottomSheet" />
     </fragment>
+    <dialog
+        android:id="@+id/bottomSheet"
+        android:name="com.android.ksih_covid_19_app.ui.symptoms.PreventionDialogFragment"
+        tools:layout="@layout/prevention_bottom_sheet">
+        <action
+            android:id="@+id/action_bottomSheet_to_symptomsFragment"
+            app:destination="@id/symptomsFragment" />
+    </dialog>
     <fragment
         android:id="@+id/countryFragment"
         android:name="com.android.ksih_covid_19_app.ui.country.CountryFragment"
@@ -57,7 +65,7 @@
     </fragment>
     <fragment
         android:id="@+id/symptomsDialogFragment"
-        android:name="com.android.ksih_covid_19_app.ui.symptoms.SymptomsDialogFragment"
+        android:name="com.android.ksih_covid_19_app.ui.symptoms.PreventionDialogFragment"
         android:label="fragment_symptoms_dialog"
-        tools:layout="@layout/fragment_symptoms_dialog" />
+        tools:layout="@layout/symptoms_alert_dialog" />
 </navigation>
