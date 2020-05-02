@@ -40,7 +40,8 @@ abstract class Covid19RoomDatabase : RoomDatabase() {
                     context.applicationContext,
                     Covid19RoomDatabase::class.java,
                     "covid_19_database"
-                ).build()
+                ).fallbackToDestructiveMigration()
+                    .build()
                 INSTANCE = instance
                 return instance
             }

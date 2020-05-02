@@ -24,16 +24,16 @@
         android:src="@drawable/background_total_cases"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/total_confirmed_cases_round_the_world" />
 
 
     <TextView
-        android:id="@+id/textView8"
+        android:id="@+id/text_cases"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:fontFamily="@font/lily_script_one"
         android:gravity="center"
-        android:text="34.850"
         android:textColor="#000000"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@+id/cardView1"

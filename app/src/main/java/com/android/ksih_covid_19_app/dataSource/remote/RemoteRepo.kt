@@ -18,4 +18,5 @@ interface RemoteRepo {
     fun getDayOneTotal(country: String): Call<List<DayOneTotalResponseItem>>
 
     fun getSearchByDate(country: String, status:String, date:String): Call<List<SearchByDateItem>>
+
 }

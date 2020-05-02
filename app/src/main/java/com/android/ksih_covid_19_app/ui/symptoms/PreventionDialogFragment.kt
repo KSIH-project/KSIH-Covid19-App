@@ -5,6 +5,8 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -12,6 +14,8 @@ import com.android.ksih_covid_19_app.R
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.makeramen.roundedimageview.RoundedImageView
+import kotlinx.android.synthetic.main.prevention_bottom_sheet.*
+import java.text.DecimalFormat
 
 
 /**
@@ -41,9 +45,19 @@ class PreventionDialogFragment : BottomSheetDialogFragment() {
         val view = View.inflate(activity,R.layout.prevention_bottom_sheet,null)
         val recyclerView:RecyclerView = view.findViewById(R.id.recycler_bottom_sheet)
         val fab = view.findViewById<RoundedImageView>(R.id.bottom_sheet_fab)
-        fab.setOnClickListener {
+        val application = requireNotNull(this.activity).application
+        val viewModelFactory = PreventionViewModelFactory(application)
+        val viewModel = ViewModelProvider(this,viewModelFactory).get(PreventionViewModel(application)::class.java)
+            fab.setOnClickListener {
          Navigation.findNavController(requireParentFragment().requireView()).navigate(R.id.action_bottomSheet_to_symptomsFragment)
         }
+
+        viewModel.global.observe(this, Observer {
+          it?.let {
+              val cases = DecimalFormat("#,###")
+           text_cases.text = cases.format(it.TotalConfirmed)
+
+        }})
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
         recyclerView.adapter  = BottomSheetAdapter(requireContext(),items)
 
