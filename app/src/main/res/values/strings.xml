@@ -10,6 +10,7 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_dialog">Title</string>
     <string name="symptom_dialog">Symptom Dialog</string>
+    <string name="search_country">Search Country</string>
     <string name="other_symptoms">Other Symptoms</string>
     <string name="symptoms_1">Some patients may have aches and pains, nasal congestion, runny nose, sore throat or diarrhea. These symptoms are usually mild and begin gradually. Some people become infected but don’t develop any symptoms and don\'t feel unwell. Most people (about 80%) recover from the disease without needing special treatment.</string>
     <string name="info_1">Around 1 out of every 6 people who gets COVID-19 becomes seriously ill and develops difficulty breathing. Older people, and those with underlying medical problems like high blood pressure, heart problems or diabetes, are more likely to develop serious illness.</string>

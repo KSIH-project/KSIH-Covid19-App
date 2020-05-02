@@ -4,19 +4,18 @@ import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.DiffUtil
+import androidx.recyclerview.widget.ListAdapter
 import com.android.ksih_covid_19_app.R
 import com.android.ksih_covid_19_app.model.Country
 import com.android.ksih_covid_19_app.utility.Constants.toFlagEmoji
 import kotlinx.android.synthetic.main.item_live_by_country_list.view.*
-import java.util.*
 
 /**
  * Created by SegunFrancis
  */
 class LiveByCountryAdapter(private val listener: OnCovidItemClickListener) :
-    RecyclerView.Adapter<LiveByCountryAdapter.LiveByCountryViewHolder>() {
-
-    private var countryList: List<Country> = ArrayList()
+    ListAdapter<Country, LiveByCountryAdapter.LiveByCountryViewHolder>(LiveByCountryDiff()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): LiveByCountryViewHolder {
         return LiveByCountryViewHolder(
@@ -25,15 +24,8 @@ class LiveByCountryAdapter(private val listener: OnCovidItemClickListener) :
         )
     }
 
-    override fun getItemCount() = countryList.size
-
     override fun onBindViewHolder(holder: LiveByCountryViewHolder, position: Int) {
-        holder.bind(countryList[position], listener)
-    }
-
-    fun displayData(countryList: List<Country>) {
-        this.countryList = countryList
-        notifyDataSetChanged()
+        holder.bind(getItem(position), listener)
     }
 
     /**
@@ -58,6 +50,16 @@ class LiveByCountryAdapter(private val listener: OnCovidItemClickListener) :
             itemView.setOnClickListener {
                 listener.onItemClick(item)
             }
+        }
+    }
+
+    class LiveByCountryDiff : DiffUtil.ItemCallback<Country>() {
+        override fun areItemsTheSame(oldItem: Country, newItem: Country): Boolean {
+            return oldItem.CountryCode == newItem.CountryCode
+        }
+
+        override fun areContentsTheSame(oldItem: Country, newItem: Country): Boolean {
+            return oldItem.equals(newItem)
         }
     }
 }
