@@ -52,7 +52,8 @@ class PreventionDialogFragment : BottomSheetDialogFragment() {
          Navigation.findNavController(requireParentFragment().requireView()).navigate(R.id.action_bottomSheet_to_symptomsFragment)
         }
 
-        viewModel.global.observe(this, Observer {
+        viewModel.getGlobal().observe(this, Observer {
+
           it?.let {
               val cases = DecimalFormat("#,###")
            text_cases.text = cases.format(it.TotalConfirmed)
