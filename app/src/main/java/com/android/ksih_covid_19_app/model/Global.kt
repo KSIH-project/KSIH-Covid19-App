@@ -5,10 +5,11 @@ import androidx.room.PrimaryKey
 
 @Entity
 data class Global(
-    @PrimaryKey
+
     val NewConfirmed: Int,
     val NewDeaths: Int,
     val NewRecovered: Int,
+    @PrimaryKey
     val TotalConfirmed: Int,
     val TotalDeaths: Int,
     val TotalRecovered: Int

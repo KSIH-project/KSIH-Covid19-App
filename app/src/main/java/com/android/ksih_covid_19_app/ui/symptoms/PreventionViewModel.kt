@@ -20,13 +20,12 @@ class PreventionViewModel(application: Application) : AndroidViewModel(applicati
     private val repository:BaseRepository
     private val dao: Covid19Dao = Covid19RoomDatabase.getDatabase(application).covid19Dao()
     private val uiScope = CoroutineScope(Dispatchers.Main + viewModelJob)
-     val global:LiveData<Global>
+
     init {
         repository = BaseRepository(covid19Api,dao)
         getSummaryRemote()
-         global = repository.getGlobalCases()
-
     }
+
 
     private fun getSummaryRemote() {
         repository.getSummary().enqueue(object :Callback<Summary>{
@@ -35,13 +34,23 @@ class PreventionViewModel(application: Application) : AndroidViewModel(applicati
             }
 
             override fun onResponse(call: Call<Summary>, response: Response<Summary>) {
-                uiScope.launch {
-                    withContext(Dispatchers.IO){
-                        repository.setGlobalList(response.body()!!.Global)
+                Log.d("Prevention" , "On success: ${response.code()}")
+
+                if (response.isSuccessful){
+
+                    uiScope.launch {
+                        withContext(Dispatchers.IO){
+                            repository.setGlobalList(response.body()!!.Global)
+                        }
                     }
                 }
-            }
+                }
+
         })
+
+    }
+    fun getGlobal():LiveData<Global>{
+        return repository.getGlobalCases()
     }
 
     override fun onCleared() {
