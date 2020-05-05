@@ -24,4 +24,18 @@
     <string name="bottom_sheet_item_body_3">Do not touch your eyes, nose or mouth if your hands are not clean.</string>
     <string name="bottom_sheet_item_body_4">Make sure you, and the people around you, follow good respiratory hygiene. This means covering your mouth and nose with your bent elbow or tissue when you cough or sneeze.</string>
     <string name="total_confirmed_cases_round_the_world">total confirmed cases round the world</string>
+
+
+    <string name="death_value">DEATH</string>
+    <string name="recovered_value">RECOVERED</string>
+    <string name="country_text">this text will be replaced</string>
+    <string name="countr_number_text">this text will not be shown</string>
+    <string name="radio_text_two">32456</string>
+
+    <string name="total_recovered">350000</string>
+    <string name="recovered">Recovered:</string>
+    <string name="total_death">3500</string>
+    <string name="death">Death:</string>
+    <string name="world_patients">World patients</string>
+    <string name="total_cases">32450000</string>
 </resources>
