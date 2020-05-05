@@ -15,27 +15,26 @@ class HomeFragment : Fragment(R.layout.home_fragment) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         // Todo: Remove temporary navigation
-        button_total_cases.setOnClickListener {
+       materialCardCountry.setOnClickListener {
             findNavController(it).navigate(R.id.countryFragment)
         }
-        button_total_cases.setOnClickListener {
-            findNavController(it).navigate(R.id.countryFragment)
-        }
-        button_live_cases.setOnClickListener {
+
+        materialCardCountryAndStatus.setOnClickListener {
             findNavController(it).navigate(R.id.liveByCountryAndStatusFragment)
         }
-        button_day_one_cases.setOnClickListener {
+        materialCardDayOneTotal.setOnClickListener {
             findNavController(it).navigate(R.id.dayOneTotalFragment)
         }
 
-        summary_button.setOnClickListener {
+        cardViewSummary.setOnClickListener {
             findNavController(it).navigate(R.id.summaryFragment)
         }
 
-        floatingActionButton.setOnClickListener {
+        who_guide_tips.setOnClickListener {
             findNavController(it).navigate(R.id.bottomSheet)
 //           val bottomSheet = PreventionDialogFragment()
 //            bottomSheet.show(requireActivity().supportFragmentManager,bottomSheet.tag)
         }
     }
+
 }
