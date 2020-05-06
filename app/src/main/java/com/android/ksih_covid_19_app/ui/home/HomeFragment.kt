@@ -39,6 +39,17 @@ class HomeFragment : Fragment(R.layout.home_fragment) {
             }
 
         })
+        materialCardWorldData.setOnClickListener{
+            val bundle = Bundle()
+            bundle.putInt("chart",0)
+            findNavController(it).navigate(R.id.action_homeFragment_to_barChartFragment, bundle)
+        }
+
+        materialCardNigeria.setOnClickListener{
+            val bundle = Bundle()
+            bundle.putInt("chart",1)
+            findNavController(it).navigate(R.id.action_homeFragment_to_barChartFragment, bundle)
+        }
 
        materialCardCountry.setOnClickListener {
             findNavController(it).navigate(R.id.countryFragment)

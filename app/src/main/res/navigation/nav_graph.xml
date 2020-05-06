@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_homeFragment_to_bottomSheet"
             app:destination="@id/bottomSheet" />
+        <action
+            android:id="@+id/action_homeFragment_to_barChartFragment"
+            app:destination="@id/barChartFragment" />
     </fragment>
     <dialog
         android:id="@+id/bottomSheet"
@@ -68,4 +71,8 @@
         android:name="com.android.ksih_covid_19_app.ui.symptoms.PreventionDialogFragment"
         android:label="fragment_symptoms_dialog"
         tools:layout="@layout/symptoms_alert_dialog" />
+    <fragment
+        android:id="@+id/barChartFragment"
+        android:name="com.android.ksih_covid_19_app.ui.home.BarChartFragment"
+        android:label="BarChartFragment" />
 </navigation>
