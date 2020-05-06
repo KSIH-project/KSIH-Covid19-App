@@ -35,7 +35,7 @@ class SymptomsAdapter(val context: Context, var symptomsList: List<SymptomsData>
         var pos = -1
         fun setData(symptoms: SymptomsData) {
             title = itemView.findViewById(R.id.text_symptoms_tittle)
-            symptomText = itemView.findViewById(R.id.text_symptoms_tittle)
+            symptomText = itemView.findViewById(R.id.textView_symptoms)
             image = itemView.findViewById(R.id.imageView_symptoms)
             title.setText(symptoms.title)
             symptomText.text = symptoms.symptomType

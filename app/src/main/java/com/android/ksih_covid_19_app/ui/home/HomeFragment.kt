@@ -34,8 +34,11 @@ class HomeFragment : Fragment(R.layout.home_fragment) {
             it?.let {
                 val nigeria = it.find { country ->
                     country.Country == "Nigeria" }
-                val cases = DecimalFormat("#,###")
-                nigeria_totalCase.text = cases.format(nigeria!!.TotalConfirmed)
+                nigeria?.let {
+                    val cases = DecimalFormat("#,###")
+                    nigeria_totalCase.text = cases.format(nigeria.TotalConfirmed)
+                }
+
             }
 
         })
