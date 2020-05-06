@@ -36,12 +36,23 @@ class HomeFragment : Fragment(R.layout.home_fragment) {
                     country.Country == "Nigeria" }
                 nigeria?.let {
                     val cases = DecimalFormat("#,###")
-                    nigeria_totalCase.text = cases.format(nigeria!!.TotalConfirmed)
-
+                    nigeria_totalCase.text = cases.format(nigeria.TotalConfirmed)
                 }
-               }
+
+            }
 
         })
+        materialCardWorldData.setOnClickListener{
+            val bundle = Bundle()
+            bundle.putInt("chart",0)
+            findNavController(it).navigate(R.id.action_homeFragment_to_barChartFragment, bundle)
+        }
+
+        materialCardNigeria.setOnClickListener{
+            val bundle = Bundle()
+            bundle.putInt("chart",1)
+            findNavController(it).navigate(R.id.action_homeFragment_to_barChartFragment, bundle)
+        }
 
        materialCardCountry.setOnClickListener {
             findNavController(it).navigate(R.id.countryFragment)

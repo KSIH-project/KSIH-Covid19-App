@@ -35,7 +35,7 @@
     <string name="total_recovered">350000</string>
     <string name="recovered">Recovered:</string>
     <string name="total_death">3500</string>
-    <string name="death">Death:</string>
+    <string name="death">Deaths:</string>
     <string name="world_patients">Total Covid-19 Cases</string>
     <string name="total_cases">32450000</string>
 </resources>
