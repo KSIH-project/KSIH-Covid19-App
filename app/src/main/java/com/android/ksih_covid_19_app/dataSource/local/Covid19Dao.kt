@@ -28,6 +28,9 @@ interface Covid19Dao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun setCountryAndNewCasesList(countryList: List<Country>)
 
+    @Query("SELECT * FROM COUNTRY_TABLE")
+    fun getCountryAndNewCasesList():LiveData<List<Country>>
+
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun setGlobalList(responseList:Global)
 

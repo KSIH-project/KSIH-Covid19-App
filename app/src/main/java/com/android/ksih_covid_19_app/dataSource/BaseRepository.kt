@@ -25,7 +25,11 @@ class BaseRepository(private val api: Covid19Api, private val dao: Covid19Dao) :
             dao.setGlobalList(globalCases)
         }
 
-        override fun getGlobalCases(): LiveData<Global> {
+    override fun getCountryAndNewCasesList(): LiveData<List<Country>> {
+       return dao.getCountryAndNewCasesList()
+    }
+
+    override fun getGlobalCases(): LiveData<Global> {
            return dao.getGlobalList()
         }
 
