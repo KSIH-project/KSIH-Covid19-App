@@ -24,6 +24,7 @@ class MainActivity : AppCompatActivity() {
             when (destination.id) {
                 R.id.summaryFragment -> hideCustomToolBar()
                 R.id.homeFragment -> hideCustomToolBar()
+                R.id.bottomSheet -> hideCustomToolBar()
                 else -> showCustomToolBar()
             }
         }
