@@ -4,7 +4,6 @@ import android.app.Application
 import android.util.Log
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import com.android.ksih_covid_19_app.dataSource.BaseRepository
 import com.android.ksih_covid_19_app.dataSource.local.Covid19Dao
 import com.android.ksih_covid_19_app.dataSource.local.Covid19RoomDatabase
@@ -21,11 +20,12 @@ class PreventionViewModel(application: Application) : AndroidViewModel(applicati
     private val repository:BaseRepository
     private val dao: Covid19Dao = Covid19RoomDatabase.getDatabase(application).covid19Dao()
     private val uiScope = CoroutineScope(Dispatchers.Main + viewModelJob)
-     val global = MutableLiveData<Global>()
+
     init {
         repository = BaseRepository(covid19Api,dao)
         getSummaryRemote()
-}
+    }
+
 
     private fun getSummaryRemote() {
         repository.getSummary().enqueue(object :Callback<Summary>{
@@ -36,23 +36,21 @@ class PreventionViewModel(application: Application) : AndroidViewModel(applicati
             override fun onResponse(call: Call<Summary>, response: Response<Summary>) {
                 Log.d("Prevention" , "On success: ${response.code()}")
 
-                uiScope.launch {
-                    withContext(Dispatchers.IO){
-                        Log.d("database" , "On database write: ${response.body()?.Global?.TotalConfirmed}")
+                if (response.isSuccessful){
 
-                        repository.setGlobalList(response.body()!!.Global)
-
-                        Log.d("database" , "On failure: ${repository.getGlobalCases().value}")
-
+                    uiScope.launch {
+                        withContext(Dispatchers.IO){
+                            repository.setGlobalList(response.body()!!.Global)
+                        }
                     }
                 }
-            }
-        })
-    }
-     fun getData(): LiveData<Global> {
-        getSummaryRemote()
-        return repository.getGlobalCases()
+                }
 
+        })
+
+    }
+    fun getGlobal():LiveData<Global>{
+        return repository.getGlobalCases()
     }
 
     override fun onCleared() {
