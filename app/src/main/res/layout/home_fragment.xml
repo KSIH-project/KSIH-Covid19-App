@@ -5,32 +5,46 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimary"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
-
-
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.home.HomeFragment">
     <ImageView
         android:id="@+id/frame_image"
         android:layout_width="match_parent"
-        android:layout_height="365dp"
-        android:src="@drawable/covid_image"
+        android:layout_height="400dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/covid_image_rounded_corner"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/who_guide_tips"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/ic_floating_button"
+        android:src="@drawable/ic_doctor"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="54dp"
+        android:elevation="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:riv_corner_radius="300dp" />
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/materialCardCountry"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="37dp"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="37dp"
+        android:layout_marginStart="54dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="54dp"
         android:background="@color/white"
         android:clickable="true"
         app:cardCornerRadius="15dp"
         app:cardElevation="8dp"
+        app:layout_constraintBottom_toTopOf="@id/materialCardCountryAndStatus"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/frame_image">
+        app:layout_constraintTop_toBottomOf="@+id/materialCardNigeria">
 
         <RelativeLayout
             android:id="@+id/layout1"
@@ -73,18 +87,17 @@
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/materialCardCountryAndStatus"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="37dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="37dp"
         android:background="@color/white"
         android:clickable="true"
         app:cardCornerRadius="15dp"
         app:cardElevation="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/materialCardCountry">
+        app:layout_constraintEnd_toEndOf="@+id/materialCardCountry"
+        app:layout_constraintStart_toStartOf="@+id/materialCardCountry"
+        app:layout_constraintTop_toBottomOf="@+id/materialCardCountry"
+        app:layout_constraintBottom_toTopOf="@id/materialCardDayOneTotal">
 
         <RelativeLayout
             android:id="@+id/layout2"
@@ -127,18 +140,17 @@
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/materialCardDayOneTotal"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="37dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="37dp"
         android:background="@color/white"
         android:clickable="true"
         app:cardCornerRadius="15dp"
         app:cardElevation="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/materialCardCountryAndStatus">
+        app:layout_constraintEnd_toEndOf="@+id/materialCardCountryAndStatus"
+        app:layout_constraintStart_toStartOf="@+id/materialCardCountryAndStatus"
+        app:layout_constraintTop_toBottomOf="@+id/materialCardCountryAndStatus"
+        app:layout_constraintBottom_toTopOf="@id/materialCardView4">
 
         <RelativeLayout
             android:id="@+id/layout3"
@@ -181,18 +193,17 @@
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/materialCardView4"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="37dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="37dp"
         android:background="@color/white"
         android:clickable="true"
         app:cardCornerRadius="15dp"
         app:cardElevation="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/materialCardDayOneTotal">
+        app:layout_constraintEnd_toEndOf="@+id/materialCardDayOneTotal"
+        app:layout_constraintStart_toStartOf="@+id/materialCardDayOneTotal"
+        app:layout_constraintTop_toBottomOf="@+id/materialCardDayOneTotal"
+        app:layout_constraintBottom_toTopOf="@id/cardViewSummary">
 
         <RelativeLayout
             android:id="@+id/layout4"
@@ -229,30 +240,25 @@
                 android:textSize="16sp" />
 
 
-
         </RelativeLayout>
 
 
     </com.google.android.material.card.MaterialCardView>
 
 
-
-
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/cardViewSummary"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="37dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="37dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"
         android:background="@color/white"
         android:clickable="true"
         app:cardCornerRadius="15dp"
         app:cardElevation="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/frame_image"
+        app:layout_constraintEnd_toEndOf="@+id/materialCardView4"
+        app:layout_constraintStart_toStartOf="@+id/materialCardView4"
         app:layout_constraintTop_toBottomOf="@+id/materialCardView4">
 
         <RelativeLayout
@@ -287,40 +293,31 @@
                 android:layout_marginBottom="8dp"
                 android:fontFamily="@font/sanchez"
                 android:text="Covid 19 patient summary"
-                android:textSize="16sp" />
+                android:textSize="14sp" />
 
         </RelativeLayout>
 
 
     </com.google.android.material.card.MaterialCardView>
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/who_guide_tips"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="64dp"
-        android:backgroundTint="@color/colorAccent"
-        android:clickable="true"
-        android:src="@drawable/ic_doctor"
-        app:elevation="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:tint="@color/colorPrimaryDark"
-        tools:ignore="RelativeOverlap" />
 
 
     <com.google.android.material.card.MaterialCardView
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:layout_marginEnd="42dp"
-        android:layout_marginBottom="16dp"
+        android:id="@+id/materialCardNigeria"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
         android:backgroundTint="@color/colorPrimaryDark"
         android:paddingBottom="12dp"
         app:cardCornerRadius="15dp"
         app:cardElevation="4dp"
-        app:layout_constraintBottom_toTopOf="@+id/materialCardCountry"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:contentPadding="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/frame_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/deathtextView"
+        app:layout_constraintTop_toTopOf="@+id/frame_image">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -332,35 +329,36 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginTop="4dp"
+                android:layout_marginTop="8dp"
                 android:fontFamily="@font/sanchez"
                 android:gravity="center"
                 android:text="115"
                 android:textColor="@color/white"
-                android:textSize="16sp"
-                android:textStyle="bold" />
+                android:textSize="16sp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:layout_marginBottom="8dp"
                 android:fontFamily="@font/sanchez"
                 android:text="Nigeria"
                 android:textColor="@color/white"
-                android:textSize="16sp" />
+                android:textSize="16sp"
+                android:textStyle="bold" />
 
         </LinearLayout>
 
     </com.google.android.material.card.MaterialCardView>
 
-
     <com.google.android.material.card.MaterialCardView
-        android:id="@+id/materialCardView5"
+        android:id="@+id/materialCardWorldData"
         style="@style/CustomCardViewStyle"
-        android:layout_width="190dp"
-        android:layout_height="92dp"
-        android:layout_marginTop="32dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         app:cardElevation="12dp"
+        app:contentPadding="4dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -370,18 +368,19 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
+
             <TextView
                 android:id="@+id/total_word_cases"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="4dp"
+                android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:fontFamily="@font/sanchez"
                 android:text="@string/total_cofirmed_cases"
-                android:textSize="24sp"
-                android:textStyle="bold" />
+                android:textSize="16sp"
+                />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -390,7 +389,11 @@
                 android:layout_marginTop="4dp"
                 android:fontFamily="@font/sanchez"
                 android:text="@string/world_patients"
+                android:textStyle="bold"
                 android:textSize="16sp" />
+
+
+
         </LinearLayout>
 
     </com.google.android.material.card.MaterialCardView>
@@ -403,7 +406,7 @@
         android:layout_marginTop="16dp"
         android:background="@drawable/round_corners"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/materialCardView5" />
+        app:layout_constraintTop_toBottomOf="@+id/materialCardWorldData" />
 
     <View
         android:id="@+id/recovered_rate"
@@ -446,12 +449,12 @@
         android:layout_marginEnd="8dp"
         android:fontFamily="@font/sanchez"
         android:text="@string/total_death"
-        android:textSize="16sp"
         android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="@+id/textView2"
+        android:textSize="14sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView2"
         app:layout_constraintEnd_toStartOf="@+id/deathtextView"
-        app:layout_constraintStart_toEndOf="@+id/textView2"
-        app:layout_constraintTop_toTopOf="@+id/textView2" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/textView2" />
 
     <TextView
         android:id="@+id/deathtextView"
@@ -483,8 +486,9 @@
         android:fontFamily="@font/sanchez"
         android:text="@string/total_recovered"
         android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@+id/textView8"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView8" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView8"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

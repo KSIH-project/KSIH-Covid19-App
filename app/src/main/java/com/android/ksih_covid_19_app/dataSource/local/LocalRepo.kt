@@ -19,6 +19,8 @@ interface LocalRepo {
 
     suspend fun setGlobalList(globalCases:Global)
 
+    fun getCountryAndNewCasesList():LiveData<List<Country>>
+
     fun getGlobalCases():LiveData<Global>
 
     fun getSearchAllCountries(query: String?): LiveData<List<Country>>
