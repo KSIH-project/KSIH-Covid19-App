@@ -4,8 +4,8 @@
 
     <item
         android:id="@+id/menu_search"
-        android:icon="@drawable/ic_search_black_24dp"
-        android:title="@android:string/search_go"
+        android:icon="@android:drawable/ic_menu_search"
+        android:title="@string/search_country"
         app:actionViewClass="androidx.appcompat.widget.SearchView"
         app:showAsAction="ifRoom" />
 </menu>

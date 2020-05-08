@@ -6,8 +6,8 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.android.ksih_covid_19_app.model.Country
 import com.android.ksih_covid_19_app.model.DayOneTotalResponseItem
+import com.android.ksih_covid_19_app.model.Global
 import com.android.ksih_covid_19_app.model.LiveByCountryAndStatusItem
-import com.android.ksih_covid_19_app.model.Summary
 
 /**
  * Created by SegunFrancis
@@ -19,7 +19,8 @@ import com.android.ksih_covid_19_app.model.Summary
     entities = [
         LiveByCountryAndStatusItem::class,
         DayOneTotalResponseItem::class,
-        Country::class
+        Country::class,
+        Global::class
     ]
 )
 abstract class Covid19RoomDatabase : RoomDatabase() {
@@ -39,7 +40,8 @@ abstract class Covid19RoomDatabase : RoomDatabase() {
                     context.applicationContext,
                     Covid19RoomDatabase::class.java,
                     "covid_19_database"
-                ).build()
+                ).fallbackToDestructiveMigration()
+                    .build()
                 INSTANCE = instance
                 return instance
             }

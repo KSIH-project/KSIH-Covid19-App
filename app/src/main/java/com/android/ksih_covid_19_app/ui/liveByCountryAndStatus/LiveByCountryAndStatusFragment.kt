@@ -4,10 +4,8 @@ import android.os.Bundle
 import android.util.Log
 import android.view.Menu
 import android.view.MenuInflater
-import android.view.MenuItem
 import android.view.View
 import androidx.appcompat.widget.SearchView
-import androidx.appcompat.widget.Toolbar
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
@@ -23,14 +21,13 @@ import kotlinx.android.synthetic.main.live_by_country_and_status_fragment.*
 
 class LiveByCountryAndStatusFragment : Fragment(R.layout.live_by_country_and_status_fragment),
     LiveByCountryAdapter.OnCovidItemClickListener {
-    private lateinit var toolbar: Toolbar
 
     private lateinit var viewModel: LiveByCountryAndStatusViewModel
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        toolbar = view.findViewById(R.id.toolbar)
-        toolbar.inflateMenu(R.menu.main_menu)
+        setHasOptionsMenu(true)
+
         live_recyclerView.addItemDecoration(
             MarginItemDecoration(
                 16
@@ -54,7 +51,7 @@ class LiveByCountryAndStatusFragment : Fragment(R.layout.live_by_country_and_sta
             }
         })
 
-        viewModel.getCountryAndNewCasesList().observe(viewLifecycleOwner, Observer { countryList ->
+        viewModel.getCountriesFromLocal().observe(viewLifecycleOwner, Observer { countryList ->
             val countries = countryList.filter { country ->
                 country.NewConfirmed > 0
             }
@@ -62,7 +59,7 @@ class LiveByCountryAndStatusFragment : Fragment(R.layout.live_by_country_and_sta
                 LiveByCountryAdapter(
                     this
                 )
-            adapter.displayData(countries)
+            adapter.submitList(countries)
             live_recyclerView.adapter = adapter
             Log.d("LiveByCountrySize", adapter.itemCount.toString())
         })
@@ -72,27 +69,18 @@ class LiveByCountryAndStatusFragment : Fragment(R.layout.live_by_country_and_sta
         }
     }
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-
-        return when (item.itemId) {
-            R.id.menu_search -> {
-                true
-            }
-            else -> super.onOptionsItemSelected(item)
-        }
-    }
-
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-       inflater.inflate(R.menu.main_menu,menu)
+        inflater.inflate(R.menu.main_menu, menu)
         val searchMenu = menu.findItem(R.id.menu_search)
-       val searchView = searchMenu.actionView as SearchView
-        searchView.setOnQueryTextListener( object: SearchView.OnQueryTextListener{
+        val searchView = searchMenu.actionView as SearchView
+        searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String?): Boolean {
-                TODO("Not yet implemented")
+                return false
             }
 
             override fun onQueryTextChange(newText: String?): Boolean {
-                TODO("Not yet implemented")
+                viewModel.getSearchResults(newText)
+                return false
             }
         })
     }
