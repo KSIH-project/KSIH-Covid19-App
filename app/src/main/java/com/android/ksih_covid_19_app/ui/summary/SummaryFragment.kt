@@ -78,6 +78,11 @@ class SummaryFragment : Fragment() {
 
     }
 
+    override fun onDestroy() {
+        requireActivity().unregisterReceiver(connectivityReceiver)
+        super.onDestroy()
+    }
+
     // checking network
    inner class ConnectivityReceiver : BroadcastReceiver() {
         override fun onReceive(context: Context, intent: Intent) {
