@@ -44,5 +44,9 @@
         <item name="android:windowBackground">@drawable/splash_image</item>
     </style>
 
+    <style name="progressBar">
+        <item name="colorAccent">@color/colorPrimaryDark</item>
+    </style>
+
 
 </resources>

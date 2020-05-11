@@ -11,7 +11,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.ProgressBar
 import androidx.core.content.ContextCompat
+import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -24,7 +26,8 @@ import org.jetbrains.anko.longToast
 
 class SummaryFragment : Fragment() {
 
-    var connectivityReceiver: ConnectivityReceiver? = null
+//    var connectivityReceiver: ConnectivityReceiver? = null
+    private lateinit var progress:ProgressBar
     private lateinit var viewModel: MainSummaryViewModel
     private lateinit var recyclerView: RecyclerView
     private lateinit var adapter: SummaryAdapter
@@ -39,9 +42,12 @@ class SummaryFragment : Fragment() {
 
         }
 
+        progress = root.findViewById(R.id.progress)
         recyclerView = root.findViewById(R.id.summary_recyclerView)
         val back = root.findViewById<ImageView>(R.id.go_back)
         back.setOnClickListener { Navigation.findNavController(root).navigate(R.id.homeFragment) }
+
+        progress.isVisible = true
 
         return root
     }
@@ -55,6 +61,7 @@ class SummaryFragment : Fragment() {
     private fun setUpObservers() {
         viewModel.summaryList.observe(viewLifecycleOwner, Observer {
             adapter.updateSummaryList(it)
+            progress.isVisible = false
         })
 
         viewModel.toastMessage.observe(viewLifecycleOwner, Observer {
@@ -72,71 +79,71 @@ class SummaryFragment : Fragment() {
         super.onResume()
         //setUp network check
         //Register connectivity BroadcastReceiver
-        connectivityReceiver = ConnectivityReceiver()
-        val intentFilter = IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION)
-        activity?.registerReceiver(connectivityReceiver, intentFilter)
+//        connectivityReceiver = ConnectivityReceiver()
+//        val intentFilter = IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION)
+//        activity?.registerReceiver(connectivityReceiver, intentFilter)
 
     }
 
     override fun onDestroy() {
-        requireActivity().unregisterReceiver(connectivityReceiver)
+//        requireActivity().unregisterReceiver(connectivityReceiver)
         super.onDestroy()
     }
 
     // checking network
-   inner class ConnectivityReceiver : BroadcastReceiver() {
-        override fun onReceive(context: Context, intent: Intent) {
-            val connectivityManager = context.getSystemService(
-                Context.CONNECTIVITY_SERVICE
-            ) as ConnectivityManager
-            val networkInfo = connectivityManager.activeNetworkInfo
-            if (networkInfo != null && networkInfo.isConnected) {
-                val snackbar = Snackbar
-                    .make(
-                        recyclerView,
-                        "Connection Available ",
-                        Snackbar.LENGTH_LONG
-                    )
-                    .setAction(
-                        "Reload Data"
-                    ) { view: View? ->
-                        viewModel.fetchSummaryList()
-                        setUpAdapter()
-                        setUpObservers()
-                    }
-                // customizing snackbar
-                snackbar.setActionTextColor(Color.BLACK)
-                val view = snackbar.view
-                view.setBackgroundColor(
-                    ContextCompat.getColor(
-                        context,
-                        R.color.colorPrimary
-                    )
-                )
-                snackbar.setText("Connection Available")
-                snackbar.setTextColor(Color.WHITE)
-                snackbar.show()
-
-            } else {
-                val snackbar = Snackbar
-                    .make(
-                        recyclerView,
-                        "No internet Connection! ",
-                        Snackbar.LENGTH_LONG
-                    )
-                // customizing snackbar
-                snackbar.setActionTextColor(Color.BLACK)
-                val view = snackbar.view
-                view.setBackgroundColor(
-                    ContextCompat.getColor(
-                        context,
-                        R.color.colorPrimary
-                    )
-                )
-                snackbar.setText("No internet Connection!")
-                snackbar.setTextColor(Color.WHITE)
-                snackbar.show()
-            }
-        }
-    }
+//   inner class ConnectivityReceiver : BroadcastReceiver() {
+//        override fun onReceive(context: Context, intent: Intent) {
+//            val connectivityManager = context.getSystemService(
+//                Context.CONNECTIVITY_SERVICE
+//            ) as ConnectivityManager
+//            val networkInfo = connectivityManager.activeNetworkInfo
+//            if (networkInfo != null && networkInfo.isConnected) {
+//                val snackbar = Snackbar
+//                    .make(
+//                        recyclerView,
+//                        "Connection Available ",
+//                        Snackbar.LENGTH_LONG
+//                    )
+//                    .setAction(
+//                        "Reload Data"
+//                    ) { view: View? ->
+//                        viewModel.fetchSummaryList()
+//                        setUpAdapter()
+//                        setUpObservers()
+//                    }
+//                // customizing snackbar
+//                snackbar.setActionTextColor(Color.BLACK)
+//                val view = snackbar.view
+//                view.setBackgroundColor(
+//                    ContextCompat.getColor(
+//                        context,
+//                        R.color.colorPrimary
+//                    )
+//                )
+//                snackbar.setText("Connection Available")
+//                snackbar.setTextColor(Color.WHITE)
+//                snackbar.show()
+//
+//            } else {
+//                val snackbar = Snackbar
+//                    .make(
+//                        recyclerView,
+//                        "No internet Connection! ",
+//                        Snackbar.LENGTH_LONG
+//                    )
+//                // customizing snackbar
+//                snackbar.setActionTextColor(Color.BLACK)
+//                val view = snackbar.view
+//                view.setBackgroundColor(
+//                    ContextCompat.getColor(
+//                        context,
+//                        R.color.colorPrimary
+//                    )
+//                )
+//                snackbar.setText("No internet Connection!")
+//                snackbar.setTextColor(Color.WHITE)
+//                snackbar.show()
+//            }
+//        }
+//    }
 }
