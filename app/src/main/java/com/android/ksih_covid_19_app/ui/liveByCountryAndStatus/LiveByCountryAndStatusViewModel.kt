@@ -52,7 +52,7 @@ class LiveByCountryAndStatusViewModel(myApplication: Application) :
         repository.getSummary().enqueue(object : Callback<Summary?> {
             override fun onResponse(call: Call<Summary?>, response: Response<Summary?>) {
                 viewModelScope.launch {
-                    repository.setCountryAndNewCasesListLocal(response.body()!!.Countries)
+                    response.body()?.Countries?.let { repository.setCountryAndNewCasesListLocal(it) }
                 }
                 responseMessage.postValue(
                     Event(

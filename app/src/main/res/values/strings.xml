@@ -41,4 +41,5 @@
     <string name="details_infection_country">Infections by Country</string>
     <string name="infection_summary"> Virus summary</string>
     <string name="summary">Summary</string>
+    <string name="prevention_guide">Virus Prevention Guide</string>
 </resources>
