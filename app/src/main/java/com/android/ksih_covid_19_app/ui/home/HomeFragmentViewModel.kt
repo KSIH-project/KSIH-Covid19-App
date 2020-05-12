@@ -40,8 +40,12 @@ class HomeFragmentViewModel(application: Application) : AndroidViewModel(applica
             override fun onResponse(call: Call<Summary>, response: Response<Summary>) {
                 uiScope.launch {
                     withContext(Dispatchers.IO){
-                        repository.setGlobalList(response.body()!!.Global)
-                        repository.setCountryAndNewCasesListLocal(response.body()!!.Countries)
+                        response.body()?.Global?.let { repository.setGlobalList(it) }
+                        response.body()?.Countries?.let {
+                            repository.setCountryAndNewCasesListLocal(
+                                it
+                            )
+                        }
                     }
                 }
             }
