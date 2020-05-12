@@ -5,7 +5,8 @@
     android:id="@+id/country_swipeRefresh"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background">
+    android:background="@drawable/background"
+    tools:context=".ui.country.CountryFragment">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/country_recyclerView"
