@@ -9,10 +9,10 @@ import com.android.ksih_covid_19_app.model.*
 import retrofit2.Call
 
 class BaseRepository(private val api: Covid19Api, private val dao: Covid19Dao) : RemoteRepo,
-        LocalRepo {
-        override fun getLiveByCountryAndStatusRemote(country: String): Call<List<LiveByCountryAndStatusItem?>> {
-            return api.getLiveByCountryAndStatus(country)
-        }
+    LocalRepo {
+    override fun getLiveByCountryAndStatusRemote(country: String): Call<List<LiveByCountryAndStatusItem?>> {
+        return api.getLiveByCountryAndStatus(country)
+    }
 
     override fun getLiveByCountryAndStatusLocal(country: String): LiveData<List<LiveByCountryAndStatusItem?>> {
         return dao.getLiveByCountryAndStatus()
@@ -21,30 +21,28 @@ class BaseRepository(private val api: Covid19Api, private val dao: Covid19Dao) :
     override suspend fun setLiveByCountryAndStatusLocal(responseList: List<LiveByCountryAndStatusItem?>) {
         dao.setLiveByCountryAndStatus(responseList)
     }
-         override suspend fun setGlobalList(globalCases: Global) {
-            dao.setGlobalList(globalCases)
-        }
+
+    override suspend fun setGlobalList(globalCases: Global) {
+        dao.setGlobalList(globalCases)
+    }
 
     override fun getCountryAndNewCasesList(): LiveData<List<Country>> {
-       return dao.getCountryAndNewCasesList()
+        return dao.getCountryAndNewCasesList()
     }
 
     override fun getGlobalCases(): LiveData<Global> {
-           return dao.getGlobalList()
-        }
+        return dao.getGlobalList()
+    }
 
-
-        override fun getSearchAllCountries(query: String?): LiveData<List<Country>> {
+    override fun getSearchAllCountries(query: String?): LiveData<List<Country>> {
         return dao.getSearchAllCountries("%$query%")
     }
 
-    override suspend fun setCountryAndNewCasesListLocal(countryList: List<Country>) {
+    override suspend fun setCountryAndNewCasesListLocal(countryList: List<Country>?) {
         dao.setCountryAndNewCasesList(countryList)
     }
 
-
-
-        override fun getSummary(): Call<Summary> {
+    override fun getSummary(): Call<Summary> {
         return api.getSummary()
     }
 
@@ -59,6 +57,4 @@ class BaseRepository(private val api: Covid19Api, private val dao: Covid19Dao) :
     ): Call<List<SearchByDateItem>> {
         return api.getSearchByDate(country, status, date)
     }
-
-
 }

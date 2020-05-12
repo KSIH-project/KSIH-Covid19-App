@@ -15,7 +15,7 @@ interface LocalRepo {
 
     suspend fun setLiveByCountryAndStatusLocal(responseList: List<LiveByCountryAndStatusItem?>)
 
-    suspend fun setCountryAndNewCasesListLocal(countryList: List<Country>)
+    suspend fun setCountryAndNewCasesListLocal(countryList: List<Country>?)
 
     suspend fun setGlobalList(globalCases:Global)
 

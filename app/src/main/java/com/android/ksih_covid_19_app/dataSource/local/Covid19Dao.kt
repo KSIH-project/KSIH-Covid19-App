@@ -26,7 +26,7 @@ interface Covid19Dao {
     fun getSearchAllCountries(searchString: String): LiveData<List<Country>>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun setCountryAndNewCasesList(countryList: List<Country>)
+    suspend fun setCountryAndNewCasesList(countryList: List<Country>?)
 
     @Query("SELECT * FROM COUNTRY_TABLE")
     fun getCountryAndNewCasesList():LiveData<List<Country>>
@@ -34,7 +34,7 @@ interface Covid19Dao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun setGlobalList(responseList:Global)
 
-    @Query("SELECT * FROM Global ")
+    @Query("SELECT * FROM Global")
     fun getGlobalList(): LiveData<Global>
 
 }
