@@ -27,7 +27,7 @@ class SymptomsFragment : Fragment() {
     )
     private val shortnessOfBreath = SymptomsData(
         "SHORTNESS OF BREATH",
-        "Around 1 out of every 6 people who gets COVID-19 becomes seriously ill and develops difficulty breathing or shortness of breath.",
+        "Around 1 out of every 6 people who gets infected becomes seriously ill and develops difficulty breathing or shortness of breath.",
         R.drawable.cough_1,"Difficulty breathing"
     )
 
