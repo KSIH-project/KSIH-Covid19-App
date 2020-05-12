@@ -41,14 +41,14 @@ class BarChartFragment : Fragment() {
                     PieEntry( it.TotalConfirmed.toFloat(),"TotalConfirmed")
                 )
 
-                val barDataSet = PieDataSet(barEntry, "World Covid-19 Cases")
+                val barDataSet = PieDataSet(barEntry, "World infection rate")
                 chart.animate()
                 val data = PieData(barDataSet)
-                barDataSet.setColors( ContextCompat.getColor(chart.context, R.color.covid_green),
-                    ContextCompat.getColor(chart.context, R.color.covid_red),
-                    ContextCompat.getColor(chart.context, R.color.covid_yellow))
+                barDataSet.setColors( ContextCompat.getColor(chart.context, R.color.recovered_green),
+                    ContextCompat.getColor(chart.context, R.color.daeths_red),
+                    ContextCompat.getColor(chart.context, R.color.infected_yellow))
 
-                chart.centerText = "World Covid-19 cases"
+                chart.centerText = "World cases"
                 chart.setDrawEntryLabels(true)
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
                     chart.setCenterTextTypeface(activity?.resources?.getFont(R.font.sanchez))
@@ -71,14 +71,14 @@ class BarChartFragment : Fragment() {
                     PieEntry( nigeria.TotalConfirmed.toFloat(),"TotalConfirmed")
                 )
 
-                val barDataSet = PieDataSet(barEntry, "World Covid-19 Cases")
+                val barDataSet = PieDataSet(barEntry, "Nigeria infection rate")
                 chart.animate()
                 val data = PieData(barDataSet)
-                barDataSet.setColors( ContextCompat.getColor(chart.context, R.color.covid_green),
-                    ContextCompat.getColor(chart.context, R.color.covid_red),
-                    ContextCompat.getColor(chart.context, R.color.covid_yellow))
+                barDataSet.setColors( ContextCompat.getColor(chart.context, R.color.recovered_green),
+                    ContextCompat.getColor(chart.context, R.color.daeths_red),
+                    ContextCompat.getColor(chart.context, R.color.infected_yellow))
 
-                chart.centerText = "Covid-19 cases Nigeria"
+                chart.centerText = "Nigeria cases"
                 chart.setDrawEntryLabels(true)
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
                     chart.setCenterTextTypeface(activity?.resources?.getFont(R.font.sanchez))

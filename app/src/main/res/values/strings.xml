@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">KSIH-Covid-19-app</string>
+    <string name="app_name">KSIH Virus Tracker</string>
     <string name="countryname">CountryName</string>
     <string name="total_cofirmed_cases">Total Confirmed Cases</string>
 
@@ -13,12 +13,12 @@
     <string name="search_country">Search Country</string>
     <string name="other_symptoms">Other Symptoms</string>
     <string name="symptoms_1">Some patients may have aches and pains, nasal congestion, runny nose, sore throat or diarrhea. These symptoms are usually mild and begin gradually. Some people become infected but don’t develop any symptoms and don\'t feel unwell. Most people (about 80%) recover from the disease without needing special treatment.</string>
-    <string name="info_1">Around 1 out of every 6 people who gets COVID-19 becomes seriously ill and develops difficulty breathing. Older people, and those with underlying medical problems like high blood pressure, heart problems or diabetes, are more likely to develop serious illness.</string>
+    <string name="info_1">Around 1 out of every 6 people who gets infected becomes seriously ill and develops difficulty breathing. Older people, and those with underlying medical problems like high blood pressure, heart problems or diabetes, are more likely to develop serious illness.</string>
     <string name="bottom_sheet_item_tittle_1"><u> Wash your Hands Frequently</u></string>
     <string name="bottom_sheet_item_tittle_2"><u> Maintain social distancing</u></string>
     <string name="bottom_sheet_item_tittle_3"><u> Avoid touching face</u></string>
     <string name="bottom_sheet_item_tittle_4"><u> Practice respiratory hygiene</u></string>
-    <string name="bottom_sheet_tittle">COVID-19 Coronavirus - Prevention</string>
+    <string name="bottom_sheet_tittle">Virus - Prevention</string>
     <string name="bottom_sheet_item_body_1">Regularly and thoroughly clean your hands with an alcohol-based hand rub or wash them with soap and water for at least 20 seconds</string>
     <string name="bottom_sheet_item_body_2">Maintain at least 1 metre (3 feet) distance between yourself and anyone who is coughing or sneezing. If you are too close, get chance to infected.</string>
     <string name="bottom_sheet_item_body_3">Do not touch your eyes, nose or mouth if your hands are not clean.</string>
@@ -36,6 +36,10 @@
     <string name="recovered">Recovered:</string>
     <string name="total_death">3500</string>
     <string name="death">Deaths:</string>
-    <string name="world_patients">Total Covid-19 Cases</string>
+    <string name="world_patients">Total Cases</string>
     <string name="total_cases">32450000</string>
+    <string name="details_infection_country">Infections by Country</string>
+    <string name="infection_summary"> Virus summary</string>
+    <string name="summary">Summary</string>
+    <string name="prevention_guide">Virus Prevention Guide</string>
 </resources>
